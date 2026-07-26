@@ -44,6 +44,7 @@ import { seoPerformanceData } from './Html/seo-performance.js';
 
 // استيراد كتل بيانات مسار CSS
 import { cssFundamentalsSelectorsData } from './Css/fundamentals-selectors.js';
+import { boxModelSizingData } from './Css/box-model-sizing.js';
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -84,4 +85,5 @@ export const registry = {
     'html-accessibility-meta': accessibilityMetaData,
     'html-seo-performance': seoPerformanceData,
     'css-fundamentals-selectors': cssFundamentalsSelectorsData,
+    'css-box-model-sizing': boxModelSizingData,
 };
