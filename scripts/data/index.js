@@ -50,6 +50,7 @@ import { typographyFontsData } from './Css/typography-fonts.js';
 import { displayPositioningData } from './Css/display-positioning.js';
 import { flexboxLayoutData } from './Css/flexbox-layout.js';
 import { gridLayoutData } from './Css/grid-layout.js';
+import { transformsTransitionsData } from './Css/transforms-transitions.js';
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -94,6 +95,7 @@ export const registry = {
     'css-colors-backgrounds-shadows': colorsBackgroundsShadowsData,
     'css-typography-fonts': typographyFontsData,
     'css-display-positioning': displayPositioningData,
-    'css-flexbox-layout': flexboxLayoutData,
-    'css-grid-layout': gridLayoutData,
+    'css-flexbox': flexboxLayoutData,
+    'css-grid': gridLayoutData,
+    'css-transitions-animations': transformsTransitionsData
 };
