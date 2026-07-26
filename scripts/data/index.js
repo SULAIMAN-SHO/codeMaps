@@ -47,6 +47,7 @@ import { cssFundamentalsSelectorsData } from './Css/fundamentals-selectors.js';
 import { boxModelSizingData } from './Css/box-model-sizing.js';
 import { colorsBackgroundsShadowsData } from './Css/colors-backgrounds-shadows.js';
 import { typographyFontsData } from './Css/typography-fonts.js';
+import { displayPositioningData } from './Css/display-positioning.js';
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -90,4 +91,5 @@ export const registry = {
     'css-box-model-sizing': boxModelSizingData,
     'css-colors-backgrounds-shadows': colorsBackgroundsShadowsData,
     'css-typography-fonts': typographyFontsData,
+    'css-display-positioning': displayPositioningData,
 };
