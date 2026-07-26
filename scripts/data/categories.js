@@ -230,6 +230,13 @@ export const categories = [
         tech: 'css'
     },
     {
+        id: 'css-variables-custom-properties',
+        name: 'CSS Variables & Custom Properties',
+        arabicName: 'متغيرات CSS والخصائص المخصصة',
+        desc: 'احتراف إعلان واستخدام المتغيرات المخصصة، وإدارة الثيمات الديناميكية، والتفاعل مع JS، وقاعدة @property الحديثة.',
+        tech: 'css'
+    },
+    {
         id: 'css-box-model-sizing',
         name: 'The Box Model & Sizing',
         arabicName: 'نموذج الصندوق والأبعاد',

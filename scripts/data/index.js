@@ -52,6 +52,7 @@ import { flexboxLayoutData } from './Css/flexbox-layout.js';
 import { gridLayoutData } from './Css/grid-layout.js';
 import { transformsTransitionsData } from './Css/transforms-transitions.js';
 import { keyframeAnimationsData } from './Css/keyframe-animations.js';
+import { variablesCustomPropertiesData } from './Css/variables-custom-properties.js';
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -100,4 +101,5 @@ export const registry = {
     'css-grid': gridLayoutData,
     'css-transitions-animations': transformsTransitionsData,
     'css-keyframe-animations': keyframeAnimationsData,
+    'css-variables-custom-properties': variablesCustomPropertiesData,
 };
