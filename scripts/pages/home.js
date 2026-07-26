@@ -6,8 +6,8 @@ import { CardComponent } from '../components/card.js';
  * @param {HTMLElement} container - العنصر المستهدف لحقن وبناء الواجهة
  */
 export function renderHome(container) {
-  // تفريغ الحاوية وتجهيز بنية الهيكل الخاص بصفحة البداية
-  container.innerHTML = `
+    // تفريغ الحاوية وتجهيز بنية الهيكل الخاص بصفحة البداية
+    container.innerHTML = `
 
 
     <section class="home-hero">
@@ -29,23 +29,23 @@ export function renderHome(container) {
     <div dir="rtl" class="tech-tracks-grid" id="main-tech-grid">
 
 
-        <div class="premium-card tech-track-card" data-tech="javascript" role="button" aria-label="مسار JavaScript">
+        <div class="premium-card tech-track-card" data-tech="javascript" role="button" aria-label="مسار JavaScript" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
 
             <model-viewer src="assets/3D/JS.glb" auto-rotate interaction-prompt="none" rotation-per-second="50deg"
                 camera-controls disable-zoom shadow-intensity="1" exposure="1" environment-image="neutral"
-                style="height: 150px; display: block; margin: 0 auto;"></model-viewer>
+                style="width: 100%; height: 150px; display: block; margin: 0 auto;"></model-viewer>
 
             <span class="track-title" style="color: var(--text-primary); font-size: 1.3rem; margin-top: 0.5rem; letter-spacing: 1px;">JavaScript</span>
 
-            <p class="track-desc" >منطق صفحات الويب</p>
+            <p class="track-desc">منطق صفحات الويب</p>
         </div>
 
 
-        <div class="premium-card tech-track-card" data-tech="css" role="button" aria-label="مسار CSS">
+        <div class="premium-card tech-track-card" data-tech="css" role="button" aria-label="مسار CSS" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
 
             <model-viewer src="assets/3D/CSS.glb" auto-rotate interaction-prompt="none" rotation-per-second="-50deg"
                 camera-controls disable-zoom shadow-intensity="1" exposure="1" environment-image="neutral"
-                style="height: 150px; display: block; margin: 0 auto;"></model-viewer>
+                style="width: 100%; height: 150px; display: block; margin: 0 auto;"></model-viewer>
 
             <span class="track-title"
                 style="color: var(--text-primary); font-size: 1.3rem; margin-top: 0.5rem; letter-spacing: 1px;">CSS3</span>
@@ -55,11 +55,11 @@ export function renderHome(container) {
         </div>
 
 
-        <div class="premium-card tech-track-card" data-tech="html" role="button" aria-label="مسار HTML">
+        <div class="premium-card tech-track-card" data-tech="html" role="button" aria-label="مسار HTML" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
 
             <model-viewer src="assets/3D/HTML.glb" auto-rotate interaction-prompt="none" rotation-per-second="50deg"
                 camera-controls disable-zoom shadow-intensity="1" exposure="1" environment-image="neutral"
-                style="height: 150px; display: block; margin: 0 auto;"></model-viewer>
+                style="width: 100%; height: 150px; display: block; margin: 0 auto;"></model-viewer>
 
             <span class="track-title"
                 style="color: var(--text-primary); font-size: 1.3rem; margin-top: 0.5rem; letter-spacing: 1px;">HTML5</span>
@@ -73,33 +73,33 @@ export function renderHome(container) {
 
 
 `;
-  const icon = container.querySelector('[data-tech="javascript"]');
-  const lastAnimation = container.querySelector(".jt1");
+    const icon = container.querySelector('[data-tech="javascript"]');
+    const lastAnimation = container.querySelector(".jt1");
 
-  if (icon && lastAnimation) {
+    if (icon && lastAnimation) {
 
-    icon.addEventListener("mouseenter", () => {
+        icon.addEventListener("mouseenter", () => {
 
-      if (icon.classList.contains("playing")) return;
+            if (icon.classList.contains("playing")) return;
 
-      icon.classList.add("playing");
+            icon.classList.add("playing");
 
+        });
+
+        lastAnimation.addEventListener("animationend", () => {
+
+            icon.classList.remove("playing");
+
+        });
+
+    }
+    const trackCards = container.querySelectorAll('.tech-track-card');
+    trackCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const tech = card.getAttribute('data-tech');
+            window.location.hash = `#/track/${tech}`;
+        });
     });
-
-    lastAnimation.addEventListener("animationend", () => {
-
-      icon.classList.remove("playing");
-
-    });
-
-  }
-  const trackCards = container.querySelectorAll('.tech-track-card');
-  trackCards.forEach(card => {
-    card.addEventListener('click', () => {
-      const tech = card.getAttribute('data-tech');
-      window.location.hash = `#/track/${tech}`;
-    });
-  });
 }
 
 
