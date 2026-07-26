@@ -55,6 +55,7 @@ import { keyframeAnimationsData } from './Css/keyframe-animations.js';
 import { variablesCustomPropertiesData } from './Css/variables-custom-properties.js';
 import { responsiveMediaQueriesData } from './Css/responsive-media-queries.js';
 import { mathFunctionsData } from './Css/math-functions.js';
+import { filtersEffectsData } from './Css/filters-effects.js';
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -106,4 +107,5 @@ export const registry = {
     'css-variables-custom-properties': variablesCustomPropertiesData,
     'css-responsive-media-queries': responsiveMediaQueriesData,
     'css-math-functions': mathFunctionsData,
+    'css-filters-effects': filtersEffectsData,
 };
