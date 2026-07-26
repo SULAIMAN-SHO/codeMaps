@@ -38,6 +38,7 @@ import { navigationLinksData } from './html/navigation-links.js';
 import { mediaAssetsData } from './html/media-assets.js';
 import { formsInputsData } from './html/forms-inputs.js';
 import { tablesData } from './html/tables-data.js';
+import { interactiveData } from './html/interactive.js';
 
 // 5. بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -73,5 +74,6 @@ export const registry = {
     'html-navigation-links': navigationLinksData,
     'html-media-assets': mediaAssetsData,
     'html-forms-inputs': formsInputsData,
-    'html-tables-data': tablesData ,
+    'html-tables-data': tablesData,
+    'html-interactive': interactiveData,
 };
