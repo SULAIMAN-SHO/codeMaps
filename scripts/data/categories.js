@@ -223,6 +223,13 @@ export const categories = [
         tech: 'css'
     },
     {
+        id: 'css-keyframe-animations',
+        name: 'Keyframe Animations',
+        arabicName: 'التحريك بالإطارات المفتاحية',
+        desc: 'تصميم وإدارة التحريكات المعقدة باستخدام قاعدة @keyframes، وضبط خيارات السرعة والتكرار وتطبيقات تسريع الـ GPU.',
+        tech: 'css'
+    },
+    {
         id: 'css-box-model-sizing',
         name: 'The Box Model & Sizing',
         arabicName: 'نموذج الصندوق والأبعاد',

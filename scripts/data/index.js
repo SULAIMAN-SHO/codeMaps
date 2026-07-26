@@ -51,6 +51,7 @@ import { displayPositioningData } from './Css/display-positioning.js';
 import { flexboxLayoutData } from './Css/flexbox-layout.js';
 import { gridLayoutData } from './Css/grid-layout.js';
 import { transformsTransitionsData } from './Css/transforms-transitions.js';
+import { keyframeAnimationsData } from './Css/keyframe-animations.js';
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -97,5 +98,6 @@ export const registry = {
     'css-display-positioning': displayPositioningData,
     'css-flexbox': flexboxLayoutData,
     'css-grid': gridLayoutData,
-    'css-transitions-animations': transformsTransitionsData
+    'css-transitions-animations': transformsTransitionsData,
+    'css-keyframe-animations': keyframeAnimationsData,
 };
