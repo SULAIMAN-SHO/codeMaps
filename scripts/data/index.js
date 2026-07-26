@@ -29,6 +29,7 @@ import { asyncPromisesData } from './advanced/async-promises.js';
 import { errorHandlingData } from './advanced/error-handling.js';
 import { modulesData } from './advanced/modules.js';
 import { oopClassesData } from './advanced/oop-classes.js';
+import { jsonData } from './advanced/json.js';
 
 //Todo HTML
 import { documentSetupData } from './Html/document-setup.js';
@@ -84,8 +85,10 @@ export const registry = {
     events: eventsData,
     bom: bomWindowData,
     storage: storageData,
+    'browser-apis': Array.isArray(fetchMethod) ? fetchMethod : [fetchMethod],
     'async-await': asyncPromisesData,
     errors: errorHandlingData,
+    json: jsonData,
     modules: modulesData,
     oop: oopClassesData,
     'html-document-setup': documentSetupData,

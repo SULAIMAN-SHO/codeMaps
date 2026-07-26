@@ -4,7 +4,39 @@ import { sanitizeHTML } from '../utils/helpers.js'; // استيراد دالة �
 
 export class CardComponent {
   /**
-   * إنشاء بطاقة تصنيف ديناميكية لصفحة المعرض الرئيسية مدمج بها الرسم البصري والعد الفعلي للدوال
+   * إرجاع المصطلحات العربية المناسبة حسب المسار التقني (JavaScript, HTML, CSS)
+   * @param {string} tech - المسار التقني للقسم
+   * @returns {Object} - مصفوفة المسميات (مفرد، مثنى، جمع، جمع مع معطوف)
+   */
+  static getTerminologies(tech) {
+    switch (tech) {
+      case 'html':
+        return {
+          single: 'وسم واحد جاهز',
+          dual: 'وسمان جاهزان',
+          plural: 'وسوم جاهزة',
+          singularOverTen: 'وسم جاهز'
+        };
+      case 'css':
+        return {
+          single: 'خاصية واحدة جاهزة',
+          dual: 'خاصيتان جاهزتان',
+          plural: 'خصائص جاهزة',
+          singularOverTen: 'خاصية جاهزة'
+        };
+      case 'javascript':
+      default:
+        return {
+          single: 'دالة واحدة جاهزة',
+          dual: 'دالتان جاهزتان',
+          plural: 'دوال جاهزة',
+          singularOverTen: 'دالة جاهزة'
+        };
+    }
+  }
+
+  /**
+   * إنشاء بطاقة تصنيف ديناميكية لصفحة المعرض الرئيسية مدمج بها الرسم البصري والعد الفعلي للعناصر
    * @param {Object} category - معلومات القسم البرمجي
    * @returns {HTMLElement} - عنصر البطاقة البرمجية الجاهز للحقن في الـ DOM
    */
@@ -17,24 +49,28 @@ export class CardComponent {
     // جلب الرسم التوضيحي المخصص للقسم ليكون جزءاً أصيلاً من هويته المعمارية
     const svgIllustration = Illustrations.get(category.id);
 
-    // جلب دوال القسم من الفهرس المركزي وحساب عددها الفعلي
+    // جلب عناصر القسم من الفهرس المركزي وحساب عددها الفعلي
     const methodsList = registry[category.id] || [];
     const count = methodsList.length;
 
-    // صياغة النص الإحصائي باللغة العربية السليمة بناءً على عدد الدوال الفعلي
+    // جلب المصطلحات العربية المناسبة لتقنية القسم الحالية (html / css / javascript)
+    const terms = CardComponent.getTerminologies(category.tech);
+
+    // صياغة النص الإحصائي باللغة العربية السليمة والمطابقة للتقنية
     let footerText = 'قيد الإنشاء';
     if (count === 1) {
-      footerText = 'دالة واحدة جاهزة';
+      footerText = terms.single;
     } else if (count === 2) {
-      footerText = 'دالتان جاهزتان';
+      footerText = terms.dual;
     } else if (count >= 3 && count <= 10) {
-      footerText = `${count} دوال جاهزة`;
+      footerText = `${count} ${terms.plural}`;
     } else if (count > 10) {
-      footerText = `${count} دالة جاهزة`;
+      footerText = `${count} ${terms.singularOverTen}`;
     }
 
+    // إصلاح الـ inline styles في حاوية الـ svg وتطبيق flex بشكل صحيح
     card.innerHTML = `
-      <div class="card-illustration-wrapper" style="margin-bottom: 1.25rem; flex; justify-content: center; align-items: center; background-color: rgba(255,255,255,0.01); border-radius: var(--radius-sm); border: 1px dashed rgba(255,255,255,0.02); padding: 0.5rem 0; width: 100%;">
+      <div class="card-illustration-wrapper" style="margin-bottom: 1.25rem; display: flex; justify-content: center; align-items: center; background-color: rgba(255,255,255,0.01); border-radius: var(--radius-sm); border: 1px dashed rgba(255,255,255,0.02); padding: 0.5rem 0; width: 100%;">
         ${svgIllustration}
       </div>
       <div class="card-header">
@@ -57,16 +93,16 @@ export class CardComponent {
   }
 
   /**
-   * إنشاء بطاقة دالة ديناميكية داخل صفحة القسم لعرض المفاهيم والطبقات
-   * @param {Object} method - بيانات الدالة والطبقات السبعة الخاصة بها
+   * إنشاء بطاقة دالة/عنصر ديناميكية داخل صفحة القسم لعرض المفاهيم والطبقات
+   * @param {Object} method - بيانات الدالة أو الخاصية
    * @param {Function} onClickCallback - دالة التنفيذ العكسية عند النقر لفتح المودال
-   * @returns {HTMLElement} - عنصر بطاقة الدالة الجاهز للحقن في الـ DOM
+   * @returns {HTMLElement} - عنصر البطاقة الجاهز للحقن في الـ DOM
    */
   static createMethodCard(method, onClickCallback) {
     const card = document.createElement('div');
     card.className = 'premium-card hover-scale';
     card.setAttribute('role', 'button');
-    card.setAttribute('aria-label', `تفاصيل دالة ${method.name}`);
+    card.setAttribute('aria-label', `تفاصيل ${method.name}`);
 
     // تعيين الصعوبة والأهمية لإضفاء التصنيف البصري المريح للمطور
     const difficultyLabel = method.difficulty === 'easy' ? 'سهل' : method.difficulty === 'medium' ? 'متوسط' : 'صعب';
