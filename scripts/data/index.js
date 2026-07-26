@@ -31,14 +31,14 @@ import { modulesData } from './advanced/modules.js';
 import { oopClassesData } from './advanced/oop-classes.js';
 
 //Todo HTML
-import { documentSetupData } from './html/document-setup.js';
-import { semanticLayoutData } from './html/semantic-layout.js';
-import { textContentData } from './html/text-content.js';
-import { navigationLinksData } from './html/navigation-links.js';
-import { mediaAssetsData } from './html/media-assets.js';
-import { formsInputsData } from './html/forms-inputs.js';
-import { tablesData } from './html/tables-data.js';
-import { interactiveData } from './html/interactive.js';
+import { documentSetupData } from './Html/document-setup.js';
+import { semanticLayoutData } from './Html/semantic-layout.js';
+import { textContentData } from './Html/text-content.js';
+import { navigationLinksData } from './Html/navigation-links.js';
+import { mediaAssetsData } from './Html/media-assets.js';
+import { formsInputsData } from './Html/forms-inputs.js';
+import { tablesData } from './Html/tables-data.js';
+import { interactiveData } from './Html/interactive.js';
 
 // 5. بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
