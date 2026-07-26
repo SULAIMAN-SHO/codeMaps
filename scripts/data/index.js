@@ -57,6 +57,8 @@ import { responsiveMediaQueriesData } from './Css/responsive-media-queries.js';
 import { mathFunctionsData } from './Css/math-functions.js';
 import { filtersEffectsData } from './Css/filters-effects.js';
 import { scrollOverflowData } from './Css/scroll-overflow.js';
+import { cascadeScopeData } from './Css/cascade-scope.js';
+import { advancedSelectorsData } from './Css/advanced-selectors.js';
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -104,10 +106,16 @@ export const registry = {
     'css-flexbox': flexboxLayoutData,
     'css-grid': gridLayoutData,
     'css-transitions-animations': transformsTransitionsData,
+    'css-transforms-transitions': transformsTransitionsData,
+    'css-transitions-transforms': transformsTransitionsData,
     'css-keyframe-animations': keyframeAnimationsData,
     'css-variables-custom-properties': variablesCustomPropertiesData,
     'css-responsive-media-queries': responsiveMediaQueriesData,
+    'css-responsive-container-queries': responsiveMediaQueriesData,
     'css-math-functions': mathFunctionsData,
     'css-filters-effects': filtersEffectsData,
     'css-scroll-overflow': scrollOverflowData,
+    'css-cascade-scope': cascadeScopeData,
+    'css-modern-architecture': cascadeScopeData,
+    'css-advanced-selectors': advancedSelectorsData,
 };

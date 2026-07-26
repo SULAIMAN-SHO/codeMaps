@@ -660,8 +660,8 @@ export class Illustrations {
           <text x="170" y="108" fill="#10b981" font-family="var(--font-mono)" font-size="8" font-weight="700" text-anchor="middle">obj</text>
         </svg>
       `,
-       
-    'html-document-setup': `
+
+      'html-document-setup': `
         <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
           <defs>
             <linearGradient id="docGlow" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -898,7 +898,405 @@ export class Illustrations {
           <text x="120" y="118" fill="#f3f4f6" font-family="var(--font-mono)" font-size="8" font-weight="700" text-anchor="middle">ARIA &amp; SEO</text>
         </svg>
       `
+      ,
+      'css-fundamentals-selectors': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="cssSelGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="100%" stop-color="#8b5cf6" />
+            </linearGradient>
+            <filter id="cssSelBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="cssSelGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#cssSelBlur)">
+            <rect x="35" y="40" width="50" height="50" rx="10" fill="url(#cssSelGlass)" stroke="url(#cssSelGlow)" stroke-width="1.5" />
+            <rect x="95" y="40" width="50" height="50" rx="10" fill="url(#cssSelGlass)" stroke="url(#cssSelGlow)" stroke-width="1.5" />
+            <rect x="155" y="40" width="50" height="50" rx="10" fill="url(#cssSelGlass)" stroke="url(#cssSelGlow)" stroke-width="1.5" />
+          </g>
+          <text x="60" y="70" fill="#f3f4f6" font-family="var(--font-mono)" font-size="14" font-weight="700" text-anchor="middle">.cls</text>
+          <text x="120" y="70" fill="#38bdf8" font-family="var(--font-mono)" font-size="14" font-weight="700" text-anchor="middle">#id</text>
+          <text x="180" y="72" fill="#a855f7" font-family="var(--font-mono)" font-size="16" font-weight="700" text-anchor="middle">*</text>
+        </svg>
+      `,
 
+      'css-advanced-selectors': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="advSelGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a855f7" />
+              <stop offset="100%" stop-color="#00f2fe" />
+            </linearGradient>
+            <filter id="advSelBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="advSelGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <path d="M 60,70 L 120,40 L 180,70 L 120,100 Z" stroke="url(#advSelGlow)" stroke-width="1.5" opacity="0.4" />
+          <g filter="url(#advSelBlur)">
+            <circle cx="120" cy="70" r="28" fill="url(#advSelGlass)" stroke="url(#advSelGlow)" stroke-width="1.5" />
+          </g>
+          <text x="120" y="74" fill="#f3f4f6" font-family="var(--font-mono)" font-size="11" font-weight="700" text-anchor="middle">:has()</text>
+        </svg>
+      `,
+
+      'css-box-model-sizing': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="boxGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#10b981" />
+            </linearGradient>
+            <filter id="boxBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="boxGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#boxBlur)">
+            <rect x="40" y="25" width="160" height="90" rx="8" fill="none" stroke="url(#boxGlow)" stroke-width="1" stroke-dasharray="4 3" opacity="0.5" />
+            <rect x="60" y="38" width="120" height="64" rx="6" fill="none" stroke="url(#boxGlow)" stroke-width="1.5" />
+            <rect x="80" y="50" width="80" height="40" rx="4" fill="url(#boxGlass)" stroke="url(#boxGlow)" stroke-width="1.5" />
+          </g>
+          <text x="120" y="74" fill="#f3f4f6" font-family="var(--font-mono)" font-size="9" font-weight="700" text-anchor="middle">Content</text>
+        </svg>
+      `,
+
+      'css-colors-backgrounds-shadows': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="colGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ec4899" />
+              <stop offset="50%" stop-color="#a855f7" />
+              <stop offset="100%" stop-color="#3b82f6" />
+            </linearGradient>
+            <filter id="colBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="colGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.15)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#colBlur)">
+            <circle cx="90" cy="70" r="30" fill="rgba(236, 72, 153, 0.3)" stroke="url(#colGlow)" stroke-width="1.5" />
+            <circle cx="130" cy="55" r="30" fill="rgba(168, 85, 247, 0.3)" stroke="url(#colGlow)" stroke-width="1.5" />
+            <circle cx="150" cy="80" r="30" fill="rgba(59, 130, 246, 0.3)" stroke="url(#colGlow)" stroke-width="1.5" />
+          </g>
+          <text x="120" y="118" fill="#f3f4f6" font-family="var(--font-mono)" font-size="8" font-weight="700" text-anchor="middle">oklch() &amp; Shadow</text>
+        </svg>
+      `,
+
+      'css-typography-fonts': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="typeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f59e0b" />
+              <stop offset="100%" stop-color="#ef4444" />
+            </linearGradient>
+            <filter id="typeBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="typeGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#typeBlur)">
+            <rect x="55" y="30" width="130" height="80" rx="10" fill="url(#typeGlass)" stroke="url(#typeGlow)" stroke-width="1.5" />
+          </g>
+          <text x="100" y="80" fill="url(#typeGlow)" font-family="Georgia, serif" font-size="42" font-weight="700">A</text>
+          <text x="140" y="80" fill="#f3f4f6" font-family="var(--font-mono)" font-size="28" font-weight="400">a</text>
+          <line x1="70" y1="92" x2="170" y2="92" stroke="url(#typeGlow)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6" />
+        </svg>
+      `,
+
+      'css-display-positioning': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="posGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="100%" stop-color="#6366f1" />
+            </linearGradient>
+            <filter id="posBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="posGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#posBlur)">
+            <rect x="45" y="55" width="100" height="60" rx="8" fill="url(#posGlass)" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1" />
+            <rect x="95" y="25" width="100" height="60" rx="8" fill="url(#posGlass)" stroke="url(#posGlow)" stroke-width="1.5" />
+          </g>
+          <text x="145" y="60" fill="#f3f4f6" font-family="var(--font-mono)" font-size="9" font-weight="700" text-anchor="middle">z-index</text>
+        </svg>
+      `,
+
+      'css-flexbox': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="flexGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#10b981" />
+              <stop offset="100%" stop-color="#3b82f6" />
+            </linearGradient>
+            <filter id="flexBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="flexGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#flexBlur)">
+            <rect x="40" y="35" width="160" height="70" rx="10" fill="none" stroke="url(#flexGlow)" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.4" />
+            <rect x="52" y="47" width="35" height="46" rx="6" fill="url(#flexGlass)" stroke="url(#flexGlow)" stroke-width="1.5" />
+            <rect x="97" y="47" width="50" height="46" rx="6" fill="url(#flexGlass)" stroke="url(#flexGlow)" stroke-width="1.5" />
+            <rect x="157" y="47" width="31" height="46" rx="6" fill="url(#flexGlass)" stroke="url(#flexGlow)" stroke-width="1.5" />
+          </g>
+          <text x="122" y="74" fill="#f3f4f6" font-family="var(--font-mono)" font-size="9" font-weight="700" text-anchor="middle">flex: 1</text>
+        </svg>
+      `,
+
+      'css-grid': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="gridGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f2fe" />
+              <stop offset="100%" stop-color="#9333ea" />
+            </linearGradient>
+            <filter id="gridBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="gridGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#gridBlur)">
+            <rect x="45" y="30" width="150" height="80" rx="8" fill="none" stroke="url(#gridGlow)" stroke-width="1.5" opacity="0.3" />
+            <rect x="52" y="37" width="42" height="32" rx="4" fill="url(#gridGlass)" stroke="url(#gridGlow)" stroke-width="1.5" />
+            <rect x="100" y="37" width="88" height="32" rx="4" fill="url(#gridGlass)" stroke="url(#gridGlow)" stroke-width="1.5" />
+            <rect x="52" y="75" width="88" height="28" rx="4" fill="url(#gridGlass)" stroke="url(#gridGlow)" stroke-width="1.5" />
+            <rect x="146" y="75" width="42" height="28" rx="4" fill="url(#gridGlass)" stroke="url(#gridGlow)" stroke-width="1.5" />
+          </g>
+          <text x="144" y="57" fill="#f3f4f6" font-family="var(--font-mono)" font-size="8" font-weight="700" text-anchor="middle">1fr 2fr</text>
+        </svg>
+      `,
+
+      'css-responsive-container-queries': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="respGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="100%" stop-color="#f59e0b" />
+            </linearGradient>
+            <filter id="respBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="respGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#respBlur)">
+            <rect x="40" y="25" width="160" height="90" rx="10" fill="url(#respGlass)" stroke="url(#respGlow)" stroke-width="1.5" />
+            <rect x="95" y="40" width="50" height="60" rx="6" fill="url(#respGlass)" stroke="url(#respGlow)" stroke-width="1.5" />
+          </g>
+          <text x="120" y="74" fill="#f3f4f6" font-family="var(--font-mono)" font-size="10" font-weight="700" text-anchor="middle">@container</text>
+        </svg>
+      `,
+
+      'css-math-functions': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="mathGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#10b981" />
+              <stop offset="100%" stop-color="#6366f1" />
+            </linearGradient>
+            <filter id="mathBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="mathGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#mathBlur)">
+            <rect x="50" y="35" width="140" height="70" rx="10" fill="url(#mathGlass)" stroke="url(#mathGlow)" stroke-width="1.5" />
+          </g>
+          <text x="120" y="65" fill="#f3f4f6" font-family="var(--font-mono)" font-size="11" font-weight="700" text-anchor="middle">clamp(1rem, 4vw, 3rem)</text>
+          <text x="120" y="85" fill="#10b981" font-family="var(--font-mono)" font-size="9" font-weight="700" text-anchor="middle">calc(100% - 20px)</text>
+        </svg>
+      `,
+
+      'css-transitions-transforms': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="trGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f59e0b" />
+              <stop offset="100%" stop-color="#ec4899" />
+            </linearGradient>
+            <filter id="trBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="trGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <path d="M 50,85 Q 120,25 190,85" stroke="url(#trGlow)" stroke-width="2" stroke-dasharray="4 4" opacity="0.6" />
+          <g filter="url(#trBlur)">
+            <rect x="95" y="40" width="50" height="50" rx="8" fill="url(#trGlass)" stroke="url(#trGlow)" stroke-width="1.5" transform="rotate(15 120 65)" />
+          </g>
+          <text x="120" y="70" fill="#f3f4f6" font-family="var(--font-mono)" font-size="9" font-weight="700" text-anchor="middle">3D</text>
+        </svg>
+      `,
+
+      'css-keyframe-animations': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="kfGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a855f7" />
+              <stop offset="100%" stop-color="#3b82f6" />
+            </linearGradient>
+            <filter id="kfBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="kfGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <line x1="40" y1="70" x2="200" y2="70" stroke="url(#kfGlow)" stroke-width="2" opacity="0.4" />
+          <g filter="url(#kfBlur)">
+            <polygon points="60,70 70,55 80,70 70,85" fill="url(#kfGlass)" stroke="url(#kfGlow)" stroke-width="1.5" />
+            <polygon points="120,70 130,50 140,70 130,90" fill="url(#kfGlass)" stroke="url(#kfGlow)" stroke-width="2" />
+            <polygon points="180,70 190,55 200,70 190,85" fill="url(#kfGlass)" stroke="url(#kfGlow)" stroke-width="1.5" />
+          </g>
+          <text x="130" y="112" fill="#f3f4f6" font-family="var(--font-mono)" font-size="8" font-weight="700" text-anchor="middle">@keyframes</text>
+        </svg>
+      `,
+
+      'css-filters-effects': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="fltGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f2fe" />
+              <stop offset="100%" stop-color="#4facfe" />
+            </linearGradient>
+            <filter id="fltBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="8" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="fltGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.2)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.03)" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="70" r="35" fill="url(#fltGlow)" opacity="0.6" />
+          <g filter="url(#fltBlur)">
+            <rect x="110" y="35" width="80" height="70" rx="12" fill="url(#fltGlass)" stroke="url(#fltGlow)" stroke-width="1.5" />
+          </g>
+          <text x="150" y="75" fill="#f3f4f6" font-family="var(--font-mono)" font-size="8" font-weight="700" text-anchor="middle">Glass</text>
+        </svg>
+      `,
+
+      'css-scroll-overflow': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="scrGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#10b981" />
+            </linearGradient>
+            <filter id="scrBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="scrGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#scrBlur)">
+            <rect x="60" y="30" width="120" height="80" rx="10" fill="url(#scrGlass)" stroke="url(#scrGlow)" stroke-width="1.5" />
+            <rect x="165" y="40" width="6" height="30" rx="3" fill="url(#scrGlow)" />
+          </g>
+          <path d="M 120,50 L 120,80 M 115,75 L 120,80 L 125,75" stroke="#f3f4f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      `,
+
+      'css-variables-custom-properties': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="varCssGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="100%" stop-color="#a855f7" />
+            </linearGradient>
+            <filter id="varCssBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="varCssGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#varCssBlur)">
+            <rect x="50" y="35" width="140" height="70" rx="10" fill="url(#varCssGlass)" stroke="url(#varCssGlow)" stroke-width="1.5" />
+          </g>
+          <text x="120" y="66" fill="url(#varCssGlow)" font-family="var(--font-mono)" font-size="12" font-weight="700" text-anchor="middle">--primary-color</text>
+          <text x="120" y="85" fill="#f3f4f6" font-family="var(--font-mono)" font-size="10" font-weight="700" text-anchor="middle">var(--primary-color)</text>
+        </svg>
+      `,
+
+      'css-modern-architecture': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="archGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#10b981" />
+              <stop offset="100%" stop-color="#38bdf8" />
+            </linearGradient>
+            <filter id="archBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="archGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#archBlur)">
+            <polygon points="120,25 180,50 120,75 60,50" fill="url(#archGlass)" stroke="url(#archGlow)" stroke-width="1.5" />
+            <polygon points="120,50 180,75 120,100 60,75" fill="url(#archGlass)" stroke="url(#archGlow)" stroke-width="1.5" />
+          </g>
+          <text x="120" y="53" fill="#f3f4f6" font-family="var(--font-mono)" font-size="9" font-weight="700" text-anchor="middle">@layer</text>
+          <text x="120" y="78" fill="#10b981" font-family="var(--font-mono)" font-size="9" font-weight="700" text-anchor="middle">@scope</text>
+        </svg>
+      `
 
     };
 
