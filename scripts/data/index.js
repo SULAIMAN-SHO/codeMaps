@@ -45,6 +45,8 @@ import { seoPerformanceData } from './Html/seo-performance.js';
 // استيراد كتل بيانات مسار CSS
 import { cssFundamentalsSelectorsData } from './Css/fundamentals-selectors.js';
 import { boxModelSizingData } from './Css/box-model-sizing.js';
+import { colorsBackgroundsShadowsData } from './Css/colors-backgrounds-shadows.js';
+import { typographyFontsData } from './Css/typography-fonts.js';
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -86,4 +88,6 @@ export const registry = {
     'html-seo-performance': seoPerformanceData,
     'css-fundamentals-selectors': cssFundamentalsSelectorsData,
     'css-box-model-sizing': boxModelSizingData,
+    'css-colors-backgrounds-shadows': colorsBackgroundsShadowsData,
+    'css-typography-fonts': typographyFontsData,
 };
