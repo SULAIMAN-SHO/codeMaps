@@ -53,6 +53,7 @@ import { gridLayoutData } from './Css/grid-layout.js';
 import { transformsTransitionsData } from './Css/transforms-transitions.js';
 import { keyframeAnimationsData } from './Css/keyframe-animations.js';
 import { variablesCustomPropertiesData } from './Css/variables-custom-properties.js';
+import { responsiveMediaQueriesData } from './Css/responsive-media-queries.js';
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -102,4 +103,5 @@ export const registry = {
     'css-transitions-animations': transformsTransitionsData,
     'css-keyframe-animations': keyframeAnimationsData,
     'css-variables-custom-properties': variablesCustomPropertiesData,
+    'css-responsive-media-queries': responsiveMediaQueriesData,
 };

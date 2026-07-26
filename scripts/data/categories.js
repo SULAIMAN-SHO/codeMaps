@@ -213,90 +213,118 @@ export const categories = [
         tech: 'html'
     },
     // ==========================================
-    // أقسام مسار CSS (CSS Roadmap Categories)
+    // أقسام مسار CSS المكتملة (CSS Roadmap Categories)
     // ==========================================
     {
         id: 'css-fundamentals-selectors',
-        name: 'Fundamentals & Selectors',
-        arabicName: 'أساسيات CSS والمحددات',
-        desc: 'فهم شلال التتابع، الوراثة، وقوة التحديد، مع احتراف استخدام المحددات المركبة والفئات والعناصر الوهمية الحديثة.',
+        name: 'Fundamentals & Basic Selectors',
+        arabicName: 'أساسيات CSS والمحددات الأولية',
+        desc: 'فهم شلال التتابع، الوراثة، وقوة التحديد، مع استخدام محددات العناصر والكلاسات والمعرفات.',
         tech: 'css'
     },
     {
-        id: 'css-keyframe-animations',
-        name: 'Keyframe Animations',
-        arabicName: 'التحريك بالإطارات المفتاحية',
-        desc: 'تصميم وإدارة التحريكات المعقدة باستخدام قاعدة @keyframes، وضبط خيارات السرعة والتكرار وتطبيقات تسريع الـ GPU.',
-        tech: 'css'
-    },
-    {
-        id: 'css-variables-custom-properties',
-        name: 'CSS Variables & Custom Properties',
-        arabicName: 'متغيرات CSS والخصائص المخصصة',
-        desc: 'احتراف إعلان واستخدام المتغيرات المخصصة، وإدارة الثيمات الديناميكية، والتفاعل مع JS، وقاعدة @property الحديثة.',
+        id: 'css-advanced-selectors',
+        name: 'Advanced & Logical Selectors',
+        arabicName: 'المحددات المتقدمة والمنطقية',
+        desc: 'احتراف المحدد الأب الثوري :has()، والمحددات المنطقية :is() و :where() والفئات الوهمية المعاصرة.',
         tech: 'css'
     },
     {
         id: 'css-box-model-sizing',
         name: 'The Box Model & Sizing',
         arabicName: 'نموذج الصندوق والأبعاد',
-        desc: 'استكشاف الهوامش الداخلية والخارجية والحدود، والتحكم بدقة أبعاد العناصر عبر box-sizing و calc و aspect-ratio.',
+        desc: 'استكشاف الهوامش الداخلية والخارجية والحدود، والتحكم بدقة أبعاد العناصر عبر box-sizing و aspect-ratio.',
         tech: 'css'
     },
     {
         id: 'css-colors-backgrounds-shadows',
         name: 'Colors, Backgrounds & Shadows',
         arabicName: 'الألوان والخلفيات والظلال',
-        desc: 'إتقان أنظمة الألوان الحديثة OKLCH و HSL، وصياغة التدرجات الملونة، الخلفيات الزجاجية، وتأثيرات الظلال ثلاثية الأبعاد.',
+        desc: 'إتقان أنظمة الألوان الحديثة OKLCH و HSL، وصياغة التدرجات الملونة والظلال ثلاثية الأبعاد.',
         tech: 'css'
     },
     {
         id: 'css-typography-fonts',
         name: 'Typography & Web Fonts',
         arabicName: 'التنسيقات النصية والخطوط',
-        desc: 'ضبط الخطوط المتغيرة Web Fonts، أبعاد السطور والمحاذاة النصية، والتحكم بخصائص المقروئية والتفاف النصوص.',
+        desc: 'ضبط الخطوط المتغيرة Web Fonts، أبعاد السطور والمحاذاة النصية، والتحكم بالمقروئية وتفاف النصوص.',
         tech: 'css'
     },
     {
         id: 'css-display-positioning',
         name: 'Display, Positioning & Stacking',
-        arabicName: 'العرض والتطبيق والطبقات',
-        desc: 'فهم سلوكيات العرض display وتتبع نظام التموضع المباشر والنسبي والمثبت مع التحكم بسياق الفرز والمستويات z-index.',
+        arabicName: 'العرض والتموضع والطبقات',
+        desc: 'فهم سلوكيات العرض display ونظام التموضع المباشر والنسبي والمثبت والتحكم بسياق الفرز z-index.',
         tech: 'css'
     },
     {
         id: 'css-flexbox',
         name: 'Flexbox Layout',
         arabicName: 'تخطيط العناصر المرن',
-        desc: 'بناء واجهات أحادية البعد متجاوبة ومرنة وتوزيع المساحات والمحاذاة التلقائية لعناصر الواجهة بكفاءة عالية.',
+        desc: 'بناء واجهات أحادية البعد متجاوبة ومرنة وتوزيع المساحات والمحاذاة التلقائية لعناصر الواجهة.',
         tech: 'css'
     },
     {
         id: 'css-grid',
         name: 'CSS Grid Architecture',
         arabicName: 'معمارية الشبكات المتقدمة',
-        desc: 'تصميم شبكات ثنائية الأبعاد معقدة باستخدام الصفوف والأعمدة والمساحات المسماة لبناء تخطيطات الواجهات الضخمة.',
+        desc: 'تصميم شبكات ثنائية الأبعاد معقدة باستخدام الصفوف والأعمدة والمساحات المسماة لبناء التخطيطات الكبيرة.',
         tech: 'css'
     },
     {
         id: 'css-responsive-container-queries',
         name: 'Responsive Design & Container Queries',
         arabicName: 'التصميم المتجاوب واستعلامات الحاوية',
-        desc: 'إنشاء مكونات متكيفة استناداً لعرض أجهزة الموبايل Media Queries واستعلامات الحجم الفرعي للمكونات Container Queries.',
+        desc: 'إنشاء مكونات متكيفة استناداً لعرض الأجهزة Media Queries واستعلامات الحجم الفرعي للمكونات Container Queries.',
         tech: 'css'
     },
     {
-        id: 'css-transitions-animations',
-        name: 'Transitions & Animations',
-        arabicName: 'الانتقالات والتحريك البصري',
-        desc: 'إضفاء التفاعلية البصرية عبر الانتقالات الانسيابية والتحريك المتقدم باستخدام Keyframes وتحريك العناصر ثلاثياً.',
+        id: 'css-math-functions',
+        name: 'CSS Math & Fluid Expressions',
+        arabicName: 'دوال الحساب والسيولة الديناميكية',
+        desc: 'صياغة القياسات المرنة والتصميم السيال باستخدام calc و clamp و min و max والدوال المثلثية المعاصرة.',
+        tech: 'css'
+    },
+    {
+        id: 'css-transitions-transforms',
+        name: 'Transitions & Transforms',
+        arabicName: 'الانتقالات والتحويلات البصرية',
+        desc: 'إضفاء التفاعلية البصرية عبر الانتقالات الانسيابية والتحويلات ثنائية وثلاثية الأبعاد المعززة بـ GPU.',
+        tech: 'css'
+    },
+    {
+        id: 'css-keyframe-animations',
+        name: 'Keyframe Animations',
+        arabicName: 'التحريك بالإطارات المفتاحية',
+        desc: 'تصميم وإدارة التحريكات المعقدة باستخدام قاعدة @keyframes وضبط خيارات السرعة والتكرار والأداء.',
+        tech: 'css'
+    },
+    {
+        id: 'css-filters-effects',
+        name: 'Filters, Blending & Masks',
+        arabicName: 'الفلاتر والدمج والأقنعة البصرية',
+        desc: 'تطبيق تأثيرات خلفيات الزجاج backdrop-filter، أنماط الدمج mix-blend-mode، والقص بالأقنعة clip-path.',
+        tech: 'css'
+    },
+    {
+        id: 'css-scroll-overflow',
+        name: 'Scroll Behavior & Scroll Animations',
+        arabicName: 'التحكم بالتمرير وأنيميشن الشاشة',
+        desc: 'التحكم بسلوك السكرول scroll-snap، تثبيت الهوامش scrollbar-gutter، والتحريك المرتبط بالتمرير.',
+        tech: 'css'
+    },
+    {
+        id: 'css-variables-custom-properties',
+        name: 'CSS Variables & Custom Properties',
+        arabicName: 'متغيرات CSS والخصائص المخصصة',
+        desc: 'إعلان واستخدام المتغيرات المخصصة، وإدارة الثيمات الديناميكية، والتفاعل مع JS وقاعدة @property.',
         tech: 'css'
     },
     {
         id: 'css-modern-architecture',
-        name: 'Modern CSS & Architecture',
-        arabicName: 'معمارية CSS الحديثة والمعاصرة',
-        desc: 'احتراف التداخل الأصلي CSS Nesting، والمتغيرات Custom Properties، والتقسيم الطبقي Cascade Layers ونظام BEM.',
+        name: 'Modern Architecture, Layers & Scope',
+        arabicName: 'المعمارية الحديثة والطبقات والنطاق',
+        desc: 'احتراف التداخل الأصلي Native Nesting، التقسيم الطبقي @layer، والنطاق المعزول @scope.',
         tech: 'css'
     }
 ];
