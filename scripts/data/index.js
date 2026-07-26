@@ -39,6 +39,7 @@ import { mediaAssetsData } from './Html/media-assets.js';
 import { formsInputsData } from './Html/forms-inputs.js';
 import { tablesData } from './Html/tables-data.js';
 import { interactiveData } from './Html/interactive.js';
+import { accessibilityMetaData } from './Html/accessibility-meta.js';
 
 // 5. بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -76,4 +77,5 @@ export const registry = {
     'html-forms-inputs': formsInputsData,
     'html-tables-data': tablesData,
     'html-interactive': interactiveData,
+    'html-accessibility-meta': accessibilityMetaData,
 };
