@@ -211,5 +211,78 @@ export const categories = [
         arabicName: 'إمكانية الوصول والـ SEO',
         desc: 'تحسين قابلية الوصول وتهيئة الصفحة لمحركات البحث باستخدام وسوم ARIA والبيانات الوصفية بالشكل الصحيح.',
         tech: 'html'
+    },
+    // ==========================================
+    // أقسام مسار CSS (CSS Roadmap Categories)
+    // ==========================================
+    {
+        id: 'css-fundamentals-selectors',
+        name: 'Fundamentals & Selectors',
+        arabicName: 'أساسيات CSS والمحددات',
+        desc: 'فهم شلال التتابع، الوراثة، وقوة التحديد، مع احتراف استخدام المحددات المركبة والفئات والعناصر الوهمية الحديثة.',
+        tech: 'css'
+    },
+    {
+        id: 'css-box-model-sizing',
+        name: 'The Box Model & Sizing',
+        arabicName: 'نموذج الصندوق والأبعاد',
+        desc: 'استكشاف الهوامش الداخلية والخارجية والحدود، والتحكم بدقة أبعاد العناصر عبر box-sizing و calc و aspect-ratio.',
+        tech: 'css'
+    },
+    {
+        id: 'css-colors-backgrounds-shadows',
+        name: 'Colors, Backgrounds & Shadows',
+        arabicName: 'الألوان والخلفيات والظلال',
+        desc: 'إتقان أنظمة الألوان الحديثة OKLCH و HSL، وصياغة التدرجات الملونة، الخلفيات الزجاجية، وتأثيرات الظلال ثلاثية الأبعاد.',
+        tech: 'css'
+    },
+    {
+        id: 'css-typography-fonts',
+        name: 'Typography & Web Fonts',
+        arabicName: 'التنسيقات النصية والخطوط',
+        desc: 'ضبط الخطوط المتغيرة Web Fonts، أبعاد السطور والمحاذاة النصية، والتحكم بخصائص المقروئية والتفاف النصوص.',
+        tech: 'css'
+    },
+    {
+        id: 'css-display-positioning',
+        name: 'Display, Positioning & Stacking',
+        arabicName: 'العرض والتطبيق والطبقات',
+        desc: 'فهم سلوكيات العرض display وتتبع نظام التموضع المباشر والنسبي والمثبت مع التحكم بسياق الفرز والمستويات z-index.',
+        tech: 'css'
+    },
+    {
+        id: 'css-flexbox',
+        name: 'Flexbox Layout',
+        arabicName: 'تخطيط العناصر المرن',
+        desc: 'بناء واجهات أحادية البعد متجاوبة ومرنة وتوزيع المساحات والمحاذاة التلقائية لعناصر الواجهة بكفاءة عالية.',
+        tech: 'css'
+    },
+    {
+        id: 'css-grid',
+        name: 'CSS Grid Architecture',
+        arabicName: 'معمارية الشبكات المتقدمة',
+        desc: 'تصميم شبكات ثنائية الأبعاد معقدة باستخدام الصفوف والأعمدة والمساحات المسماة لبناء تخطيطات الواجهات الضخمة.',
+        tech: 'css'
+    },
+    {
+        id: 'css-responsive-container-queries',
+        name: 'Responsive Design & Container Queries',
+        arabicName: 'التصميم المتجاوب واستعلامات الحاوية',
+        desc: 'إنشاء مكونات متكيفة استناداً لعرض أجهزة الموبايل Media Queries واستعلامات الحجم الفرعي للمكونات Container Queries.',
+        tech: 'css'
+    },
+    {
+        id: 'css-transitions-animations',
+        name: 'Transitions & Animations',
+        arabicName: 'الانتقالات والتحريك البصري',
+        desc: 'إضفاء التفاعلية البصرية عبر الانتقالات الانسيابية والتحريك المتقدم باستخدام Keyframes وتحريك العناصر ثلاثياً.',
+        tech: 'css'
+    },
+    {
+        id: 'css-modern-architecture',
+        name: 'Modern CSS & Architecture',
+        arabicName: 'معمارية CSS الحديثة والمعاصرة',
+        desc: 'احتراف التداخل الأصلي CSS Nesting، والمتغيرات Custom Properties، والتقسيم الطبقي Cascade Layers ونظام BEM.',
+        tech: 'css'
     }
 ];

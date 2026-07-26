@@ -42,7 +42,10 @@ import { interactiveData } from './Html/interactive.js';
 import { accessibilityMetaData } from './Html/accessibility-meta.js';
 import { seoPerformanceData } from './Html/seo-performance.js';
 
-// 5. بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
+// استيراد كتل بيانات مسار CSS
+import { cssFundamentalsSelectorsData } from './Css/fundamentals-selectors.js';
+
+// بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
     variables: variablesData,
     operators: operatorsData,
@@ -80,4 +83,5 @@ export const registry = {
     'html-interactive': interactiveData,
     'html-accessibility-meta': accessibilityMetaData,
     'html-seo-performance': seoPerformanceData,
+    'css-fundamentals-selectors': cssFundamentalsSelectorsData,
 };
