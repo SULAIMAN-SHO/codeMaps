@@ -1,0 +1,198 @@
+﻿/* الغطاء الخلفي الشفاف والمشوش المبتكر (Glassmorphism Modal Backdrop) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(9, 11, 14, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* حاوية المودال الفاخرة ذات التأثير الحركي المنساب */
+.modal-wrapper {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.95) translateY(20px);
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.modal-overlay.active .modal-wrapper {
+  transform: scale(1) translateY(0);
+}
+
+/* ترويسة المودال الملتصقة لسهولة الإغلاق عند التمرير الطويل */
+.modal-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-title-en {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  direction: ltr;
+  text-align: left;
+}
+
+.modal-close-btn {
+  font-size: 1.75rem;
+  color: var(--text-muted);
+  transition: var(--transition-fast);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+
+.modal-close-btn:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--text-muted);
+  transform: rotate(90deg);
+}
+
+/* محتويات طبقات المعرفة السبعة */
+.modal-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* القالب الهيكلي لكل طبقة (Semantic Modular Section Block) */
+.section-block {
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  border: 1px solid var(--border-color);
+  border-right: 4px solid var(--accent-primary);
+  /* تأكيد المحاذاة اليمنى للغة العربية */
+}
+
+.section-block-title {
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-block-content {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* كتل التمييز والطبقات الفرعية التوضيحية داخل القسم */
+.layer-box {
+  border-right: 3px solid var(--accent-primary);
+  padding-right: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+/* لتمييز الأنماط الخاطئة والصحيحة بلمسة بصرية هندسية */
+.layer-box.danger {
+  border-right-color: var(--color-danger);
+}
+
+.layer-box.success {
+  border-right-color: var(--color-success);
+}
+
+/* حاويات الرموز البرمجية المعزولة برمجياً وتنسيقياً */
+.code-container {
+  background-color: #0b0d10;
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  direction: ltr;
+  /* فرض الاتجاه البرمجي العالمي */
+  text-align: left;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.code-block {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* كونسول مخرجات الكود التفاعلي */
+.code-output {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  margin-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 0.75rem;
+  direction: ltr;
+  text-align: left;
+}
+
+/* مواءمة الهواتف وشاشات اللمس الكاملة للمودال (Full Screen Mobile Modal) */
+@media (max-width: 768px) {
+  .modal-wrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
+
+  .modal-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .section-block {
+    padding: 1.25rem;
+  }
+}

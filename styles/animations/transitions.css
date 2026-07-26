@@ -1,0 +1,70 @@
+﻿/* تفعيل التحريك المعجل بالعتاد الرسومي لضمان تجربة فخمة وخالية من التباطؤ (GPU-Accelerated Keyframes) */
+
+.fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: opacity, transform;
+}
+
+.slide-up {
+  animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* تأثير تلاشي متدرج للظهور والتحريك برفق */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تأثير حركة انزلاقية للمودال والنوافذ الفرعية */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* تأثيرات تحويم مجهرية على الأزرار والتفاعلات (Micro-interaction Transitions) */
+.hover-scale {
+  transition: var(--transition-fast);
+  will-change: transform;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-scale:active {
+  transform: scale(0.98);
+}
+
+/* تأثير لمعان دائم أو وميض هابط لتأثير النبض البصري */
+.pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+}

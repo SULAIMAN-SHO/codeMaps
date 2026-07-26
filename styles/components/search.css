@@ -1,0 +1,139 @@
+﻿.search-container {
+  position: relative;
+  width: 320px;
+  max-width: 100%;
+  user-select: none;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* شريط البحث المصمم بدقة ممتازة وبشكل مريح (Premium Minimal Search Input) */
+.search-input {
+  width: 100%;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  /* حشو إضافي من اليسار للأيقونة */
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+  will-change: border-color, box-shadow;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.search-input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  background-color: rgba(18, 22, 26, 0.95);
+}
+
+/* الأيقونة العائمة داخل المدخل */
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: var(--transition-fast);
+}
+
+.search-input:focus+.search-icon {
+  color: var(--accent-primary);
+}
+
+/* قائمة نتائج البحث الفورية المنسدلة (Instant Floating Dropdown) */
+.search-results-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  max-height: 380px;
+  overflow-y: auto;
+  z-index: 200;
+  display: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-tertiary) var(--bg-primary);
+}
+
+.search-results-dropdown.active {
+  display: block;
+  animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* بنية صفوف النتائج المكتشفة */
+.search-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.search-item:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.search-item-title {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  direction: ltr;
+  text-align: left;
+}
+
+/* تاق التصنيف الجانبي */
+.search-item-cat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: var(--bg-primary);
+  color: var(--accent-primary);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.search-item:hover .search-item-cat {
+  border-color: var(--accent-primary);
+}
+
+/* تخصيص شريط التمرير الداخلي للدروب داون */
+.search-results-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.search-results-dropdown::-webkit-scrollbar-track {
+  background-color: var(--bg-secondary);
+}
+
+.search-results-dropdown::-webkit-scrollbar-thumb {
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+/* ملاءمة الشاشات الصغيرة وتمدد شريط البحث بالكامل */
+@media (max-width: 768px) {
+  .search-container {
+    width: 100%;
+  }
+}

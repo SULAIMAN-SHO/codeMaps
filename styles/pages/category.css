@@ -1,0 +1,111 @@
+﻿/* ترويسة صفحة التفاصيل والتصنيفات (Category Header Layout) */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+  gap: 1.5rem;
+}
+
+.category-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.category-meta h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.category-meta p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+/* الواجهة البديلة للأقسام قيد التطوير (Premium Placeholder Empty State) */
+.empty-state {
+  text-align: center;
+  padding: 6rem 2rem;
+  background-color: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* توهج خفيف في منتصف الـ empty state */
+.empty-state::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.empty-state-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.empty-state p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 450px;
+  line-height: 1.7;
+}
+
+/* تواؤم وتجاوب العرض على الأجهزة الصغيرة */
+@media (max-width: 768px) {
+  .category-header {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .category-meta h1 {
+    font-size: 1.75rem;
+  }
+
+  .category-meta p {
+    font-size: 0.9rem;
+  }
+
+  .empty-state {
+    padding: 4rem 1.5rem;
+  }
+}

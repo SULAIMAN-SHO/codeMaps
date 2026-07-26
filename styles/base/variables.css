@@ -1,0 +1,52 @@
+﻿:root {
+  /* لوحة الألوان الأساسية الداكنة الفاخرة (Premium Obsidian Palette) */
+  --bg-primary: #090b0e;
+  --bg-secondary: #12161a;
+  --bg-tertiary: #1b2026;
+  --accent-primary: #5093fd;
+  --accent-glow: rgba(59, 130, 246, 0.15);
+
+  /* درجات ألوان الدلالات (Status & Semantic Colors) */
+  --color-success: #10b981;
+  --color-success-bg: rgba(16, 185, 129, 0.12);
+  --color-warning: #f59e0b;
+  --color-warning-bg: rgba(245, 158, 11, 0.12);
+  --color-danger: #ef4444;
+  --color-danger-bg: rgba(239, 68, 68, 0.12);
+  --color-info: #8b5cf6;
+  --color-info-bg: rgba(139, 92, 246, 0.12);
+
+  /* التدرج الهرمي للنصوص (Typography Hierarchy) */
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-disabled: #4b5563;
+
+  /* الحدود والشفافية (Borders & Transparencies) */
+  --border-color: rgba(255, 255, 255, 0.06);
+  --border-focus: rgba(59, 130, 246, 0.4);
+  --border-hover: rgba(255, 255, 255, 0.12);
+
+  /* عائلات الخطوط (Font Families) */
+  --font-arabic: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* الحركات المعجلة بالعتاد (Hardware-Accelerated Transitions) */
+  --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* أقطار الحواف الدائرية (Border Radius Hierarchy) */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  /* الظلال ثلاثية الأبعاد الفاخرة (Premium Dynamic Shadows) */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+
+  /* حاويات المحتوى والأبعاد */
+  --max-width-content: 1400px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');

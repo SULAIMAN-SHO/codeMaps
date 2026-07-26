@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeMap JS - المرجع الفاخر للغة جافا سكريبت</title>
+
+  <!-- الخطوط الفاخرة: Cairo للعربية و JetBrains Mono للأكواد -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+  <!-- ربط جميع الأنماط المنفصلة معمارياً -->
+  <link rel="stylesheet" href="styles/base/variables.css">
+  <link rel="stylesheet" href="styles/base/reset.css">
+  <link rel="stylesheet" href="styles/layout/layout.css">
+  <link rel="stylesheet" href="styles/layout/navigation.css">
+  <link rel="stylesheet" href="styles/components/Icon.css">
+  <link rel="stylesheet" href="styles/components/card.css">
+  <link rel="stylesheet" href="styles/components/modal.css">
+  <link rel="stylesheet" href="styles/components/search.css">
+  <link rel="stylesheet" href="styles/animations/transitions.css">
+  <link rel="stylesheet" href="styles/pages/home.css">
+  <link rel="stylesheet" href="styles/pages/category.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- شريط التنقل العلوي للمنصة -->
+    <header class="header">
+      <!-- محرك البحث الموحد والذكي -->
+      <div class="search-container">
+        <div class="search-input-wrapper">
+          <input type="text" id="global-search-input" class="search-input" placeholder="ابحث عن دالة... (Ctrl+K)">
+          <span class="search-icon">🔍</span>
+        </div>
+        <div id="search-results" class="search-results-dropdown"></div>
+      </div>
+
+
+      <div class="logo-container" onclick="window.location.hash='#/'" style="cursor: pointer;">
+        <span class="logo-text">CodeMap JS</span>
+        <!-- <span class="logo-tag">الأساس الفاخر</span> -->
+      </div>
+    </header>
+
+    <!-- حاوية عرض الصفحات الديناميكية (SPA Engine) -->
+    <main id="app-shell" class="main-content"></main>
+
+    <!-- التذييل العام للمنصة -->
+    <footer class="footer">
+      <p>© 2026 CodeMap JS. منصة تفاعلية تفصل المفاهيم البرمجية هندسياً لتمثيل عقلية المحترفين.</p>
+    </footer>
+  </div>
+
+  <!-- الحاوية الأساسية لعرض المودال ذو الطبقات السبعة -->
+  <div id="modal-container"></div>
+
+
+
+
+
+
+  <!-- محرك تشغيل المنصة الأساسي عبر الموديولات -->
+  <script type="module" src="scripts/app.js"></script>
+</body>
+
+</html>

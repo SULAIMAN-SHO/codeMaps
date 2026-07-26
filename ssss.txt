@@ -1,0 +1,988 @@
+
+var userVar = 'SULAIMAN';
+let userLet = 'SULAIMAN';
+const userConst = 'SULAIMAN';
+console.log('SULAIMAN');
+console.log('Welcome \'JavaScript\''); // الهروب من علامات الاقتباس (Escape Characters)
+let x = 10;
+x += 5;
+console.log(x);
+let a = 10;
+a -= 5;
+console.log(a);
+let b = 10;
+b *= 5;
+console.log(b);
+let c = 10;
+c /= 5;
+console.log(c);
+let d = 10;
+d %= 5;
+console.log(d);
+let e = 10;
+e **= 2;
+console.log(e);
+let numInc = 10;
+console.log(++numInc); // زيادة قبلية (Pre-increment)
+console.log(numInc++); // زيادة بعدية (Post-increment)
+console.log(--numInc); // نقصان قبلي (Pre-decrement)
+console.log(numInc--); // نقصان بعدي (Post-decrement)
+console.log(Number.MIN_SAFE_INTEGER);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MAX_VALUE);
+console.log((10).toString());
+console.log(typeof ((10).toString())); // مخرجات من نوع نص باستخدام typeof
+console.log((55.654897431646478).toFixed(3)); // تحديد الخانات العشرية
+console.log(parseInt("55.664879874341321"));
+console.log(typeof (parseInt("55.664879874341321"))); // مخرجات من نوع رقم باستخدام typeof
+console.log(parseFloat("55.664879874341321")); // الاحتفاظ بالفاصلة العشرية
+console.log(Number.isInteger(10)); // فحص ما إذا كان العدد صحيحاً
+console.log(Math.round(5.5));
+console.log(Math.ceil(9.1));
+console.log(Math.floor(3.9));
+console.log(Math.abs(-3.9)); // تعديل طفيف على القيمة لتوضيح دور القيمة المطلقة
+console.log(Math.sqrt(144));
+console.log(Math.pow(2, 3));
+console.log(Math.min(2, 3, 7, -10));
+console.log(Math.max(2, 3, 999, -10, -500));
+console.log(Math.random());
+console.log(Math.trunc(100.5555));
+let strSample = "SulaimaN ShO";
+console.log(strSample.length);
+console.log(strSample.toUpperCase());
+console.log(strSample.toLowerCase());
+console.log(strSample[7]); // جلب حرف عبر المؤشر المباشر
+console.log(strSample.charAt(10)); // جلب حرف عبر دالة charAt
+let textWithSpaces = "    SulaimaN ShO     ";
+console.log(textWithSpaces.trim().length); // حساب الطول بعد إزالة الفراغات
+console.log(textWithSpaces.length); // حساب الطول بالفراغات
+console.log(textWithSpaces.toUpperCase().toLowerCase().trim()); // دمج الدوال المتتالي
+let idea = "SulaimaN ShO";
+console.log(idea.indexOf("m")); // البحث عن الفهرس من البداية
+let textForLastIndex = "AAsaaas";
+console.log(textForLastIndex.lastIndexOf("s")); // البحث عن الفهرس من النهاية
+console.log(idea.slice(0, 7)); // اقتطاع باستخدام slice
+let testStr1 = "SulaimaN|ShO|Number|owhn";
+let testStr2 = "SulaimaN ShO Number owhn";
+console.log(testStr1.split("")); // التقسيم لكل حرف مفرد
+console.log(testStr2.split(" ")); // التقسيم بناءً على المسافة الفاصلة
+console.log(testStr1.split("|")); // التقسيم بناءً على علامة الـ pipe
+console.log(idea.substring(3, 8)); // اقتطاع باستخدام substring
+console.log(idea.substr(3, 2)); // اقتطاع باستخدام substr (تحديد البداية والطول)
+console.log(idea.startsWith("SulaimaN"));
+console.log(idea.startsWith("ShO", 9)); // فحص البداية بدءاً من فهرس محدد
+console.log(idea.endsWith("ShO"));
+console.log(idea.endsWith("SulaimaN", 8)); // فحص النهاية حتى فهرس محدد
+console.log(idea.includes("Sh"));
+console.log(idea.includes("Sh", 10)); // فحص الاحتواء بدءاً من فهرس محدد
+console.log(idea.repeat(3));
+let name1 = "SulaimaN";
+let lastName = "ShO";
+console.log(name1.concat("|", lastName));
+let cssStr = "I love Css";
+console.log(cssStr.replace("Css", "JavaScript"));
+let s1 = 55;
+let s2 = "55";
+console.log(5 == 5); // مقارنة نفس النوع والقيمة ضعيفاً
+console.log(5 == "5"); // مقارنة قيم مختلفة النوع ضعيفاً (مساواة ضعيفة)
+console.log(true == 1); // مقارنة منطقية مع معامل التحويل
+console.log(s1 === s2); // مقارنة صارمة نوعاً وقيمة
+console.log(s1 != 10); // عدم مساواة ضعيفة
+console.log(s1 !== s2); // عدم مساواة صارمة
+console.log(23 > 15); // أكبر من (توضيح استخدامها)
+console.log(23 < 50); // أصغر من
+console.log(23 >= 23); // أكبر من أو يساوي
+console.log(23 <= 23); // أصغر من أو يساوي
+console.log("a" <= "b"); // مقارنة أبجدية أصغر أو يساوي
+console.log("a" >= "b"); // مقارنة أبجدية أكبر أو يساوي
+console.log(null == undefined); // حالة مساواة خاصة ضعيفة
+console.log(null === undefined); // حالة مساواة خاصة صارمة
+console.log(20 > 15 && 30 > 20); // معامل AND بسيط
+let math = 70;
+let physic = 55;
+let computer = 80;
+let resultAndChain = (math >= 60 && physic >= 60 && computer >= 60); // معامل AND متعدد الشروط
+console.log(resultAndChain);
+let logicEmail = "sulaiman@gmail.co";
+let logicPass = "123456789";
+let complexLogic = ((userLet == "SULAIMAN" && logicPass == "123456789") || (logicEmail == "sulaiman@gmail.co" && logicPass == "123456789")); // شروط مركبة ومعقدة بالأقواس (AND مع OR)
+console.log(complexLogic);
+let aVal = 60;
+let bVal = 70;
+let cVal = 90;
+let resultOrChain = (aVal >= 60 || bVal >= 60 || cVal >= 60); // معامل OR متعدد الشروط
+console.log(resultOrChain);
+console.log(!resultOrChain); // النفي (NOT) لمتغير منطقي
+let num = 10;
+if (num > 0) {
+console.log("الوضع لوز");
+}
+let age = 20;
+if (age >= 18) {
+console.log("الشخص بالغ");
+} else {
+console.log("ليس بالغ");
+}
+if (logicPass === "123456789" && userLet === "SULAIMAN") {
+console.log("تفضل حبيب امورك تمام");
+} else {
+console.log("هلق شوف انت يا هكر يا نسيان الكلمة");
+}
+let nmuu = 0;
+if (nmuu > 0) {
+console.log("+ الرقم موجب");
+} else if (nmuu < 0) {
+console.log("- الرقم سالب");
+} else {
+console.log("حسب مو شايف الرقم صفر كبر طموحك شوي");
+}
+let grade = 50;
+if (grade >= 90) {
+console.log("ممتاز يا اينشتان زمانك");
+} else if (grade >= 80) {
+console.log("يا عيني عليك كويس كتير");
+} else if (grade >= 70) {
+console.log("ماشي حالك شد حيلك بس");
+} else {
+console.log("شو هل نتيجة الله لا يعطيك عافية");
+}
+let statusTernary = age >= 18 ? "شاب" : "طفل";
+console.log(statusTernary);
+let antheng = ["abdo", "احمد", "محمد", "هاني", "بوس", 27, 23];
+console.log(antheng.length - 1); // حساب الفهرس الأخير رياضياً
+let lastelement = antheng.length - 1;
+console.log(antheng.at(lastelement)); // استخدام الدالة .at() مع مؤشر ديناميكي
+console.log(antheng[lastelement]); // استخدام الأقواس مع مؤشر ديناميكي
+let antheng2 = [];
+if (antheng2.length > 0) {
+console.log(antheng2);
+} else {
+console.log("لا يتوفر معلومات");
+}
+let colors = ["blue", "green", "red"];
+console.log(Array.isArray(colors)); // فحص نوع المصفوفة (يختلف عن فحص النصوص)
+colors.push("رمادي"); // إضافة للنهاية
+console.log(colors.length); // فحص الطول بعد التعديل
+colors.unshift("mama"); // إضافة للبداية
+colors.pop(); // حذف من النهاية
+colors.shift(); // حذف من البداية
+console.log(colors.includes("red")); // فحص الاحتواء (مصفوفات)
+console.log(colors.indexOf("red")); // فحص الفهرس (مصفوفات)
+console.log(colors.lastIndexOf("red")); // فحص الفهرس العكسي (مصفوفات)
+colors.sort(); // ترتيب مصفوفة
+colors.reverse(); // عكس ترتيب مصفوفة
+let sliced = colors.slice(1, 2); // اقتطاع مصفوفة (تختلف عن دالة النصوص في المدخلات والمخرجات)
+let newArr = colors.concat(["black", "white"]); // دمج مصفوفات (تختلف عن concat الخاصة بالنصوص)
+console.log(newArr.join(" | ")); // تحويل مصفوفة لنص بفاصل
+let nested = ["Math", ["physics"]];
+let flatArr = nested.flat(); // تسطيح مصفوفات متداخلة
+for (let i = 0; i <= 10; i++) {
+console.log(`العام : ${i}`); // دمجنا فكرة الدوران التصاعدي مع صياغة Template Literal
+}
+for (let i = 50; i > 0; i--) {
+console.log(i);
+}
+for (let i = 1; i <= 100; i += 2) {
+console.log("SULAIMAN SHO" + " | " + i);
+}
+for (let i = 0; i < 101; i = i + 2) {
+console.log(`الرقم الزوجي هو : ${i}`);
+}
+for (let i = 100; i >= 0; i = i - 5) {
+console.log(i);
+}
+for (let i = 100; i >= 0; i -= 10) {
+console.log(i);
+}
+let num = 0;
+for (let i = 0; i <= 500; i++) {
+num += i;       // طريقة الجمع المختصرة
+num = num + i;  // طريقة الجمع التقليدية
+}
+console.log(num);
+const fruits = ["تفاحة", "برتقالة", "موزة", "شاورما"];
+for (let i = 0; i < fruits.length; i++) {
+console.log(fruits[i]);
+}
+let total = 0;
+let numbers = [5, 10, 15, 25, 65, 95];
+for (let i = 0; i < numbers.length; i++) {
+total += numbers[i];
+}
+console.log(`المجموع : ${total}`);
+let array1 = [2, 4, 6];
+let array2 = [];
+for (let i = 0; i < array1.length; i++) {
+array2.push(array1[i] * 2);
+}
+console.log(array2);
+let items1 = [27, "", 23, "", 47, 43];
+let newArray = [];
+for (let i = 0; i < items1.length; i++) {
+if (items1[i] !== "") {
+newArray.push(items1[i]);
+}
+}
+console.log(newArray);
+let items2 = [27, "", 23, "", 47, 43, true, "sulaiman"];
+let str = [];
+for (let i = 0; i < items2.length; i++) {
+if (typeof items2[i] === "string") {
+str.push(items2[i]);
+}
+}
+console.log(str);
+let users = ["علي", "أحمد", "سارة", "محمد"];
+for (let i = 0; i < users.length; i++) {
+if (users[i] === "أحمد") {
+break;
+}
+console.log(users[i]);
+}
+for (let i = 0; i <= 15; i++) {
+if (i === 7) {
+continue;
+}
+console.log(i);
+}
+for (let i = 0; i <= 15; i++) {
+if (i % 2 === 0) {
+continue;
+}
+console.log(i);
+}
+let names = ["sulaiman", "root", "ahmed", "mohamed", "عبدو", "admin"];
+for (let i = 0; i < names.length; i++) {
+if (names[i] === "root" || names[i] === "admin") {
+continue;
+}
+console.log(names[i]);
+}
+let count = 1;
+while (count <= 5) {
+console.log(`القيمة : ${count}`);
+count++;
+}
+let array1 = [1, "نص", true, 4, "كلمة", false];
+let idx = 0;
+while (idx < array1.length) {
+if (typeof array1[idx] === "number") {
+console.log(array1[idx]);
+}
+idx++;
+}
+let inputVal;
+let tryCounter = 0;
+while (inputVal !== "خروج") {
+inputVal = prompt("اكتب اي شيء");
+tryCounter++;
+}
+console.log(`عدد المحاولات : ${tryCounter - 1}`);
+let k = 1;
+do {
+console.log(k);
+k++;
+} while (k <= 10)
+let j = 15;
+do {
+console.log(j);
+j++;
+} while (j <= 10)
+let answer;
+do {
+answer = prompt("اكتب نعم للمتابعة");
+} while (answer !== "نعم")
+alert("تمت المتابعة بنجاح");
+function userInfo(name, age, country) {
+console.log(`اسم المستخدم : ${name}`);
+console.log(`العمر : ${age}`);
+console.log(`المدينة : ${country}`);
+}
+userInfo("سليمان", 25, "سوريا");
+function printYear(startYear, endYear) {
+for (let year = startYear; year <= endYear; year++) {
+console.log(year);
+}
+}
+printYear(2000, 2005);
+function calcArea(length, width) {
+return length * width;
+}
+let area = calcArea(200, 50);
+console.log(`المساحة للشكل هي : ${area + 5}`);
+function isEven(num) {
+return num % 2 === 0;
+}
+console.log(isEven(10));
+function getFirstletter(name) {
+return name.charAt(0).toUpperCase();
+}
+let charResult = getFirstletter("sulaiman");
+console.log(charResult);
+function calc(num1 = 0, num2 = 0) {
+return num1 + num2;
+}
+let result = calc();
+console.log(`مجموع الارقام : ${result}`);
+const greet = function () {
+console.log(`welcome`);
+}
+greet();
+setTimeout(function () {
+console.log(`welcome`);
+}, 2000);
+let names = ["أحمد", "منى", "خالد"];
+names.forEach(function (name) {
+console.log(`مرحبا : ${name}`);
+});
+document.getElementById("btn").addEventListener("click", function () {
+alert("يا هلاااا وللله");
+});
+const sayHi = () => {
+console.log(`Hi`);
+};
+sayHi();
+const greet2 = name2 => {
+console.log(`welcome2 ${name2}`);
+};
+greet2("sulaiman");
+let greet = (name = "to you") => {
+console.log(`welcome ${name}`);
+};
+greet();
+const calc = (a, b) => {
+return a + b;
+};
+console.log(calc(5, 7));
+const calc2 = (aa, bb) => aa + bb;
+console.log(calc2(25, 50));
+document.getElementById("btn3").addEventListener('click', () => console.log(`click`));
+let king = "SULAIMAN";
+function fncosh() {
+console.log(`WELCOME ${king}`);
+}
+fncosh();
+function sayHllo() {
+let message = "Local";
+console.log(message);
+}
+sayHllo();
+console.log(message);
+if (true) {
+let color = "blue";
+const size = "sm";
+var shape = "square";
+}
+console.log(shape);
+function parent() {
+let parentvar = "parentvar##";
+function child() {
+let name = "sulaiman";
+console.log(parentvar);
+}
+child();
+console.log(name);
+}
+parent();
+let numbers = [1, 5, 6, 9];
+let newnumbers = numbers.map(function (number) {
+return number + 1;
+});
+console.log(newnumbers);
+let newnumbers2 = numbers.map((number) => {
+return number + 1;
+});
+console.log(newnumbers2);
+let newnumbers3 = numbers.map(number => number + 5);
+console.log(newnumbers3);
+let names = ["sulaiman", "ahmed", "mohamed"];
+let newNames = names.map(name => name.toUpperCase());
+console.log(newNames);
+let age = [10, 6, 10, 5, 7, 18, 20, 50];
+let ageState = age.map(val => val >= 18 ? "شاب" : "طفل");
+console.log(ageState);
+let numbers33 = [9, 12, 15, 16, 17, 20, 26, 29, 44, 77, 90];
+let result = numbers33.map(num => {
+if (num % 2 === 0) {
+return num * 2;
+} else {
+return (num + 1) * 3;
+}
+});
+console.log(result);
+let numbers = [5, 7, 9, 10, 15, 20];
+let newNumbers = numbers.filter(function (num) {
+return num >= 10;
+});
+console.log(newNumbers);
+let newNumbers2 = numbers.filter((num) => {
+return num >= 10;
+});
+console.log(newNumbers2);
+let newNumbers3 = numbers.filter(num => num >= 10);
+console.log(newNumbers3);
+let numbersss = [20, 43, 33, 17, 34, 65, 26, 56, 76, 88, 58, 90, 94];
+let range = numbersss.filter(function (item) {
+return item >= 10 && item <= 50 && item % 2 === 0;
+});
+console.log(range);
+let range3 = numbersss.filter(item => item >= 10 && item <= 50 && item % 2 === 0);
+console.log(range3);
+let notNumber3 = [20, 43, 33, 17, 34, 65, 26, 56, 76, 88, 58, 90, 94, 20];
+let newArray3 = notNumber3.filter((el) => {
+return el % 3 !== 0;
+}).map((num) => {
+return num * 5;
+});
+console.log(newArray3);
+let nums = [1, 2, 3, 4, 5];
+let sum = nums.reduce(function (acc, current) {
+return acc + current;
+}, 0);
+console.log(sum);
+let nums2 = [1, 23, 37, 44, 53, 60, 92, 95];
+let max = nums2.reduce((acc, current) => {
+return current >= acc ? current : acc;
+}, 0);
+console.log(max);
+let sumEven = nums2.reduce((acc, current) => {
+if (current % 2 === 0) {
+return acc + current;
+}
+return acc;
+}, 0);
+console.log(sumEven);
+let letters = ['s', 'u', 'l', 'a', 'i', 'm', 'a', 'n'];
+let joined = letters.reduce((acc, current) => {
+return acc + current;
+});
+console.log(joined);
+let names = ['sulaiman', 'sara', 'ali'];
+names.forEach((name, index) => {
+console.log(`name ${index + 1} : ${name}`);
+});
+console.log(names);
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let sum = 0;
+numbers.forEach((num) => {
+sum += num;
+});
+console.log(sum);
+let double1 = [];
+numbers.forEach((num) => {
+double1.push(num * 2);
+});
+console.log(double1);
+numbers.forEach((num) => {
+if (num % 2 !== 0) {
+console.log(num);
+}
+});
+let user = {
+name: "sulaiman",
+age: 25,
+admin: true,
+};
+user.email = "sulaiman@gmail.com";
+delete user.name;
+console.log(user);
+console.log(user.age);
+console.log(user.email);
+let user1 = {
+name: "sulaiman",
+age: 25,
+admin: true,
+start: function () {
+console.log(`welcome to start`);
+}
+};
+user1.start();
+let user2 = {
+"user name": "sulaiman",
+age: 25,
+admin: true,
+userInfo: function () {
+console.log(this["user name"]);
+}
+};
+user2.userInfo();
+console.log(user2["user name"]);
+let users = [
+{
+name: "sulaiman",
+age: 30,
+isStudent: true,
+userInfo: function () {
+console.log(this.isStudent);
+}
+},
+{
+name: "ahmed",
+age: 36,
+isStudent: false,
+userInfo: function () {
+console.log(this.isStudent);
+}
+}
+];
+for (let i = 0; i < users.length; i++) {
+console.log("name : " + users[i].name);
+console.log("age : " + users[i].age);
+console.log("Student : " + users[i].isStudent);
+console.log(`##############`);
+}
+let user = {
+name: "sulaiman",
+age: 25,
+isStudent: true,
+userInfo: function () {
+console.log(this.isStudent);
+},
+address: {
+city: "Idleb",
+country: "syria",
+details: {
+detal1: "detal1",
+detal2: "detal2",
+}
+}
+};
+user.address.details.detal1 = "ssss";
+console.log(user.address.details);
+let company = {
+name: "TeckSoft",
+departments: {
+development: {
+teamlead: "samer ali",
+developers: ["sulaiman", "yasin", "samer"]
+},
+markiting: "mona",
+tools: ["SEO", "emails", "Facebook"]
+}
+};
+console.log(company.name);
+console.log(company.departments.development.developers);
+console.log(this);
+function showThis() {
+console.log(this);
+}
+showThis();
+let user = {
+name: "sulaiman",
+sayHello: function () {
+console.log("hello " + this.name);
+}
+};
+user.sayHello();
+document.getElementById("btn").addEventListener("click", function () {
+console.log(this);
+});
+let btn = document.getElementById("btn");
+console.log(btn);
+let sections = document.getElementsByTagName("section");
+console.log(sections);
+let newArray = Array.from(sections);
+newArray.forEach(element => {
+element.innerHTML = "sulaiman";
+});
+let Selector = document.querySelector(".paragraph");
+console.log(Selector);
+let AllSelector = document.querySelectorAll("p");
+console.log(AllSelector);
+AllSelector.forEach(element => {
+console.log(element);
+});
+let testForm = document.forms["test"];
+console.log(testForm);
+let userName = testForm.elements["userName"];
+console.log(userName);
+console.log(document.body);
+console.log(document.images);
+let parent = document.getElementById("parent");
+console.log(parent.children);
+console.log(parent.childNodes);
+console.log(parent.firstElementChild);
+console.log(parent.lastElementChild);
+console.log(parent.nextElementSibling);
+console.log(parent.previousElementSibling);
+console.log(parent.parentElement);
+let test = document.getElementById("test");
+console.log(test.textContent);
+console.log(test.innerText);
+let testss = document.getElementById("testss");
+testss.innerHTML = "<h1>sulaiman</h1>";
+let aaa = document.getElementById("aaa");
+console.log(aaa.getAttribute("src"));
+aaa.setAttribute("src", "images/2.jpg");
+aaa.removeAttribute("alt");
+console.log(aaa.hasAttribute("src"));
+console.log(aaa.hasAttributes());
+let container = document.getElementById("container");
+let myDiv = document.createElement("div");
+myDiv.textContent = "welcome div";
+myDiv.classList.add("dvdove");
+container.prepend(myDiv);
+let referenceDiv = document.createElement("div");
+referenceDiv.textContent = "Reference";
+document.body.prepend(referenceDiv);
+let beforeBtn = document.createElement("button");
+beforeBtn.textContent = "Before";
+referenceDiv.before(beforeBtn);
+let afterBtn = document.createElement("button");
+afterBtn.textContent = "After";
+referenceDiv.after(afterBtn);
+let card = document.createElement("div");
+card.classList.add("card");
+let title = document.createElement("h2");
+title.textContent = "كورس الجافا سكربت";
+let desc = document.createElement("p");
+desc.textContent = "هذا الوصف الخاص بالكورس";
+let btn = document.createElement("button");
+btn.textContent = "انقر للمزيد من التفاصيل";
+btn.classList.add("btn");
+card.append(title, desc, btn);
+document.body.prepend(card);
+let btn = document.getElementById("btn");
+btn.addEventListener("click", function () {
+alert("test click");
+console.log("click");
+});
+document.addEventListener("contextmenu", function (e) {
+e.preventDefault();
+});
+let userName = document.getElementById("userName");
+userName.addEventListener("input", function () {
+console.log(this.value, ": البيانات المدخلة");
+});
+let myForm = document.getElementById("myForm");
+myForm.addEventListener("submit", function (e) {
+e.preventDefault();
+});
+let btn7 = document.getElementById("btn7");
+btn7.addEventListener("click", function () {
+document.body.style.backgroundColor = "#111111"
+});
+window.addEventListener("scroll", function () {
+console.log("scrollY :", window.scrollY);
+});
+let fullBtn = document.getElementById("fullScreenBtn");
+fullBtn.addEventListener("click", function () {
+if (!document.fullscreenElement) {
+if (document.documentElement.requestFullscreen) {
+document.documentElement.requestFullscreen();
+}
+fullBtn.textContent = "الخروج من ملء الشاشة";
+} else {
+if (document.exitFullscreen) {
+document.exitFullscreen();
+}
+fullBtn.textContent = "تفعيل وضع ملء الشاشة";
+}
+});
+let btn8 = document.getElementById("btn8");
+let width = document.getElementById("width");
+let height = document.getElementById("height");
+let widthInch = document.getElementById("widthInch");
+let heightInch = document.getElementById("heightInch");
+let screenSize = document.getElementById("screenSize");
+btn8.addEventListener("click", function () {
+function updateDisplay() {
+let wPx = window.innerWidth;
+let hPx = window.innerHeight;
+let wIn = (wPx / 96).toFixed(2);
+let hIn = (hPx / 96).toFixed(2);
+let diagonalPx = Math.sqrt(Math.pow(wPx, 2) + Math.pow(hPx, 2));
+let totalInch = (diagonalPx / 96).toFixed(1)
+width.textContent = `${wPx} : العرض`;
+height.textContent = `${hPx} : الارتفاع`;
+if (widthInch) widthInch.textContent = `العرض: ${wIn} بوصة`;
+if (heightInch) heightInch.textContent = `الارتفاع: ${hIn} بوصة`;
+if (screenSize) {
+screenSize.textContent = `مقاس الشاشة الكلي: ${totalInch} بوصة`;
+}
+}
+updateDisplay();
+window.addEventListener("resize", updateDisplay);
+btn8.textContent = "جاري تتبع حجم الشاشة...";
+btn8.disabled = true;
+});
+window.addEventListener("keydown", function (e) {
+console.log(e.key, " : ", "الزر المضغوط هو");
+});
+let Add = document.getElementById("Add");
+let Remove = document.getElementById("Remove");
+let Toggle = document.getElementById("Toggle");
+let Replace = document.getElementById("Replace");
+let Check = document.getElementById("Check");
+let box = document.getElementById("box");
+Add.addEventListener("click", function () {
+box.classList.add("box", "fontsiz");
+});
+Remove.addEventListener("click", function () {
+box.classList.remove("box", "fontsiz");
+});
+Toggle.addEventListener("click", function () {
+box.classList.toggle("box");
+});
+Replace.addEventListener("click", function () {
+box.classList.replace("box", "box2");
+});
+Check.addEventListener("click", function () {
+if (box.classList.contains("box")) {
+console.log("الكلاس موجود بالفعل");
+} else {
+box.classList.add("box");
+console.log("تم الاضافة الان");
+}
+});
+let box = document.getElementById("box");
+box.style.color = "red";
+box.style.cssText = `
+background-color: #ccc;
+color: black;
+border-radius: 15px;
+font-size: 20px;
+text-align: center;
+`;
+let mainStyle = document.getElementById("main-style");
+let Swich = document.getElementById("Swich");
+Swich.addEventListener("click", function () {
+if (mainStyle) {
+mainStyle.remove();
+}
+let link = document.createElement("link");
+link.rel = "stylesheet";
+link.href = "../css/Lesson_35_dark.css";
+document.head.appendChild(link);
+});
+let style = document.createElement('style');
+style.textContent = `
+body {
+background-color: black;
+}
+`;
+document.head.appendChild(style);
+let letbox = document.getElementById("letbox");
+let divStyle = window.getComputedStyle(letbox);
+console.log(divStyle.display);
+console.log(divStyle.padding);
+console.log(window.innerWidth);
+console.log(navigator.userAgent);
+console.log(navigator.onLine);
+console.log(location.href);
+console.log(location.pathname);
+let reload = document.getElementById("reload");
+reload.addEventListener("click", function () {
+location.reload();
+});
+let assign = document.getElementById("assign");
+assign.addEventListener("click", function () {
+location.assign("https://www.google.com");
+});
+let replace = document.getElementById("replace");
+replace.addEventListener("click", function () {
+location.replace("https://www.google.com");
+});
+console.log(history.length);
+console.log(history.back());
+console.log(screen.width);
+console.log(screen.availHeight);
+let InformationName = document.getElementById("InformationName");
+InformationName.addEventListener("click", function () {
+let name = prompt("ادخل اسمك");
+console.log(name);
+});
+let confirms = document.getElementById("confirms");
+confirms.addEventListener("click", function () {
+let yesNo = confirm("انت موافق على اختراق الهاتف الخاص بك");
+if (yesNo === true) {
+console.log("انت واحد كفو");
+} else {
+console.log("حقك الطبيعي");
+}
+});
+function clac(num1, num2) {
+console.log(num1 + num2);
+}
+setTimeout(clac, 2000, 7, 3);
+let startI = document.getElementById("startI");
+let counter = document.getElementById("counter");
+let count = 500;
+startI.addEventListener("click", function () {
+function counterDown() {
+counter.innerText = count;
+count--;
+if (count >= 0) {
+setTimeout(counterDown, 20);
+} else {
+alert("انتهى الوقت");
+}
+}
+counterDown();
+});
+setTimeout(function () {
+console.log("Heloo 1");
+setTimeout(function () {
+console.log("Heloo 2");
+setTimeout(function () {
+console.log("Heloo 3");
+}, 1000);
+}, 1500);
+}, 1000);
+function greet(name) {
+console.log(`hello ${name}`);
+}
+setInterval(greet , 200 , 'sulaiman');
+let Stop = document.getElementById("Stop");
+let intrevalCode = setInterval(() => {
+console.log("يتم التنفيذ");
+}, 500);
+Stop.addEventListener("click", function () {
+clearInterval(intrevalCode);
+});
+let clock = document.getElementById("clock");
+function showTime() {
+let now = new Date();
+clock.innerText = now.toLocaleTimeString();
+}
+setInterval(showTime, 1000);
+setInterval(function () {
+let color = "#" + Math.floor(Math.random() * 14777245).toString(16);
+document.getElementById("page").style.backgroundColor = color;
+}, 1000);
+let Scroll = document.getElementById("Scroll");
+let Scrollby = document.getElementById("Scrollby");
+Scroll.addEventListener("click", function () {
+window.scrollTo({
+top: 1000,
+left: 0,
+behavior: "smooth"
+});
+});
+Scrollby.addEventListener("click", function () {
+window.scrollBy({
+top: 500,
+left: 0,
+behavior: "smooth"
+});
+});
+let printBtn = document.getElementById("print");
+printBtn.addEventListener("click", function () {
+window.print();
+});
+localStorage.setItem("name", "sulaiman");
+let storedName = localStorage.getItem("name");
+console.log(storedName);
+localStorage.removeItem("name");
+console.log(localStorage.length);
+let black = document.getElementById("black");
+let red = document.getElementById("red");
+let clear = document.getElementById("clear");
+clear.addEventListener("click", function () {
+localStorage.clear();
+});
+document.body.style.backgroundColor = localStorage.getItem("color");
+red.addEventListener("click", function () {
+localStorage.setItem("color", "red");
+document.body.style.backgroundColor = localStorage.getItem("color");
+});
+black.addEventListener("click", function () {
+localStorage.setItem("color", "black");
+document.body.style.backgroundColor = localStorage.getItem("color");
+});
+const colors = ['red', 'green', 'blue'];
+let [a, b, c] = colors;
+console.log(a);
+let nums2 = [7];
+let [ss, aa = "29"] = nums2;
+console.log(ss);
+console.log(aa);
+const names = ['sulaiman', 'tebarek', 'omar', 'ali'];
+let [sul, tba, ...atherName] = names;
+console.log(sul + ' ' + tba);
+console.log(atherName);
+let users = [['sulaiman', 25], ['Tebarek', 29]];
+let [[mYname, age], [nameT]] = users;
+console.log(mYname, '&', nameT);
+function splitName(fullName) {
+return fullName.split(' ');
+}
+let [firstName, lastName] = splitName('sulaiman sho');
+console.log(firstName);
+console.log(lastName);
+let aaa = 10;
+let bbb = 9999;
+[aaa, bbb] = [bbb, aaa];
+console.log(aaa);
+console.log(bbb);
+let person = {
+name: 'sulaiman',
+age: 25,
+country: 'syria',
+};
+let { name: userName, country } = person;
+console.log(userName);
+console.log(country);
+let student = {
+name: "sulaiman",
+age: 30,
+address: {
+couuntry: "syria",
+city: "idleb",
+phonse: {
+phon1: "12346879",
+phon2: "9787899",
+},
+}
+};
+let { name, age, address: { city, couuntry, phonse: { phon1 } } } = student;
+console.log(city);
+console.log(couuntry);
+console.log(phon1);
+let user = {
+name1: 'omar',
+age: 25,
+country: 'syria',
+};
+let { name1, ...otherp } = user;
+console.log(otherp);
+console.log(otherp.age);
+let numbers = new Set();
+numbers.add(1);
+numbers.add(2);
+numbers.add(3);
+numbers.add(4);
+console.log(numbers);
+numbers.delete(3);
+console.log(numbers);
+console.log(numbers.has(3));
+console.log(numbers.has(4));
+console.log(numbers.size);
+numbers.clear();
+console.log(numbers);
+let nums = [1, 2, 2, 2, 1, 5, 555, 6, 8, 999];
+let newNumss = [...new Set(nums)];
+console.log(newNumss);
+let numbers11 = new Set([1, 2, 5, 6, 8, 9]);
+for (let el of numbers11) {
+console.log(el);
+}
+numbers11.forEach((item) => {
+console.log(item);
+});
+let newArr = Array.from(numbers11);
+console.log(newArr);
+let students = new Set([{ id: 1, name: 'omar' }, { id: 2, name: 'tebarek' }]);
+let updated = { id: 1, name: 'sulaiman' };
+let toDelete = [];
+students.forEach((item) => {
+if (item.id === 1) {
+toDelete.push(item);
+}
+});
+toDelete.forEach((item) => {
+students.delete(item);
+students.add(updated);
+});
+console.log(students);
+

@@ -1,0 +1,83 @@
+        .st0 {
+            fill: #f1dc50;
+        }
+
+        .st1,
+        .jt1 {
+            fill: none;
+            stroke: #333;
+            stroke-miterlimit: 133.33;
+            stroke-width: 66.67px;
+        }
+
+        .jt1 {
+            stroke-dasharray: 490.8481140136719;
+            stroke-dashoffset: 0;
+            transition: 0.5s;
+        }
+
+        .st1 {
+            stroke-dasharray: 721.90625;
+            stroke-dashoffset: 0;
+            transition: 0.5s;
+            transition-delay: 0.5s;
+        }
+
+        .track-icon {
+            width: 150px;
+        }
+
+
+        .playing .st1 {
+            animation: anmationS 3s;
+            animation-delay: 1000ms;
+        }
+
+        .playing .jt1 {
+            animation: anmationJ 4s;
+        }
+
+        @keyframes anmationS {
+            0% {
+                stroke-dashoffset: 721.90625;
+                stroke: #ffffff;
+            }
+
+            50% {
+                stroke: #333;
+                stroke-dashoffset: 0;
+            }
+
+            75% {
+                stroke-dashoffset: 721.90625;
+                stroke: #ffffff;
+            }
+
+            90% {
+                stroke: #333;
+                stroke-dashoffset: 0;
+            }
+        }
+
+
+        @keyframes anmationJ {
+            0% {
+                stroke-dashoffset: 490.8481140136719;
+                stroke: #ffffff;
+            }
+
+            50% {
+                stroke: #333;
+                stroke-dashoffset: 0;
+            }
+
+            75% {
+                stroke-dashoffset: 490.8481140136719;
+                stroke: #ffffff;
+            }
+
+            90% {
+                stroke: #333;
+                stroke-dashoffset: 0;
+            }
+        }

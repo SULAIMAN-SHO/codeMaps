@@ -1,0 +1,65 @@
+/* زر العودة التفاعلي الفاخر (Interactive Back Button) */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.65rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    transition: var(--transition-smooth);
+    user-select: none;
+    will-change: transform, border-color, background-color;
+}
+
+.back-btn span {
+    display: inline-block;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.back-btn:hover {
+    background-color: var(--bg-tertiary);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+    box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+/* تحريك السهم برفق عند التحويم لمنح طابع ديناميكي متجاوب */
+.back-btn:hover span {
+    transform: translateX(4px);
+}
+
+.back-btn:active {
+    transform: scale(0.97);
+}
+
+/* شريط التنقل الفرعي ومسارات المراجع (Breadcrumbs) */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    user-select: none;
+}
+
+.breadcrumb-item {
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.breadcrumb-item:hover {
+    color: var(--accent-primary);
+}
+
+.breadcrumb-separator {
+    display: inline-block;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+}
