@@ -56,6 +56,7 @@ import { variablesCustomPropertiesData } from './Css/variables-custom-properties
 import { responsiveMediaQueriesData } from './Css/responsive-media-queries.js';
 import { mathFunctionsData } from './Css/math-functions.js';
 import { filtersEffectsData } from './Css/filters-effects.js';
+import { scrollOverflowData } from './Css/scroll-overflow.js';
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
@@ -108,4 +109,5 @@ export const registry = {
     'css-responsive-media-queries': responsiveMediaQueriesData,
     'css-math-functions': mathFunctionsData,
     'css-filters-effects': filtersEffectsData,
+    'css-scroll-overflow': scrollOverflowData,
 };
