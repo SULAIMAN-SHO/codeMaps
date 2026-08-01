@@ -39,6 +39,15 @@ export function renderCategory(container, categoryId) {
   } else if (category.tech === 'javascript') {
     backLabel = 'العودة لمسار JavaScript';
     backHash = '#/track/javascript';
+  } else if (category.tech === 'vscode') {
+    backLabel = 'العودة لمسار إضافات VS Code';
+    backHash = '#/track/vscode';
+  } else if (category.tech === 'ai-tools') {
+    backLabel = 'العودة لمسار أدوات الذكاء الاصطناعي';
+    backHash = '#/track/ai-tools';
+  } else if (category.tech === 'dev-tools') {
+    backLabel = 'العودة لمسار أدوات ومواقع للمطورين';
+    backHash = '#/track/dev-tools';
   }
 
   // بناء ترويسة التصنيف المحددة مع زر العودة التكيفي

@@ -24,6 +24,27 @@ export class CardComponent {
           plural: 'خصائص جاهزة',
           singularOverTen: 'خاصية جاهزة'
         };
+      case 'dev-tools':
+        return {
+          single: 'موقع واحد جاهز',
+          dual: 'موقعان جاهزان',
+          plural: 'مواقع جاهزة',
+          singularOverTen: 'موقع جاهز'
+        };
+      case 'vscode':
+        return {
+          single: 'إضافة واحدة جاهزة',
+          dual: 'إضافتان جاهزتان',
+          plural: 'إضافات جاهزة',
+          singularOverTen: 'إضافة جاهزة'
+        };
+      case 'ai-tools':
+        return {
+          single: 'أداة واحدة جاهزة',
+          dual: 'أداتان جاهزتان',
+          plural: 'أدوات جاهزة',
+          singularOverTen: 'أداة جاهزة'
+        };
       case 'javascript':
       default:
         return {
@@ -93,31 +114,70 @@ export class CardComponent {
   }
 
   /**
-   * إنشاء بطاقة دالة/عنصر ديناميكية داخل صفحة القسم لعرض المفاهيم والطبقات
-   * @param {Object} method - بيانات الدالة أو الخاصية
-   * @param {Function} onClickCallback - دالة التنفيذ العكسية عند النقر لفتح المودال
-   * @returns {HTMLElement} - عنصر البطاقة الجاهز للحقن في الـ DOM
-   */
+    * إنشاء بطاقة دالة/عنصر/موقع/إضافة ديناميكية مجهزة بالأيقونة والأزرار المخصصة
+    * @param {Object} method - بيانات الدالة أو الأداة أو الإضافة
+    * @param {Function} onClickCallback - دالة التنفيذ العكسية عند النقر لفتح المودال
+    * @returns {HTMLElement} - عنصر البطاقة الجاهز للحقن في الـ DOM
+    */
   static createMethodCard(method, onClickCallback) {
     const card = document.createElement('div');
     card.className = 'premium-card hover-scale';
     card.setAttribute('role', 'button');
     card.setAttribute('aria-label', `تفاصيل ${method.name}`);
 
-    // تعيين الصعوبة والأهمية لإضفاء التصنيف البصري المريح للمطور
-    const difficultyLabel = method.difficulty === 'easy' ? 'سهل' : method.difficulty === 'medium' ? 'متوسط' : 'صعب';
-    const importanceLabel = method.importance === 'critical' ? 'حرج' : method.importance === 'important' ? 'مهم' : 'اختياري';
+    // معالجة الأيقونة/الشعار إن وجد في بيانات العنصر
+    let iconHTML = '';
+    if (method.icon) {
+      if (method.icon.trim().startsWith('<svg')) {
+        iconHTML = `<div class="card-icon-wrapper" style="margin-bottom: 0.75rem; display: flex; justify-content: center; align-items: center; min-height: 48px;">${method.icon}</div>`;
+      } else {
+        iconHTML = `<div class="card-icon-wrapper" style="margin-bottom: 0.75rem; display: flex; justify-content: center; align-items: center; min-height: 48px;"><img src="${sanitizeHTML(method.icon)}" alt="${sanitizeHTML(method.name)}" style="max-height: 48px; max-width: 48px; object-fit: contain;" /></div>`;
+      }
+    }
+
+    // صياغة التذييل والأزرار حسب نوع العنصر (موقع، إضافة، أداة ذكاء اصطناعي، دالة برمجية)
+    let footerHTML = '';
+    if (method.type === 'website' || method.type === 'ai-tool') {
+      footerHTML = `
+        <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
+          <a href="${sanitizeHTML(method.url || '#')}" target="_blank" rel="noopener noreferrer" class="btn-action-primary" style="padding: 0.45rem 0.85rem; background: var(--accent-primary); color: #fff; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" onclick="event.stopPropagation();">
+            🔗 زيارة الموقع
+          </a>
+          <button class="btn-action-secondary details-btn" style="padding: 0.45rem 0.85rem; background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; cursor: pointer;">
+            📖 المزيد
+          </button>
+        </div>
+      `;
+    } else if (method.type === 'vscode-extension') {
+      footerHTML = `
+        <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
+          <a href="${sanitizeHTML(method.installUrl || '#')}" class="btn-action-primary" style="padding: 0.45rem 0.85rem; background: #007acc; color: #fff; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" onclick="event.stopPropagation();">
+            ⚡ تثبيت
+          </a>
+          <button class="btn-action-secondary details-btn" style="padding: 0.45rem 0.85rem; background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; cursor: pointer;">
+            📖 المزيد
+          </button>
+        </div>
+      `;
+    } else {
+      const difficultyLabel = method.difficulty === 'easy' ? 'سهل' : method.difficulty === 'medium' ? 'متوسط' : 'صعب';
+      const importanceLabel = method.importance === 'critical' ? 'حرج' : method.importance === 'important' ? 'مهم' : 'اختياري';
+      footerHTML = `
+        <div class="badge-container">
+          <span class="badge badge-${method.difficulty}">${difficultyLabel}</span>
+          <span class="badge badge-${method.importance}">${importanceLabel}</span>
+        </div>
+      `;
+    }
 
     card.innerHTML = `
+      ${iconHTML}
       <div class="card-header">
         <span class="card-title-en" style="color: var(--accent-primary);">${sanitizeHTML(method.name)}</span>
       </div>
       <p class="card-desc">${sanitizeHTML(method.shortDescription)}</p>
       <div class="card-footer">
-        <div class="badge-container">
-          <span class="badge badge-${method.difficulty}">${difficultyLabel}</span>
-          <span class="badge badge-${method.importance}">${importanceLabel}</span>
-        </div>
+        ${footerHTML}
       </div>
     `;
 

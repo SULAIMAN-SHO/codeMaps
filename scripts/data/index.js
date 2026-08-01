@@ -61,6 +61,11 @@ import { scrollOverflowData } from './Css/scroll-overflow.js';
 import { cascadeScopeData } from './Css/cascade-scope.js';
 import { advancedSelectorsData } from './Css/advanced-selectors.js';
 
+import { vscodeExtensionsData } from './tools/vscode-extensions.js';
+
+import { aiToolsData } from './tools/ai-tools.js';
+import { visualInspirationData, imageEditingData, videoEditingData } from './tools/dev-tools.js';
+
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
 export const registry = {
     variables: variablesData,
@@ -121,4 +126,9 @@ export const registry = {
     'css-cascade-scope': cascadeScopeData,
     'css-modern-architecture': cascadeScopeData,
     'css-advanced-selectors': advancedSelectorsData,
+    'vscode-extensions': vscodeExtensionsData,
+    'ai-tools-cat': aiToolsData,
+    'visual-inspiration': visualInspirationData,
+    'image-editing': imageEditingData,
+    'video-editing': videoEditingData,
 };
