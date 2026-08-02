@@ -70,12 +70,9 @@ export function renderHome(container) {
 
         <!-- 4. مسار إضافات VS Code -->
         <div class="premium-card tech-track-card" data-tech="vscode" role="button" aria-label="إضافات VS Code" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-            <div style="width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;">
-                <svg width="65" height="65" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16.5 9.4 7.55 4.24a1 1 0 0 0-1.05.1l-3 2.5a1 1 0 0 0-.05 1.5l3.5 3.16L3.45 14.66a1 1 0 0 0 .05 1.5l3 2.5a1 1 0 0 0 1.05.1L16.5 13.6a1 1 0 0 0 .5-.86V10.26a1 1 0 0 0-.5-.86z"></path>
-                    <path d="M18 6v12l3.5-2.5a1 1 0 0 0 .5-.86V9.36a1 1 0 0 0-.5-.86L18 6z"></path>
-                </svg>
-            </div>
+            <model-viewer src="assets/3D/vs-code-extensions.glb" auto-rotate interaction-prompt="none" rotation-per-second="50deg"
+                camera-controls disable-zoom shadow-intensity="1" exposure="1" environment-image="neutral"
+                style="width: 100%; height: 150px; display: block; margin: 0 auto;"></model-viewer>
             <span class="track-title" style="color: var(--text-primary); font-size: 1.3rem; margin-top: 0.5rem; letter-spacing: 1px;">VS Code</span>
             <p class="track-desc">إضافات ملحقات المحرر</p>
         </div>
