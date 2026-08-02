@@ -116,6 +116,16 @@
   text-align: center;
 }
 
+/* استهداف عناوين كروت مسار أدوات ومواقع للمطورين تحديداً */
+.premium-card[data-tech="dev-tools"] .card-title-en {
+  font-family: 'Cairo', sans-serif;
+  /* اسم الخط العربي المطلوب */
+  direction: rtl;
+  /* الاتجاه من اليمين إلى اليسار */
+  text-align: center;
+  /* محاذاة النص بالمنتصف */
+}
+
 .card-title-ar {
   color: var(--accent-primary);
   font-size: 0.95rem;

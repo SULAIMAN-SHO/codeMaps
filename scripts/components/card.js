@@ -64,6 +64,8 @@ export class CardComponent {
   static createCategoryCard(category) {
     const card = document.createElement('div');
     card.className = 'premium-card hover-scale';
+    card.setAttribute('data-tech', category.tech || '');
+    card.setAttribute('data-category-id', category.id || '');
     card.setAttribute('role', 'button');
     card.setAttribute('aria-label', `عرض قسم ${category.arabicName}`);
 
