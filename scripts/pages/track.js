@@ -67,6 +67,92 @@ export function renderTrack(container, techName) {
       return;
     }
 
+    // إضافة شريط التثبيت الجماعي المخصص لإضافات VS Code
+    if (techName === 'vscode') {
+      const batchBar = document.createElement('div');
+      batchBar.className = 'batch-install-bar';
+      batchBar.style.cssText = 'background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;';
+
+      batchBar.innerHTML = `
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; cursor: pointer; color: var(--text-primary); font-size: 0.95rem;">
+                  <input type="checkbox" id="select-all-exts" style="width: 18px; height: 18px; accent-color: var(--accent-primary); cursor: pointer;" />
+                  تحديد الكل
+                </label>
+                <span id="selected-count-badge" class="badge" style="background: rgba(255,255,255,0.05); color: var(--accent-primary); border: 1px solid var(--border-color); font-size: 0.85rem;">المحدد: 0 إضافة</span>
+              </div>
+              <button id="batch-copy-cmd-btn" style="padding: 0.6rem 1.25rem; background: #007acc; color: #ffffff; border: none; border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; box-shadow: 0 4px 12px rgba(0, 122, 204, 0.35);">
+                🚀 تثبيت الحزمة المحددة بضغطة زر
+              </button>
+            `;
+
+      contentArea.appendChild(batchBar);
+
+      // ربط أحداث الشريط الجماعي بعد تجهيز واجهة العناصر
+      setTimeout(() => {
+        const selectAllCb = document.getElementById('select-all-exts');
+        const countBadge = document.getElementById('selected-count-badge');
+        const copyCmdBtn = document.getElementById('batch-copy-cmd-btn');
+
+        const updateCount = () => {
+          const checked = document.querySelectorAll('.ext-checkbox:checked');
+          if (countBadge) {
+            countBadge.textContent = `المحدد: ${checked.length} إضافة`;
+          }
+        };
+
+        if (selectAllCb) {
+          selectAllCb.addEventListener('change', (e) => {
+            const allCbs = document.querySelectorAll('.ext-checkbox');
+            allCbs.forEach(cb => {
+              cb.checked = e.target.checked;
+            });
+            updateCount();
+          });
+        }
+
+        // تحديث العداد الفوري عند النقر على أي مربع تحديد
+        contentArea.addEventListener('change', (e) => {
+          if (e.target.classList.contains('ext-checkbox')) {
+            updateCount();
+          }
+        });
+
+        // نسخ أمر التثبيت الشامل الصامت وتأكيده عبر المودال المصغر الذكي
+        if (copyCmdBtn) {
+          copyCmdBtn.addEventListener('click', () => {
+            const checkedCbs = document.querySelectorAll('.ext-checkbox:checked');
+            if (checkedCbs.length === 0) {
+              ModalComponent.toast({
+                title: 'تنبيه التحديد',
+                message: 'يرجى تحديد إضافة واحدة على الأقل لتثبيت الحزمة.',
+                type: 'warning'
+              });
+              return;
+            }
+
+            const extIds = Array.from(checkedCbs).map(cb => cb.getAttribute('data-ext-id')).filter(Boolean);
+            const cliCommand = `code ${extIds.map(id => `--install-extension ${id}`).join(' ')}`;
+
+            navigator.clipboard.writeText(cliCommand).then(() => {
+              ModalComponent.toast({
+                title: 'تم تجهيز أمر التثبيت الشامل بنجاح',
+                message: 'تم نسخ أمر السطر البرمجي الموحد لجميع الإضافات المحددة إلى الحافظة! للتثبيت الفوري بدون أي رسائل متصفح:\n1. افتح Terminal أو PowerShell في حاسوبك.\n2. الصق الأمر المنسوخ واضغط Enter.',
+                code: cliCommand,
+                type: 'success'
+              });
+            }).catch(() => {
+              ModalComponent.toast({
+                title: 'تنبيه النسخ',
+                message: 'تعذر النسخ التلقائي للحافظة، يرجى منح المتصفح إذن النسخ.',
+                type: 'warning'
+              });
+            });
+          });
+        }
+      }, 50);
+    }
+
     // تجميع العناصر حسب المجموعات (group)
     const groups = {};
     allItems.forEach(item => {

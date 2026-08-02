@@ -122,8 +122,19 @@ export class CardComponent {
   static createMethodCard(method, onClickCallback) {
     const card = document.createElement('div');
     card.className = 'premium-card hover-scale';
+    card.style.position = 'relative';
     card.setAttribute('role', 'button');
     card.setAttribute('aria-label', `تفاصيل ${method.name}`);
+
+    // إضافة مربع تحديد تفاعلي مخصص لإضافات VS Code
+    let selectCheckboxHTML = '';
+    if (method.type === 'vscode-extension') {
+      selectCheckboxHTML = `
+        <div class="ext-select-wrapper" style="position: absolute; top: 0.85rem; left: 0.85rem; z-index: 3;" onclick="event.stopPropagation();">
+          <input type="checkbox" class="ext-checkbox" data-ext-id="${sanitizeHTML(method.id)}" data-install-url="${sanitizeHTML(method.installUrl)}" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--accent-primary);" />
+        </div>
+      `;
+    }
 
     // معالجة الأيقونة/الشعار إن وجد في بيانات العنصر
     let iconHTML = '';
@@ -171,6 +182,7 @@ export class CardComponent {
     }
 
     card.innerHTML = `
+      ${selectCheckboxHTML}
       ${iconHTML}
       <div class="card-header">
         <span class="card-title-en" style="color: var(--accent-primary);">${sanitizeHTML(method.name)}</span>

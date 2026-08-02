@@ -229,4 +229,64 @@ export class ModalComponent {
       }, 350);
     }
   }
+  /**
+   * إنشاء وتفعيل نافذة منبثقة مخصصة صغيرة للرسائل والتنبيهات السريعة (Compact Notification Toast Modal)
+   * @param {Object} options - عنوان الرسالة، نصها، الكود، ونوع التنبيه
+   */
+  static toast({ title, message, code, type = 'success' }) {
+    let container = document.getElementById('toast-modal-container');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'toast-modal-container';
+      document.body.appendChild(container);
+    }
+
+    const icon = type === 'success' ? '✅' : (type === 'warning' ? '⚠️' : 'ℹ️');
+    const borderColor = type === 'success' ? '#10b981' : (type === 'warning' ? '#f59e0b' : '#3b82f6');
+
+    container.className = 'modal-overlay active';
+    container.innerHTML = `
+      <div class="modal-wrapper slide-up" style="max-width: 520px; border-top: 4px solid ${borderColor}; padding: 1.5rem; background: var(--bg-secondary);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.3rem;">${icon}</span>
+            <span style="font-size: 1.1rem; font-weight: 800; color: var(--text-primary);">${sanitizeHTML(title)}</span>
+          </div>
+          <button class="modal-close-btn" id="toast-close-btn" aria-label="إغلاق" style="font-size: 1.2rem; cursor: pointer;">×</button>
+        </div>
+        
+        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+          ${sanitizeHTML(message)}
+        </p>
+
+        ${code ? `
+        <div class="code-container" style="margin-bottom: 1.25rem; background: #0d1117; border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 0.85rem;">
+          <div style="font-size: 0.75rem; color: var(--accent-primary); font-weight: 700; margin-bottom: 0.4rem;">الأمر المنسوخ في الحافظة:</div>
+          <pre class="code-block" style="margin: 0; white-space: pre-wrap; word-break: break-all;"><code style="color: #a7f3d0; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;">${sanitizeHTML(code)}</code></pre>
+        </div>
+        ` : ''}
+
+        <div style="display: flex; justify-content: flex-end;">
+          <button id="toast-confirm-btn" style="padding: 0.55rem 1.4rem; background: var(--accent-primary); color: #fff; border: none; border-radius: var(--radius-sm); font-weight: 700; font-size: 0.88rem; cursor: pointer; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);">
+            فهمت ذلك
+          </button>
+        </div>
+      </div>
+    `;
+
+    document.body.style.overflow = 'hidden';
+
+    const close = () => {
+      container.className = 'modal-overlay';
+      document.body.style.overflow = '';
+      setTimeout(() => { container.innerHTML = ''; }, 300);
+    };
+
+    document.getElementById('toast-close-btn')?.addEventListener('click', close);
+    document.getElementById('toast-confirm-btn')?.addEventListener('click', close);
+    container.addEventListener('click', (e) => {
+      if (e.target === container) close();
+    });
+  }
+
 }
