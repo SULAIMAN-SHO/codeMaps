@@ -136,13 +136,21 @@ export class CardComponent {
       `;
     }
 
-    // معالجة الأيقونة/الشعار إن وجد في بيانات العنصر
+    // معالجة الأيقونة/الشعار إن وجد في بيانات العنصر مع دعم السقوط الآمن عند تعذر التحميل
     let iconHTML = '';
     if (method.icon) {
       if (method.icon.trim().startsWith('<svg')) {
         iconHTML = `<div class="card-icon-wrapper" style="margin-bottom: 0.75rem; display: flex; justify-content: center; align-items: center; min-height: 48px;">${method.icon}</div>`;
       } else {
-        iconHTML = `<div class="card-icon-wrapper" style="margin-bottom: 0.75rem; display: flex; justify-content: center; align-items: center; min-height: 48px;"><img src="${sanitizeHTML(method.icon)}" alt="${sanitizeHTML(method.name)}" style="max-height: 48px; max-width: 48px; object-fit: contain;" /></div>`;
+        const cleanSrc = method.icon.replace(/&amp;/g, '&');
+        let domainFallback = 'google.com';
+        try {
+          if (method.url) domainFallback = new URL(method.url).hostname;
+        } catch (e) { }
+
+        iconHTML = `<div class="card-icon-wrapper" style="margin-bottom: 0.75rem; display: flex; justify-content: center; align-items: center; min-height: 48px;">
+          <img src="${cleanSrc}" alt="${sanitizeHTML(method.name)}" style="max-height: 48px; max-width: 48px; object-fit: contain; border-radius: 6px;" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=${domainFallback}&sz=128';" />
+        </div>`;
       }
     }
 

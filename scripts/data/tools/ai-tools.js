@@ -1,41 +1,602 @@
 export const aiToolsData = [
+    // ==========================================
+    // 1. منصات تجربة النماذج المجمعة مجاناً (Free Multi-Model Playgrounds)
+    // ==========================================
+    {
+        id: 'ai-openrouter',
+        type: 'ai-tool',
+        name: 'OpenRouter',
+        icon: 'https://www.google.com/s2/favicons?domain=openrouter.ai&sz=128',
+        group: 'منصات تجربة النماذج المجمعة مجاناً',
+        shortDescription: 'بوابة المطورين الشاملة للوصول واستخدام عشرات النماذج العالمية مجاناً وبواجهة موحدة.',
+        url: 'https://openrouter.ai',
+        pricing: 'نماذج مجانية / رصيد حسب الاستهلاك',
+        bestFor: 'أفضل حالات الاستخدام: التبديل الفوري بين أحدث النماذج المفتوحة والمدفوعة وتجربتها مجاناً.',
+        features: ['تجميع عشرات النماذج العالمية', 'واجهة شات تفاعلية حرة', 'دعم النماذج المجانية المفتوحة'],
+        keywords: ['openrouter', 'playground', 'free models', 'api']
+    },
+    {
+        id: 'ai-poe',
+        type: 'ai-tool',
+        name: 'Poe by Quora',
+        icon: 'https://www.google.com/s2/favicons?domain=poe.com&sz=128',
+        group: 'منصات تجربة النماذج المجمعة مجاناً',
+        shortDescription: 'منصة تجمع لك كافة النماذج الذكية (Claude, ChatGPT, DeepSeek, Llama) في مكان واحد.',
+        url: 'https://poe.com',
+        pricing: 'استخدام مجاني يومي / اشتراك',
+        bestFor: 'أفضل حالات الاستخدام: تجربة وبناء بوتات مخصصة والوصول لأحدث نماذج الذكاء الاصطناعي مجاناً.',
+        features: ['وصول لكافة النماذج العالمية', 'إنشاء بوتات مخصصة', 'تجربة مجانية يومية مريحة'],
+        keywords: ['poe', 'quora', 'chatbots', 'free ai']
+    },
+    {
+        id: 'ai-lmarena',
+        type: 'ai-tool',
+        name: 'LMSYS Chatbot Arena',
+        icon: 'https://www.google.com/s2/favicons?domain=lmarena.ai&sz=128',
+        group: 'منصات تجربة النماذج المجمعة مجاناً',
+        shortDescription: 'حلبة التقييم المباشر العالمية لتجربة ومقارنة كافة النماذج مجاناً دون أي قيود.',
+        url: 'https://lmarena.ai',
+        pricing: 'مجاني بالكامل',
+        bestFor: 'أفضل حالات الاستخدام: إجراء مقارنات أفقية مجانية بين نموذجين مختلفين بنفس الوقت.',
+        features: ['تجربة مجانية غير محدودة', 'مقارنة النماذج جنباً إلى جنب', 'لوحة التصنيف العالمي المعتمدة'],
+        keywords: ['lmarena', 'chatbot arena', 'benchmark', 'free']
+    },
+    {
+        id: 'ai-huggingchat',
+        type: 'ai-tool',
+        name: 'HuggingChat',
+        icon: 'https://www.google.com/s2/favicons?domain=huggingface.co&sz=128',
+        group: 'منصات تجربة النماذج المجمعة مجاناً',
+        shortDescription: 'منصة HuggingFace المفتوحة لتجربة أحدث النماذج المفتوحة المصدر مجاناً.',
+        url: 'https://huggingface.co/chat',
+        pricing: 'مجاني ومفتوح المصدر',
+        bestFor: 'أفضل حالات الاستخدام: تجربة أحدث النماذج المفتوحة مثل Llama 3 و Qwen و DeepSeek بخصوصية.',
+        features: ['بديل مفتوح المصدر لـ ChatGPT', 'مجاني بالكامل بدون إعلانات', 'دعم النماذج المتقدمة'],
+        keywords: ['huggingface', 'huggingchat', 'open source', 'free']
+    },
+    {
+        id: 'ai-duckduckgo-chat',
+        type: 'ai-tool',
+        name: 'DuckDuckGo AI Chat',
+        icon: 'https://www.google.com/s2/favicons?domain=duckduckgo.com&sz=128',
+        group: 'منصات تجربة النماذج المجمعة مجاناً',
+        shortDescription: 'تصفح وتجربة النماذج الذكية المجهولة دون تسجيل دخول أو تتبع للخصوصية.',
+        url: 'https://duckduckgo.com/chat',
+        pricing: 'مجاني بالكامل',
+        bestFor: 'أفضل حالات الاستخدام: المحادثات البرمجية السريعة والخاصة دون الحاجة لإنشاء حساب.',
+        features: ['خصوصية فائقة ومجهولية تامة', 'بدون تسجيل دخول', 'دعم Claude و Llama و Mixtral'],
+        keywords: ['duckduckgo', 'privacy', 'free chat', 'anonymous']
+    },
+    {
+        id: 'ai-mistral-chat',
+        type: 'ai-tool',
+        name: 'Mistral Le Chat',
+        icon: 'https://www.google.com/s2/favicons?domain=chat.mistral.ai&sz=128',
+        group: 'منصات تجربة النماذج المجمعة مجاناً',
+        shortDescription: 'منصة شركة Mistral الفرنسية الرسمية لتجربة نماذجها القوية للبرمجة والمحادثة مجاناً.',
+        url: 'https://chat.mistral.ai',
+        pricing: 'مجاني بالكامل',
+        bestFor: 'أفضل حالات الاستخدام: معالجة الأكواد واللغات الأوروبية والعربية بنماذج فائقة السرعة.',
+        features: ['نماذج Mistral Large وسريعة', 'مجاني بالكامل', 'أداء عالي في تحليل البرمجيات'],
+        keywords: ['mistral', 'le chat', 'france', 'free ai']
+    },
+
+    // ==========================================
+    // 2. مفاتيح API مجانية وخوادم الذكاء الاصطناعي (Free AI API Keys)
+    // ==========================================
+    {
+        id: 'ai-groq',
+        type: 'ai-tool',
+        name: 'GroqCloud Console',
+        icon: 'https://www.google.com/s2/favicons?domain=console.groq.com&sz=128',
+        group: 'مفاتيح API مجانية وخوادم الذكاء الاصطناعي',
+        shortDescription: 'أسرع خادم ذكاء اصطناعي في العالم يمنحك مفاتيح API مجانية وبسرعة معالجة خيالية.',
+        url: 'https://console.groq.com',
+        pricing: 'مفاتيح API مجانية وسريعة',
+        bestFor: 'أفضل حالات الاستخدام: استخراج مفتاح API مجاني وسريع جداً لتطبيقاتك بنماذج Llama و DeepSeek.',
+        features: ['سرعة استجابة فائقة (LPU)', 'مفاتيح API مجانية سخية', 'دعم نماذج مفتوحة متقدمة'],
+        keywords: ['groq', 'api key', 'free api', 'lpu', 'fast']
+    },
+    {
+        id: 'ai-google-studio',
+        type: 'ai-tool',
+        name: 'Google AI Studio',
+        icon: 'https://www.google.com/s2/favicons?domain=aistudio.google.com&sz=128',
+        group: 'مفاتيح API مجانية وخوادم الذكاء الاصطناعي',
+        shortDescription: 'استخراج مفاتيح API مجانية لنماذج قوقل المتقدمة (Gemini 1.5 Pro & Flash).',
+        url: 'https://aistudio.google.com',
+        pricing: 'مفاتيح API مجانية للمطورين',
+        bestFor: 'أفضل حالات الاستخدام: دمج نموذج Gemini القوي بسعة سياق ضخمة في مشاريعك مجاناً.',
+        features: ['مفاتيح API مجانية بحدود سخية', 'سعة سياق مليوني توكن', 'دعم تحليل الفيديو والصور'],
+        keywords: ['google', 'ai studio', 'gemini api', 'free api']
+    },
+    {
+        id: 'ai-together',
+        type: 'ai-tool',
+        name: 'Together AI',
+        icon: 'https://www.google.com/s2/favicons?domain=www.together.ai&sz=128',
+        group: 'مفاتيح API مجانية وخوادم الذكاء الاصطناعي',
+        shortDescription: 'منصة خوادم تمنح رصيداً تجريبياً مجانياً لبناء وتجربة مفاتيح API للنماذج المفتوحة.',
+        url: 'https://www.together.ai',
+        pricing: 'رصيد مجاني للمبتدئين',
+        bestFor: 'أفضل حالات الاستخدام: الوصول السريع لعشرات النماذج المفتوحة عبر API واحدة موحدة.',
+        features: ['رصيد مجاني عند التسجيل', 'أسعار اقتصادية جداً', 'دعم كود استدعاء موحد'],
+        keywords: ['together ai', 'api keys', 'inference', 'open source']
+    },
+    {
+        id: 'ai-replicate',
+        type: 'ai-tool',
+        name: 'Replicate',
+        icon: 'https://www.google.com/s2/favicons?domain=replicate.com&sz=128',
+        group: 'مفاتيح API مجانية وخوادم الذكاء الاصطناعي',
+        shortDescription: 'تشغيل واختبار آلاف نماذج التوليد المفتوحة والصوت والصور عبر مفاتيح API.',
+        url: 'https://replicate.com',
+        pricing: 'تجربة مجانية / حسب الاستخدام',
+        bestFor: 'أفضل حالات الاستخدام: دمج نماذج توليد الصور والتفريغ الصوتي المعقدة عبر API بسيطة.',
+        features: ['آلاف النماذج المتخصصة', 'تجربة مباشرة أونلاين', 'دعم النماذج البصرية'],
+        keywords: ['replicate', 'models', 'api', 'image generation']
+    },
+    {
+        id: 'ai-cerebras',
+        type: 'ai-tool',
+        name: 'Cerebras Cloud',
+        icon: 'https://www.google.com/s2/favicons?domain=cloud.cerebras.ai&sz=128',
+        group: 'مفاتيح API مجانية وخوادم الذكاء الاصطناعي',
+        shortDescription: 'أسرع خادم توليد نصوص وأكواد بـ 2000+ توكن في الثانية مع شات وAPI مجاني.',
+        url: 'https://cloud.cerebras.ai',
+        pricing: 'مجاني / مفاتيح API',
+        bestFor: 'أفضل حالات الاستخدام: استخراج مفتاح API فائق السرعة وتجربة شات فورية لنماذج Llama.',
+        features: ['أسرع استجابة توليد في العالم (WSE)', 'تجربة شات سحابية فورية', 'دعم مفاتيح API مجانية'],
+        keywords: ['cerebras', 'fast ai', 'cloud', 'speed', 'api']
+    },
+    // ==========================================
+    // 3. بناء التطبيقات والواجهات الكاملة (AI Full-Stack Builders)
+    // ==========================================
     {
         id: 'ai-v0',
         type: 'ai-tool',
         name: 'v0 by Vercel',
-        icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><circle cx="12" cy="12" r="3"/></svg>',
-        group: 'توليد الكود والواجهات',
+        icon: 'https://www.google.com/s2/favicons?domain=v0.dev&sz=128',
+        group: 'بناء التطبيقات والواجهات الكاملة',
         shortDescription: 'إنشاء مكونات واجهات تفاعلية مستجيبة بـ React و Tailwind CSS بطلب نصي بسيط.',
         url: 'https://v0.dev',
         pricing: 'مجاني / خطط مدفوعة',
         bestFor: 'أفضل حالات الاستخدام: بناء الواجهات السريعة واستلهام وتوليد المكونات البرمجية الأنيقة.',
-        features: ['توليد كود نظيف وقابل لإعادة الاستخدام', 'تعديل تفاعلي مباشر عبر المحادثة', 'تصدير فوري للمشروع بنقرة زر'],
-        keywords: ['ai', 'v0', 'vercel', 'react', 'tailwind']
+        features: ['توليد كود نظيف وقابل لإعادة الاستخدام', 'تعديل تفاعلي مباشر', 'تصدير فوري للمشروع'],
+        keywords: ['v0', 'vercel', 'react', 'ui']
+    },
+    {
+        id: 'ai-bolt',
+        type: 'ai-tool',
+        name: 'Bolt.new',
+        icon: 'https://www.google.com/s2/favicons?domain=bolt.new&sz=128',
+        group: 'بناء التطبيقات والواجهات الكاملة',
+        shortDescription: 'بناء وتثبيت وتشغيل مشاريع الويب الكاملة (Full-Stack) أونلاين بالذكاء الاصطناعي.',
+        url: 'https://bolt.new',
+        pricing: 'مجاني / خطط مدفوعة',
+        bestFor: 'أفضل حالات الاستخدام: إنشاء تطبيقات ويب كاملة تشمل الفرونت إند والباك إند داخل المتصفح.',
+        features: ['تشغيل الكود حياً بالمتصفح', 'تثبيت حزم npm تلقائياً', 'توليد تطبيقات متكاملة'],
+        keywords: ['bolt', 'fullstack', 'ai', 'webcontainer']
+    },
+    {
+        id: 'ai-lovable',
+        type: 'ai-tool',
+        name: 'Lovable.dev',
+        icon: 'https://www.google.com/s2/favicons?domain=lovable.dev&sz=128',
+        group: 'بناء التطبيقات والواجهات الكاملة',
+        shortDescription: 'منصة تطوير واجهات وتطبيقات حقيقية كاملة فائقة الأناقة بناءً على الوصف.',
+        url: 'https://lovable.dev',
+        pricing: 'مجاني / خطط مدفوعة',
+        bestFor: 'أفضل حالات الاستخدام: تحويل أفكار المنتجات إلى تطبيقات حقيقية وقابلة للنشر فوراً.',
+        features: ['توليد تطبيقات متكاملة', 'ربط بقواعد البيانات', 'تصاميم حديثة فائقة الجودة'],
+        keywords: ['lovable', 'dev', 'fullstack', 'ui']
+    },
+    {
+        id: 'ai-marblism',
+        type: 'ai-tool',
+        name: 'Marblism',
+        icon: 'https://www.google.com/s2/favicons?domain=www.marblism.com&sz=128',
+        group: 'بناء التطبيقات والواجهات الكاملة',
+        shortDescription: 'توليد تطبيقات ويب وهواتف كاملة مع قاعدة البيانات والباك إند بطلب نصي واحد.',
+        url: 'https://www.marblism.com',
+        pricing: 'مجاني تجريبي / مدفوع',
+        bestFor: 'أفضل حالات الاستخدام: إنشاء هيكلية تطبيقات SaaS كاملة وتشغيل الباك إند تلقائياً.',
+        features: ['توليد قواعد بيانات وبناء باك إند', 'إنشاء واجهات تفاعلية', 'تصدير الكود لـ GitHub'],
+        keywords: ['marblism', 'saas', 'fullstack', 'database']
+    },
+    {
+        id: 'ai-locofy',
+        type: 'ai-tool',
+        name: 'Locofy.ai',
+        icon: 'https://www.google.com/s2/favicons?domain=www.locofy.ai&sz=128',
+        group: 'بناء التطبيقات والواجهات الكاملة',
+        shortDescription: 'تحويل تصاميم Figma إلى أكواد React و Web مجهزة للإنتاج بالذكاء الاصطناعي.',
+        url: 'https://www.locofy.ai',
+        pricing: 'مجاني تجريبي / مدفوع',
+        bestFor: 'أفضل حالات الاستخدام: تحويل ملفات التصاميم إلى أكواد فرونت إند متجاوبة حقيقية.',
+        features: ['ربط مباشر مع Figma', 'توليد كود متجاف كلياً', 'دعم React و HTML/CSS'],
+        keywords: ['locofy', 'figma to code', 'react', 'frontend']
+    },
+    {
+        id: 'ai-magicpatterns',
+        type: 'ai-tool',
+        name: 'MagicPatterns',
+        icon: 'https://www.google.com/s2/favicons?domain=www.magicpatterns.com&sz=128',
+        group: 'بناء التطبيقات والواجهات الكاملة',
+        shortDescription: 'إنشاء واستلهام نماذج الواجهات والمكونات وتصميمات الأفكار البرمجية.',
+        url: 'https://www.magicpatterns.com',
+        pricing: 'مجاني تجريبي / مدفوع',
+        bestFor: 'أفضل حالات الاستخدام: توليد واستكشاف أفكار مكونات الواجهات وتصميمات النماذج الأولية.',
+        features: ['إنشاء مكونات واجهات بـ React', 'تصدير التصاميم والكود', 'استلهام الأفكار السريعة'],
+        keywords: ['magicpatterns', 'ui', 'prototyping', 'react']
+    },
+
+    // ==========================================
+    // 4. محررات الأكواد ووكلاء التطوير (AI Code Editors & Agents)
+    // ==========================================
+    {
+        id: 'ai-cursor',
+        type: 'ai-tool',
+        name: 'Cursor',
+        icon: 'https://www.google.com/s2/favicons?domain=cursor.com&sz=128',
+        group: 'محررات الأكواد ووكلاء التطوير',
+        shortDescription: 'محرر البرمجة الذكي المفضل للمطورين المعزز بوكلاء الذكاء الاصطناعي.',
+        url: 'https://cursor.com/agents',
+        pricing: 'مجاني / خطط مدفوعة',
+        bestFor: 'أفضل حالات الاستخدام: كتابة الكود التفاعلي والتعديل الذكي المباشر داخل ملفات المشروع.',
+        features: ['تحرير وتوليد كود تلقائي', 'فهم سياق المشروع الكامل', 'وكلاء تطوير مستقلة'],
+        keywords: ['cursor', 'ai', 'editor', 'coding agent']
+    },
+    {
+        id: 'ai-windsurf',
+        type: 'ai-tool',
+        name: 'Windsurf / Codeium',
+        icon: 'https://www.google.com/s2/favicons?domain=windsurf.com&sz=128',
+        group: 'محررات الأكواد ووكلاء التطوير',
+        shortDescription: 'محرر ومساعد إكمال كود ذكي ومجاني وسريع جداً مع إدراك لسياق الملفات.',
+        url: 'https://windsurf.com',
+        pricing: 'مجاني للأفراد',
+        bestFor: 'أفضل حالات الاستخدام: التنبؤ وتوليد الأكواد أثناء الكتابة وإصلاح الأخطاء حياً.',
+        features: ['إكمال كود فائق السرعة', 'دعم سياق المشروع التدفقي Cascade', 'مجاني وسريع'],
+        keywords: ['windsurf', 'codeium', 'editor', 'cascade']
+    },
+    {
+        id: 'ai-supermaven',
+        type: 'ai-tool',
+        name: 'Supermaven',
+        icon: 'https://www.google.com/s2/favicons?domain=supermaven.com&sz=128',
+        group: 'محررات الأكواد ووكلاء التطوير',
+        shortDescription: 'أسرع مساعد إكمال كود تلقائي في العالم بسعة سياق مليوني توكن.',
+        url: 'https://supermaven.com',
+        pricing: 'مجاني / Pro',
+        bestFor: 'أفضل حالات الاستخدام: التنبؤ بالأكواد فائقة السرعة مع فهم ذكي لكامل المجلدات.',
+        features: ['أسرع إكمال كود بالملي ثانية', 'سعة سياق ضخمة', 'دعم كافة المحررات'],
+        keywords: ['supermaven', 'fast autocomplete', 'ai', 'copilot']
+    },
+    {
+        id: 'ai-replit-agent',
+        type: 'ai-tool',
+        name: 'Replit Agent',
+        icon: 'https://www.google.com/s2/favicons?domain=replit.com&sz=128',
+        group: 'محررات الأكواد ووكلاء التطوير',
+        shortDescription: 'وكيل تطوير مدمج في Replit لبناء وتدشين المشاريع أونلاين بنقرة زر.',
+        url: 'https://replit.com',
+        pricing: 'تجربة مجانية / مدفوع',
+        bestFor: 'أفضل حالات الاستخدام: تحويل أفكار الأكواد إلى برمجيات منشورة على السحابة أونلاين.',
+        features: ['بناء الكود أونلاين', 'نشر وتدشين فوري على السحابة', 'وكيل تطوير مدمج'],
+        keywords: ['replit', 'replit agent', 'cloud IDE', 'deploy']
+    },
+    {
+        id: 'ai-copilot',
+        type: 'ai-tool',
+        name: 'GitHub Copilot',
+        icon: 'https://www.google.com/s2/favicons?domain=github.com&sz=128',
+        group: 'محررات الأكواد ووكلاء التطوير',
+        shortDescription: 'المساعد الذكي البرمجي القياسي الرسمي من GitHub وميكروسوفت.',
+        url: 'https://github.com/features/copilot',
+        pricing: 'اشتراك / مجاني للطلاب والمطورين المفتوحين',
+        bestFor: 'أفضل حالات الاستخدام: الإكمال التلقائي واقتراح الأكواد أثناء التكويد اليومي.',
+        features: ['تكامل تام مع VS Code', 'إكمال تلقائي للأكواد', 'محادثة تفاعلية للمشروع'],
+        keywords: ['copilot', 'github', 'ai', 'vscode']
+    },
+
+    // ==========================================
+    // 5. المساعدات النماذجية المباشرة (Leading AI Assistants)
+    // ==========================================
+    {
+        id: 'ai-deepseek',
+        type: 'ai-tool',
+        name: 'DeepSeek Chat',
+        icon: 'https://www.google.com/s2/favicons?domain=chat.deepseek.com&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'نموذج التفكير المنطقي الفائق في حل المسائل البرمجية المعقدة بأسلوب مجاني.',
+        url: 'https://chat.deepseek.com',
+        pricing: 'مجاني ومفتوح المصدر',
+        bestFor: 'أفضل حالات الاستخدام: كتابة وتصحيح الخوارزميات وحل التحديات البرمجية المعقدة.',
+        features: ['قدرات تفكير منطقي عالية (R1)', 'مجاني بالكامل', 'فهم دقيق للأكواد البرمجية'],
+        keywords: ['deepseek', 'ai', 'r1', 'reasoning']
     },
     {
         id: 'ai-chatgpt',
         type: 'ai-tool',
         name: 'ChatGPT',
-        icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg>',
-        group: 'المساعدات الذكية العامة',
-        shortDescription: 'المساعد الذكي الأقوى لفهم وتوليد الأكواد وتصحيح الثغرات وتشخيص الأخطاء البرمجية.',
+        icon: 'https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'المساعد الذكي الأشهر والأقوى لفهم وتوليد الأكواد وتصحيح الثغرات البرمجية.',
         url: 'https://chatgpt.com',
         pricing: 'مجاني / GPT-4o مدفوع',
-        bestFor: 'أفضل حالات الاستخدام: كتابة وشرح الخوارزميات، تحسين الكود، وتحديد الأخطاء البرمجية.',
-        features: ['محادثة تفاعلية مستمرة وفهم السياق', 'تشخيص واكتشاف الأخطاء البرمجية', 'شرح المفاهيم المعقدة وتبسيطها'],
-        keywords: ['ai', 'chatgpt', 'openai', 'coding assistant']
+        bestFor: 'أفضل حالات الاستخدام: كتابة وشرح الخوارزميات، مراجعة الأكواد، وإعادة الترافق.',
+        features: ['محادثة تفاعلية مستمرة', 'تشخيص الأخطاء البرمجية', 'توليد الحلول التقنية'],
+        keywords: ['chatgpt', 'openai', 'ai']
     },
     {
         id: 'ai-claude',
         type: 'ai-tool',
         name: 'Claude AI',
-        icon: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="1.5"><path d="M12 2v20M2 12h20"/></svg>',
-        group: 'المساعدات الذكية العامة',
-        shortDescription: 'نموذج ذكاء اصطناعي فائق الدقة في تحليل المشاريع البرمجية الضخمة والأكواد المعقدة.',
+        icon: 'https://www.google.com/s2/favicons?domain=claude.ai&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'نموذج Anthropic الفائق والدقيق في تحليل وكتابة الأكواد والملفات الضخمة.',
         url: 'https://claude.ai',
         pricing: 'مجاني / خطط مدفوعة',
-        bestFor: 'أفضل حالات الاستخدام: معالجة واستيعاب ملفات البرمجة الطويلة وإعادة الترافق الهيكلي (Refactoring).',
-        features: ['سعة سياق ضخمة جداً لتحليل ملفات كاملة', 'دقة عالية في كتابة النصوص والكود', 'استجابة منطقية فائقة في معالجة المشكلات'],
-        keywords: ['ai', 'claude', 'anthropic', 'refactoring']
+        bestFor: 'أفضل حالات الاستخدام: معالجة واستيعاب ملفات البرمجة الطويلة وإعادة الهيكلة النظيفة.',
+        features: ['دقة استثنائية في كتابة النصوص والكود', 'سعة سياق كبيرة', 'أداء منطقي راقٍ'],
+        keywords: ['claude', 'anthropic', 'ai']
+    },
+    {
+        id: 'ai-perplexity',
+        type: 'ai-tool',
+        name: 'Perplexity AI',
+        icon: 'https://www.google.com/s2/favicons?domain=www.perplexity.ai&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'محرك البحث الذكي المعزز بالذكاء الاصطناعي والإجابات الموثقة بالمصادر.',
+        url: 'https://www.perplexity.ai',
+        pricing: 'مجاني / Pro',
+        bestFor: 'أفضل حالات الاستخدام: البحث عن الحلول التقنية المحدثة مع جلب روابط المراجع الحية.',
+        features: ['محرك بحث إجابات موثق', 'جلب مصادر حيّة حقيقية', 'تجميع وتنظيم الأبحاث'],
+        keywords: ['perplexity', 'search', 'ai', 'research']
+    },
+    {
+        id: 'ai-notebooklm',
+        type: 'ai-tool',
+        name: 'NotebookLM',
+        icon: 'https://www.google.com/s2/favicons?domain=notebook.google.com&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'مساعد أبحاث قوقل الذكي لتحليل وتلخيص الملفات والمستندات بأسلوب تفاعلي.',
+        url: 'https://notebook.google.com',
+        pricing: 'مجاني بالكامل',
+        bestFor: 'أفضل حالات الاستخدام: رفع الكتب والمستندات التقنية وتلخيصها وإنشاء بودكاست صوتي عنها.',
+        features: ['تحليل المستندات و PDF', 'إنشاء بودكاست صلب وملخصات', 'روابط استشهاد دقيقة'],
+        keywords: ['notebooklm', 'google', 'research', 'pdf']
+    },
+    {
+        id: 'ai-gemini',
+        type: 'ai-tool',
+        name: 'Google Gemini',
+        icon: 'https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'نموذج قوقل الشامل والذكي المرتبط بالبحث المباشر ومعالجة الوسائط.',
+        url: 'https://gemini.google.com/app?hl=ar',
+        pricing: 'مجاني / Gemini Advanced',
+        bestFor: 'أفضل حالات الاستخدام: البحث المباشر وتحليل الصور والمستندات وكتابة الأكواد.',
+        features: ['مرتبط بمحرك بحث قوقل', 'تحليل الصور والوسائط', 'سرعة استجابة فائقة'],
+        keywords: ['gemini', 'google', 'ai']
+    },
+    {
+        id: 'ai-manus',
+        type: 'ai-tool',
+        name: 'Manus AI',
+        icon: 'https://www.google.com/s2/favicons?domain=manus.im&sz=128',
+        group: 'محررات الأكواد ووكلاء التطوير',
+        shortDescription: 'وكيل ذكاء اصطناعي مستقل لتنفيذ المهام البرمجية والهندسية المعقدة.',
+        url: 'https://manus.im/app',
+        pricing: 'دعوات / خطط مدفوعة',
+        bestFor: 'أفضل حالات الاستخدام: أتمتة وتنفيذ المهام المركبة وبناء البرمجيات من البداية للنهاية.',
+        features: ['تفكير منطقي والتخطيط للمهام', 'تنفيذ ذاتي للأوامر', 'بناء وتطوير المشاريع'],
+        keywords: ['manus', 'agent', 'automation']
+    },
+    {
+        id: 'ai-meta',
+        type: 'ai-tool',
+        name: 'Meta AI',
+        icon: 'https://www.google.com/s2/favicons?domain=www.meta.ai&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'نموذج شركة ميتا المفتوح المصدر (Llama) للمحادثة وتوليد الأفكار.',
+        url: 'https://www.meta.ai',
+        pricing: 'مجاني بالكامل',
+        bestFor: 'أفضل حالات الاستخدام: المحادثة المباشرة وتوليد الرسوم وتلخيص الأفكار.',
+        features: ['مبني على نماذج Llama الحديثة', 'توليد صور لحظي', 'سريع ومجاني'],
+        keywords: ['meta', 'llama', 'ai']
+    },
+    {
+        id: 'ai-qwen',
+        type: 'ai-tool',
+        name: 'Qwen AI',
+        icon: 'https://www.google.com/s2/favicons?domain=chat.qwen.ai&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'نموذج شركة علي بابا الذكي المتخصص في البرمجة والحلول التقنية.',
+        url: 'https://chat.qwen.ai/',
+        pricing: 'مجاني ومفتوح المصدر',
+        bestFor: 'أفضل حالات الاستخدام: توليد الأكواد وكتابة الحلول باللغات البرمجية المختلفة.',
+        features: ['دعم برمجي قوي لـ 2.5', 'أداء ممتاز باللغة العربية', 'سريع جداً'],
+        keywords: ['qwen', 'alibaba', 'ai']
+    },
+    {
+        id: 'ai-grok',
+        type: 'ai-tool',
+        name: 'Grok',
+        icon: 'https://www.google.com/s2/favicons?domain=grok.com&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'نموذج xAI الذكي المرتبط بالأخبار والبيانات الحية المباشرة.',
+        url: 'https://grok.com',
+        pricing: 'اشتراك / مجاني جزئياً',
+        bestFor: 'أفضل حالات الاستخدام: التحليل اللحظي للأحداث التقنية والأخبار والبرمجة السريعة.',
+        features: ['ربط لحظي بالبيانات الحية', 'نموذج تفكير قوي', 'إجابات مباشرة وقوية'],
+        keywords: ['grok', 'xai', 'ai']
+    },
+    // ==========================================
+    // توليد الصور والـ SVG أونلاين (Cloud UI & Design)
+    // ==========================================
+    {
+        id: 'ai-recraft',
+        type: 'ai-tool',
+        name: 'Recraft.ai',
+        icon: 'https://www.google.com/s2/favicons?domain=www.recraft.ai&sz=128',
+        group: 'توليد أصول التصميم والـ SVG السحابي',
+        shortDescription: 'الأداة الأولى المخصصة لتوليد أصول رسومات الفيكتور SVG والأيقونات والـ UI أونلاين.',
+        url: 'https://www.recraft.ai',
+        pricing: 'مجاني يومي / Pro',
+        bestFor: 'أفضل حالات الاستخدام: توليد كود ورسوم الفيكتور (SVG) المتجاوبة وأيقونات الواجهات.',
+        features: ['توليد كود SVG حقيقي', 'تصدير أيقونات متجاوبة', 'توليد أصول واجهات متكاملة'],
+        keywords: ['recraft', 'svg', 'vector', 'ui design']
+    },
+    {
+        id: 'ai-leonardo',
+        type: 'ai-tool',
+        name: 'Leonardo.ai',
+        icon: 'https://www.google.com/s2/favicons?domain=leonardo.ai&sz=128',
+        group: 'توليد أصول التصميم والـ SVG السحابي',
+        shortDescription: 'منصة سحابية احترافية لتوليد صور الواجهات وأصول الألعاب والرسومات بالذكاء الاصطناعي.',
+        url: 'https://leonardo.ai',
+        pricing: 'رصيد مجاني يومي',
+        bestFor: 'أفضل حالات الاستخدام: توليد الرسوم التوضيحية وشخصيات الألعاب والواجهات الفنية.',
+        features: ['توليد صور بدقة عالية', 'رصيد تجديد مجاني يومي', 'تحكم في أبعاد النسبة التكبيرية'],
+        keywords: ['leonardo', 'ai image', 'game assets', 'design']
+    },
+    {
+        id: 'ai-ideogram',
+        type: 'ai-tool',
+        name: 'Ideogram AI',
+        icon: 'https://www.google.com/s2/favicons?domain=ideogram.ai&sz=128',
+        group: 'توليد أصول التصميم والـ SVG السحابي',
+        shortDescription: 'أداة سحابية فائقة الجودة لتوليد الشعارات والتصاميم التي تحتوي على نصوص واضحة.',
+        url: 'https://ideogram.ai',
+        pricing: 'مجاني يومي / Pro',
+        bestFor: 'أفضل حالات الاستخدام: تصميم الشعارات والرموز التي تحتوي على كلمات إنجليزية ناصعة.',
+        features: ['توليد نصوص واضحة داخل الصور', 'تصميم الشعارات والأيقونات', 'مجاني أونلاين'],
+        keywords: ['ideogram', 'typography', 'logo', 'design']
+    },
+
+    // ==========================================
+    // الوسائط والصوتيات السحابية (Cloud Media & Audio)
+    // ==========================================
+    {
+        id: 'ai-elevenlabs',
+        type: 'ai-tool',
+        name: 'ElevenLabs',
+        icon: 'https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128',
+        group: 'توليد الصوتيات والوسائط السحابية',
+        shortDescription: 'الأداة السحابية الأولى لتوليد الأصوات والدبلجة الواقعية بالذكاء الاصطناعي أونلاين.',
+        url: 'https://elevenlabs.io',
+        pricing: 'مجاني شهري / خطط مدفوعة',
+        bestFor: 'أفضل حالات الاستخدام: تحويل النصوص لشروح صوتية واقعية للموقع والدبلجة الحية.',
+        features: ['أصوات واقعية للغاية', 'دعم كامل للغة العربية', 'دبلجة الفيديوهات سحابياً'],
+        keywords: ['elevenlabs', 'tts', 'voice', 'audio']
+    },
+    {
+        id: 'ai-suno',
+        type: 'ai-tool',
+        name: 'Suno AI',
+        icon: 'https://www.google.com/s2/favicons?domain=suno.com&sz=128',
+        group: 'توليد الصوتيات والوسائط السحابية',
+        shortDescription: 'إنشاء ومونتاج المؤثرات الصوتية والموسيقى الخلفية للمشاريع أونلاين بطلب نصي.',
+        url: 'https://suno.com',
+        pricing: 'رصيد مجاني يومي',
+        bestFor: 'أفضل حالات الاستخدام: إنشاء مقاطع صوتية ومؤثرات خلفية للمواقع والألعاب.',
+        features: ['توليد صوتي سحابي متكامل', 'توليد مؤشرات مجاني يومي', 'سرعة الاستجابة'],
+        keywords: ['suno', 'audio', 'music', 'sound effects']
+    },
+    {
+        id: 'ai-runway',
+        type: 'ai-tool',
+        name: 'RunwayML',
+        icon: 'https://www.google.com/s2/favicons?domain=runwayml.com&sz=128',
+        group: 'توليد الصوتيات والوسائط السحابية',
+        shortDescription: 'منصة سحابية متكاملة لصناعة وتحريك الفيديوهات والتأثيرات البصرية.',
+        url: 'https://runwayml.com',
+        pricing: 'تجربة مجانية / Pro',
+        bestFor: 'أفضل حالات الاستخدام: تحريك الصور الساكنة وإنشاء الفيديوهات التوضيحية للمنتج.',
+        features: ['تحريك الصور أونلاين Gen-2/Gen-3', 'محرر فيديو سحابي', 'مؤثرات بصرية سينمائية'],
+        keywords: ['runway', 'video ai', 'gen-3', 'animation']
+    },
+    {
+        id: 'ai-google-flow',
+        type: 'ai-tool',
+        name: 'Google Flow',
+        icon: 'https://www.google.com/s2/favicons?domain=flow.google&sz=128',
+        group: 'توليد الصوتيات والوسائط السحابية',
+        shortDescription: 'أداة قوقل السحابية الفائقة لتوليد الفيديوهات والمقاطع السينمائية بالذكاء الاصطناعي أونلاين.',
+        url: 'https://flow.google',
+        pricing: 'رصيد مجاني يتجدد يومياً',
+        bestFor: 'أفضل حالات الاستخدام: تحويل النصوص والأفكار إلى فيديوهات سينمائية متكاملة مع الصوت واللوحات القصصية.',
+        features: ['توليد فيديو سينمائي عالي الجودة', 'توليد الصوت والشخصيات المتطابقة', 'رصيد مجاني يومي للمطورين'],
+        keywords: ['google flow', 'video ai', 'google', 'cinematic video']
+    },
+    // ==========================================
+    // المساعدات البرمجية وأدوات الميديا السحابية المحدثة
+    // ==========================================
+    {
+        id: 'ai-blackbox',
+        type: 'ai-tool',
+        name: 'Blackbox AI',
+        icon: 'https://www.google.com/s2/favicons?domain=www.blackbox.ai&sz=128',
+        group: 'محررات الأكواد ووكلاء التطوير',
+        shortDescription: 'محرك بحث ومساعد برمجي سحابي سريع لتجربة واستخراج وتصحيح الأكواد فوراً.',
+        url: 'https://www.blackbox.ai',
+        pricing: 'مجاني / Pro',
+        bestFor: 'أفضل حالات الاستخدام: التوليد الفوري السريع للأكواد والبحث عن حلول الثغرات واستخراج الكود من الصور.',
+        features: ['تحليل واستخراج الكود من الصور', 'إكمال كود سحابي فوري', 'سرعة استجابة فائقة'],
+        keywords: ['blackbox', 'ai coding', 'code search']
+    },
+    {
+        id: 'ai-luma-dream',
+        type: 'ai-tool',
+        name: 'Luma Dream Machine',
+        icon: 'https://www.google.com/s2/favicons?domain=lumalabs.ai&sz=128',
+        group: 'توليد الصوتيات والوسائط السحابية',
+        shortDescription: 'منصة سحابية متقدمة لتوليد مقاطع فيديو عالية الجودة بحركة كاميرا واقعية.',
+        url: 'https://lumalabs.ai/dream-machine',
+        pricing: 'رصيد تجريبي مجاني',
+        bestFor: 'أفضل حالات الاستخدام: تحويل الصور والأفكار إلى مقاطع فيديو واقعية للمنتجات والمشاريع.',
+        features: ['حركة كاميرا سينمائية واقعية', 'سرعة توليد عالية', 'جودة رسومية فائقة'],
+        keywords: ['luma', 'dream machine', 'video ai']
+    },
+    {
+        id: 'ai-kling',
+        type: 'ai-tool',
+        name: 'Kling AI',
+        icon: 'https://www.google.com/s2/favicons?domain=klingai.com&sz=128',
+        group: 'توليد الصوتيات والوسائط السحابية',
+        shortDescription: 'أداة سحابية لتوليد الفيديوهات الطويلة نسبياً بالذكاء الاصطناعي وبدقة عالية.',
+        url: 'https://klingai.com',
+        pricing: 'رصيد مجاني يومي',
+        bestFor: 'أفضل حالات الاستخدام: إنشاء فيديوهات توضيحية ومقاطع تحريك سينمائية تفاعلية.',
+        features: ['دعم مقاطع فيديو أطول', 'دقة ألوان وحركة ممتازة', 'استخدام سحابي مباشر'],
+        keywords: ['kling', 'klingai', 'video ai']
+    },
+    {
+        id: 'ai-sambanova',
+        type: 'ai-tool',
+        name: 'SambaNova Cloud',
+        icon: 'https://www.google.com/s2/favicons?domain=cloud.sambanova.ai&sz=128',
+        group: 'مفاتيح API مجانية وخوادم الذكاء الاصطناعي',
+        shortDescription: 'خادم استضافة سحابي فائق السرعة للنماذج المفتوحة مثل Llama 3.1 405B.',
+        url: 'https://cloud.sambanova.ai',
+        pricing: 'مجاني للمطورين',
+        bestFor: 'أفضل حالات الاستخدام: تجربة النماذج المفتوحة الضخمة واستخراج مفاتيح API مجانية.',
+        features: ['معالجة سريعة للنماذج الضخمة', 'مفاتيح API مجانية', 'دعم Llama 405B'],
+        keywords: ['sambanova', 'fast api', 'llama 405b']
+    },
+    {
+        id: 'ai-cloudflare-workers',
+        type: 'ai-tool',
+        name: 'Cloudflare Workers AI',
+        icon: 'https://www.google.com/s2/favicons?domain=ai.cloudflare.com&sz=128',
+        group: 'مفاتيح API مجانية وخوادم الذكاء الاصطناعي',
+        shortDescription: 'تشغيل نماذج الذكاء الاصطناعي السحابية على الحافة (Serverless Edge) مجاناً.',
+        url: 'https://ai.cloudflare.com',
+        pricing: 'مجاني بحساب Cloudflare',
+        bestFor: 'أفضل حالات الاستخدام: دمج الذكاء الاصطناعي في مشاريع الفرونت إند والباك إند بدون خوادم.',
+        features: ['تشغيل Serverless Edge', 'مفاتيح API مجانية يومية', 'سرعة استجابة عالمية'],
+        keywords: ['cloudflare', 'workers ai', 'serverless', 'edge']
     }
 ];
