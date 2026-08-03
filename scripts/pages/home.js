@@ -70,7 +70,7 @@ export function renderHome(container) {
 
         <!-- 4. مسار إضافات VS Code -->
         <div class="premium-card tech-track-card" data-tech="vscode" role="button" aria-label="إضافات VS Code" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-            <model-viewer src="assets/3D/vs-code-extensions.glb" auto-rotate interaction-prompt="none" rotation-per-second="50deg"
+            <model-viewer src="assets/3D/vs-code-extensions.glb" auto-rotate interaction-prompt="none" rotation-per-second="-50deg"
                 camera-controls disable-zoom shadow-intensity="1" exposure="1" environment-image="neutral"
                 style="width: 100%; height: 150px; display: block; margin: 0 auto;"></model-viewer>
             <span class="track-title" style="color: var(--text-primary); font-size: 1.3rem; margin-top: 0.5rem; letter-spacing: 1px;">VS Code</span>
@@ -79,21 +79,16 @@ export function renderHome(container) {
 
         <!-- 5. مسار أدوات الذكاء الاصطناعي -->
         <div class="premium-card tech-track-card" data-tech="ai-tools" role="button" aria-label="أدوات الذكاء الاصطناعي" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-            <div style="width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;">
-                <svg width="65" height="65" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
-                    <path d="M12 12 2.1 12a10 10 0 0 1 9.9-10v10z"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                    <path d="m19 5 2.5-2.5M19 19l2.5 2.5M5 19l-2.5 2.5M5 5 2.5 2.5"></path>
-                </svg>
-            </div>
+            <model-viewer src="assets/3D/Ai.glb" auto-rotate interaction-prompt="none" rotation-per-second="50deg"
+                camera-controls disable-zoom shadow-intensity="1" exposure="1" environment-image="neutral"
+                style="width: 100%; height: 150px; display: block; margin: 0 auto;"></model-viewer>
             <span class="track-title" style="color: var(--text-primary); font-size: 1.3rem; margin-top: 0.5rem; letter-spacing: 1px;">AI Tools</span>
             <p class="track-desc">أدوات الذكاء الاصطناعي</p>
         </div>
 
         <!-- 6. مسار أدوات ومواقع للمطورين -->
         <div class="premium-card tech-track-card" data-tech="dev-tools" role="button" aria-label="أدوات ومواقع للمطورين" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-            <model-viewer src="assets/3D/Tools.glb" auto-rotate interaction-prompt="none" rotation-per-second="50deg"
+            <model-viewer src="assets/3D/Tools.glb" auto-rotate interaction-prompt="none" rotation-per-second="-50deg"
                 camera-controls disable-zoom shadow-intensity="1" exposure="1" environment-image="neutral"
                 style="width: 100%; height: 150px; display: block; margin: 0 auto;"></model-viewer>
             <span class="track-title" style="color: var(--text-primary); font-size: 1.3rem; margin-top: 0.5rem; letter-spacing: 1px;">Dev Tools</span>
