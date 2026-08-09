@@ -14,6 +14,9 @@ export function renderTrack(container, techName) {
   if (techName === 'vscode') trackTitle = 'إضافات VS Code';
   if (techName === 'ai-tools') trackTitle = 'أدوات الذكاء الاصطناعي';
   if (techName === 'dev-tools') trackTitle = 'أدوات ومواقع للمطورين';
+  if (techName === 'apps') trackTitle = 'أدوات وتطبيقات';
+  if (techName === 'our-creations') trackTitle = 'من تطويرنا';
+  if (techName === 'tech-reference') trackTitle = 'مصطلحات ومعلومات تقنية';
 
   if (filteredCategories.length === 0) {
     container.innerHTML = `
@@ -48,32 +51,32 @@ export function renderTrack(container, techName) {
 
   const contentArea = document.getElementById('track-content-area');
 
-  // معالجة العرض المباشر لـ VS Code و AI Tools (عناوين + كروت بنظام Flexbox)
-  if (techName === 'vscode' || techName === 'ai-tools') {
-    let allItems = [];
-    filteredCategories.forEach(cat => {
-      const catItems = registry[cat.id] || [];
-      allItems.push(...catItems);
-    });
+  // معالجة العرض المباشر لـ VS Code و AI Tools ومن تطويرنا (عناوين + كروت بنظام Flexbox)
+    if (techName === 'vscode' || techName === 'ai-tools' || techName === 'our-creations') {
+        let allItems = [];
+        filteredCategories.forEach(cat => {
+            const catItems = registry[cat.id] || [];
+            allItems.push(...catItems);
+        });
 
-    if (allItems.length === 0) {
-      contentArea.innerHTML = `
+        if (allItems.length === 0) {
+            contentArea.innerHTML = `
               <div class="empty-state">
                 <div class="empty-state-icon">⚙️</div>
                 <h2 class="empty-state-title">قيد التطوير</h2>
                 <p>نعمل حالياً على إضافة وتنسيق عناصر هذا المسار.</p>
               </div>
             `;
-      return;
-    }
+            return;
+        }
 
-    // إضافة شريط التثبيت الجماعي المخصص لإضافات VS Code
-    if (techName === 'vscode') {
-      const batchBar = document.createElement('div');
-      batchBar.className = 'batch-install-bar';
-      batchBar.style.cssText = 'background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;';
-
-      batchBar.innerHTML = `
+        // إضافة شريط التثبيت الجماعي المخصص لإضافات VS Code
+        if (techName === 'vscode') {
+            const batchBar = document.createElement('div');
+            batchBar.className = 'batch-install-bar';
+            batchBar.style.cssText = 'background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;';
+            
+            batchBar.innerHTML = `
               <div style="display: flex; align-items: center; gap: 0.75rem;">
                 <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; cursor: pointer; color: var(--text-primary); font-size: 0.95rem;">
                   <input type="checkbox" id="select-all-exts" style="width: 18px; height: 18px; accent-color: var(--accent-primary); cursor: pointer;" />
@@ -85,106 +88,117 @@ export function renderTrack(container, techName) {
                 🚀 تثبيت الحزمة المحددة بضغطة زر
               </button>
             `;
+            
+            contentArea.appendChild(batchBar);
+            
+            setTimeout(() => {
+                const selectAllCb = document.getElementById('select-all-exts');
+                const countBadge = document.getElementById('selected-count-badge');
+                const copyCmdBtn = document.getElementById('batch-copy-cmd-btn');
 
-      contentArea.appendChild(batchBar);
+                const updateCount = () => {
+                    const checked = document.querySelectorAll('.ext-checkbox:checked');
+                    if (countBadge) {
+                        countBadge.textContent = `المحدد: ${checked.length} إضافة`;
+                    }
+                };
 
-      // ربط أحداث الشريط الجماعي بعد تجهيز واجهة العناصر
-      setTimeout(() => {
-        const selectAllCb = document.getElementById('select-all-exts');
-        const countBadge = document.getElementById('selected-count-badge');
-        const copyCmdBtn = document.getElementById('batch-copy-cmd-btn');
+                if (selectAllCb) {
+                    selectAllCb.addEventListener('change', (e) => {
+                        const allCbs = document.querySelectorAll('.ext-checkbox');
+                        allCbs.forEach(cb => {
+                            cb.checked = e.target.checked;
+                        });
+                        updateCount();
+                    });
+                }
 
-        const updateCount = () => {
-          const checked = document.querySelectorAll('.ext-checkbox:checked');
-          if (countBadge) {
-            countBadge.textContent = `المحدد: ${checked.length} إضافة`;
-          }
-        };
+                contentArea.addEventListener('change', (e) => {
+                    if (e.target.classList.contains('ext-checkbox')) {
+                        updateCount();
+                    }
+                });
 
-        if (selectAllCb) {
-          selectAllCb.addEventListener('change', (e) => {
-            const allCbs = document.querySelectorAll('.ext-checkbox');
-            allCbs.forEach(cb => {
-              cb.checked = e.target.checked;
-            });
-            updateCount();
-          });
+                if (copyCmdBtn) {
+                    copyCmdBtn.addEventListener('click', () => {
+                        const checkedCbs = document.querySelectorAll('.ext-checkbox:checked');
+                        if (checkedCbs.length === 0) {
+                            ModalComponent.toast({
+                                title: 'تنبيه التحديد',
+                                message: 'يرجى تحديد إضافة واحدة على الأقل لتثبيت الحزمة.',
+                                type: 'warning'
+                            });
+                            return;
+                        }
+
+                        const extIds = Array.from(checkedCbs).map(cb => cb.getAttribute('data-ext-id')).filter(Boolean);
+                        const cliCommand = `code ${extIds.map(id => `--install-extension ${id}`).join(' ')}`;
+
+                        navigator.clipboard.writeText(cliCommand).then(() => {
+                            ModalComponent.toast({
+                                title: 'تم تجهيز أمر التثبيت الشامل بنجاح',
+                                message: 'تم نسخ أمر السطر البرمجي الموحد لجميع الإضافات المحددة إلى الحافظة! للتثبيت الفوري بدون أي رسائل متصفح:\n1. افتح Terminal أو PowerShell في حاسوبك.\n2. الصق الأمر المنسوخ واضغط Enter.',
+                                code: cliCommand,
+                                type: 'success'
+                            });
+                        }).catch(() => {
+                            ModalComponent.toast({
+                                title: 'تنبيه النسخ',
+                                message: 'تعذر النسخ التلقائي للحافظة، يرجى منح المتصفح إذن النسخ.',
+                                type: 'warning'
+                            });
+                        });
+                    });
+                }
+            }, 50);
         }
 
-        // تحديث العداد الفوري عند النقر على أي مربع تحديد
-        contentArea.addEventListener('change', (e) => {
-          if (e.target.classList.contains('ext-checkbox')) {
-            updateCount();
-          }
-        });
+        // تجميع وعرض العناصر سواء بـ group أو كروت مباشرة
+        const hasGroups = allItems.some(item => item.group);
 
-        // نسخ أمر التثبيت الشامل الصامت وتأكيده عبر المودال المصغر الذكي
-        if (copyCmdBtn) {
-          copyCmdBtn.addEventListener('click', () => {
-            const checkedCbs = document.querySelectorAll('.ext-checkbox:checked');
-            if (checkedCbs.length === 0) {
-              ModalComponent.toast({
-                title: 'تنبيه التحديد',
-                message: 'يرجى تحديد إضافة واحدة على الأقل لتثبيت الحزمة.',
-                type: 'warning'
-              });
-              return;
-            }
-
-            const extIds = Array.from(checkedCbs).map(cb => cb.getAttribute('data-ext-id')).filter(Boolean);
-            const cliCommand = `code ${extIds.map(id => `--install-extension ${id}`).join(' ')}`;
-
-            navigator.clipboard.writeText(cliCommand).then(() => {
-              ModalComponent.toast({
-                title: 'تم تجهيز أمر التثبيت الشامل بنجاح',
-                message: 'تم نسخ أمر السطر البرمجي الموحد لجميع الإضافات المحددة إلى الحافظة! للتثبيت الفوري بدون أي رسائل متصفح:\n1. افتح Terminal أو PowerShell في حاسوبك.\n2. الصق الأمر المنسوخ واضغط Enter.',
-                code: cliCommand,
-                type: 'success'
-              });
-            }).catch(() => {
-              ModalComponent.toast({
-                title: 'تنبيه النسخ',
-                message: 'تعذر النسخ التلقائي للحافظة، يرجى منح المتصفح إذن النسخ.',
-                type: 'warning'
-              });
+        if (hasGroups) {
+            const groups = {};
+            allItems.forEach(item => {
+                const groupName = item.group || 'عام';
+                if (!groups[groupName]) groups[groupName] = [];
+                groups[groupName].push(item);
             });
-          });
+
+            Object.keys(groups).forEach(groupTitle => {
+                const sectionTitle = document.createElement('h2');
+                sectionTitle.className = 'section-title';
+                sectionTitle.style.cssText = 'font-size: 1.3rem; margin: 1.5rem 0 1rem; color: var(--accent-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;';
+                sectionTitle.textContent = groupTitle;
+                contentArea.appendChild(sectionTitle);
+
+                const flexContainer = document.createElement('div');
+                flexContainer.style.cssText = 'display: flex; flex-wrap: wrap; gap: 1.25rem; margin-bottom: 2rem;';
+
+                groups[groupTitle].forEach(item => {
+                    const cardElement = CardComponent.createMethodCard(item, (selected) => ModalComponent.open(selected));
+                    cardElement.style.cssText = 'flex: 1 1 280px; max-width: 100%;';
+                    flexContainer.appendChild(cardElement);
+                });
+
+                contentArea.appendChild(flexContainer);
+            });
+        } else {
+            const flexContainer = document.createElement('div');
+            flexContainer.style.cssText = 'display: flex; flex-wrap: wrap; gap: 1.25rem; margin-bottom: 2rem;';
+
+            allItems.forEach(item => {
+                const cardElement = CardComponent.createMethodCard(item, (selected) => ModalComponent.open(selected));
+                cardElement.style.cssText = 'flex: 1 1 280px; max-width: 100%;';
+                flexContainer.appendChild(cardElement);
+            });
+
+            contentArea.appendChild(flexContainer);
         }
-      }, 50);
-    }
-
-    // تجميع العناصر حسب المجموعات (group)
-    const groups = {};
-    allItems.forEach(item => {
-      const groupName = item.group || 'عام';
-      if (!groups[groupName]) groups[groupName] = [];
-      groups[groupName].push(item);
-    });
-
-    // عرض كل مجموعة تحت عنوان مستقل بنظام Flexbox
-    Object.keys(groups).forEach(groupTitle => {
-      const sectionTitle = document.createElement('h2');
-      sectionTitle.className = 'section-title';
-      sectionTitle.style.cssText = 'font-size: 1.3rem; margin: 1.5rem 0 1rem; color: var(--accent-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;';
-      sectionTitle.textContent = groupTitle;
-      contentArea.appendChild(sectionTitle);
-
-      const flexContainer = document.createElement('div');
-      flexContainer.style.cssText = 'display: flex; flex-wrap: wrap; gap: 1.25rem; margin-bottom: 2rem;';
-
-      groups[groupTitle].forEach(item => {
-        const cardElement = CardComponent.createMethodCard(item, (selected) => ModalComponent.open(selected));
-        cardElement.style.cssText = 'flex: 1 1 280px; max-width: 100%;';
-        flexContainer.appendChild(cardElement);
-      });
-
-      contentArea.appendChild(flexContainer);
-    });
-  } else {
+    } else {
     // العرض القياسي للأقسام الكبيرة (HTML, CSS, JS, Dev Tools)
     const grid = document.createElement('div');
     grid.className = 'card-grid';
-    grid.setAttribute('dir', 'ltr');
+    grid.setAttribute('dir', 'rtl');
 
     filteredCategories.forEach(category => {
       const cardElement = CardComponent.createCategoryCard(category);

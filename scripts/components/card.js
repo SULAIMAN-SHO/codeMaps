@@ -8,7 +8,25 @@ export class CardComponent {
    * @param {string} tech - المسار التقني للقسم
    * @returns {Object} - مصفوفة المسميات (مفرد، مثنى، جمع، جمع مع معطوف)
    */
-  static getTerminologies(tech) {
+  static getTerminologies(tech, categoryId) {
+    if (categoryId === 'file-formats' || categoryId === 'image-formats' || categoryId === 'video-formats') {
+      return {
+        single: 'صيغة واحدة جاهزة',
+        dual: 'صيغتان جاهزتان',
+        plural: 'صيغ جاهزة',
+        singularOverTen: 'صيغة جاهزة'
+      };
+    }
+    // تخصيص كلمة "اختصارات" للكروت الفرعية الداخلية فقط دون الكارت الرئيسي
+    if (categoryId && categoryId.startsWith('shortcuts-') && categoryId !== 'shortcuts-main') {
+      return {
+        single: 'اختصار واحد جاهز',
+        dual: 'اختصاران جاهزان',
+        plural: 'اختصارات جاهزة',
+        singularOverTen: 'اختصار جاهز'
+      };
+    }
+
     switch (tech) {
       case 'html':
         return {
@@ -45,6 +63,28 @@ export class CardComponent {
           plural: 'أدوات جاهزة',
           singularOverTen: 'أداة جاهزة'
         };
+      case 'apps':
+      case 'our-creations':
+        return {
+          single: 'تطبيق واحد جاهز',
+          dual: 'تطبيقان جاهزان',
+          plural: 'تطبيقات جاهزة',
+          singularOverTen: 'تطبيق جاهز'
+        };
+      case 'tech-reference':
+        return {
+          single: 'قسم واحد جاهز',
+          dual: 'قسمان جاهزان',
+          plural: 'أقسام جاهزة',
+          singularOverTen: 'قسم جاهز'
+        };
+      case 'tech-reference-sub':
+        return {
+          single: 'مصطلح واحد جاهز',
+          dual: 'مصطلحان جاهزان',
+          plural: 'مصطلحات جاهزة',
+          singularOverTen: 'مصطلح جاهز'
+        };
       case 'javascript':
       default:
         return {
@@ -69,15 +109,32 @@ export class CardComponent {
     card.setAttribute('role', 'button');
     card.setAttribute('aria-label', `عرض قسم ${category.arabicName}`);
 
-    // جلب الرسم التوضيحي المخصص للقسم ليكون جزءاً أصيلاً من هويته المعمارية
-    const svgIllustration = Illustrations.get(category.id);
+    // معالجة الأيقونة أو المجسم ثلاثي الأبعاد (3D Model) أو الصورة الفردية المخصصة للتصنيف
+    let illustrationHTML = '';
+    const src = category.model3d || category.image || category.icon;
+
+    if (category.model3d || (src && (src.endsWith('.glb') || src.endsWith('.gltf')))) {
+      const modelPath = category.model3d || src;
+      illustrationHTML = `<model-viewer src="${sanitizeHTML(modelPath)}" auto-rotate interaction-prompt="none" rotation-per-second="50deg" disable-zoom shadow-intensity="1" exposure="1" environment-image="neutral" style="width: 100px; height: 100px; display: block; margin: 0 auto; pointer-events: none;"></model-viewer>`;
+    } else if (src) {
+      if (src.trim().startsWith('<svg')) {
+        illustrationHTML = src;
+      } else {
+        const cleanSrc = src.replace(/&amp;/g, '&');
+        let domainFallback = 'google.com';
+        try { if (category.url) domainFallback = new URL(category.url).hostname; } catch (e) { }
+        illustrationHTML = `<img src="${cleanSrc}" alt="${sanitizeHTML(category.arabicName)}" style="max-height: 72px; max-width: 72px; object-fit: contain; border-radius: 6px;" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=${domainFallback}&sz=128';" />`;
+      }
+    } else {
+      illustrationHTML = Illustrations.get(category.id);
+    }
 
     // جلب عناصر القسم من الفهرس المركزي وحساب عددها الفعلي
     const methodsList = registry[category.id] || [];
     const count = methodsList.length;
 
-    // جلب المصطلحات العربية المناسبة لتقنية القسم الحالية (html / css / javascript)
-    const terms = CardComponent.getTerminologies(category.tech);
+    // جلب المصطلحات العربية المناسبة لتقنية ومعرف القسم الحالية مع تمرير المعرف
+    const terms = CardComponent.getTerminologies(category.tech, category.id);
 
     // صياغة النص الإحصائي باللغة العربية السليمة والمطابقة للتقنية
     let footerText = 'قيد الإنشاء';
@@ -93,8 +150,8 @@ export class CardComponent {
 
     // إصلاح الـ inline styles في حاوية الـ svg وتطبيق flex بشكل صحيح
     card.innerHTML = `
-      <div class="card-illustration-wrapper" style="margin-bottom: 1.25rem; display: flex; justify-content: center; align-items: center; background-color: rgba(255,255,255,0.01); border-radius: var(--radius-sm); border: 1px dashed rgba(255,255,255,0.02); padding: 0.5rem 0; width: 100%;">
-        ${svgIllustration}
+      <div class="card-illustration-wrapper" style="margin-bottom: 1.25rem; display: flex; justify-content: center; align-items: center; background-color: rgba(255,255,255,0.01); border-radius: var(--radius-sm); border: 1px dashed rgba(255,255,255,0.02); padding: 0.5rem 0; width: 100%; min-height: 110px;">
+        ${illustrationHTML}
       </div>
       <div class="card-header">
         <span class="card-title-en">${sanitizeHTML(category.name)}</span>
@@ -156,19 +213,22 @@ export class CardComponent {
       }
     }
 
-    // صياغة التذييل والأزرار حسب نوع العنصر (موقع، إضافة، أداة ذكاء اصطناعي، دالة برمجية)
+
+    // صياغة التذييل والأزرار حسب نوع العنصر (موقع، إضافة، أداة ذكاء اصطناعي، تطبيق، دالة برمجية)
     let footerHTML = '';
-    if (method.type === 'website' || method.type === 'ai-tool') {
+    if (method.type === 'website' || method.type === 'ai-tool' || method.type === 'app') {
+      const btnLabel = method.type === 'app' ? '💻 فتح / تحميل' : '🔗 زيارة الموقع';
       footerHTML = `
         <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
           <a href="${sanitizeHTML(method.url || '#')}" target="_blank" rel="noopener noreferrer" class="btn-action-primary" style="padding: 0.45rem 0.85rem; background: var(--accent-primary); color: #fff; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" onclick="event.stopPropagation();">
-            🔗 زيارة الموقع
+            ${btnLabel}
           </a>
           <button class="btn-action-secondary details-btn" style="padding: 0.45rem 0.85rem; background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; cursor: pointer;">
             📖 المزيد
           </button>
         </div>
       `;
+
     } else if (method.type === 'vscode-extension') {
       footerHTML = `
         <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
@@ -177,6 +237,14 @@ export class CardComponent {
           </a>
           <button class="btn-action-secondary details-btn" style="padding: 0.45rem 0.85rem; background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; cursor: pointer;">
             📖 المزيد
+          </button>
+        </div>
+      `;
+    } else if (method.type === 'tech-reference') {
+      footerHTML = `
+        <div style="display: flex; justify-content: center; width: 100%; margin-top: 0.75rem;">
+          <button class="btn-action-secondary details-btn" style="padding: 0.45rem 1.25rem; width:100%; background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; cursor: pointer;">
+            📖 التفاصيل والشرح
           </button>
         </div>
       `;

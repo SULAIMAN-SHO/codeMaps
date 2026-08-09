@@ -62,8 +62,37 @@ import { cascadeScopeData } from "./Css/cascade-scope.js";
 import { advancedSelectorsData } from "./Css/advanced-selectors.js";
 
 import { vscodeExtensionsData } from "./tools/vscode-extensions.js";
-
 import { aiToolsData } from "./tools/ai-tools.js";
+import { ourCreationsData } from './tools/our-creations.js';
+
+import {
+    appsScreenRecordingData,
+    appsVideoEditingData,
+    appsDownloadManagersData,
+    appsDeveloperToolsData,
+    appsRuntimesLibrariesData,
+    appsSecurityPrivacyData,
+    appsRemoteDesktopData,
+    appsDatabaseGuisData
+} from './tools/desktop-apps.js';
+
+
+import {
+    techTermsMainData,
+    shortcutsMainData,
+    techTermsHtmlData,
+    techTermsCssData,
+    techTermsJsData,
+    techTermsGeneralData,
+    shortcutsWindowsData,
+    shortcutsVscodeData,
+    shortcutsChromeData,
+    shortcutsPhotoshopData,
+    fileFormatsData,
+    imageFormatsData,
+    videoFormatsData
+} from './tools/tech-reference.js';
+
 import {
     visualInspirationData,
     imageEditingData,
@@ -147,4 +176,26 @@ export const registry = {
     "animation-libraries": animationLibrariesData,
     "dev-utilities": devUtilitiesData,
     "stock-images-icons": stockImagesIconsData,
+    'our-creations': ourCreationsData,
+    'tech-terms-main': techTermsMainData,
+    'shortcuts-main': shortcutsMainData,
+    'tech-terms-html': techTermsHtmlData,
+    'tech-terms-css': techTermsCssData,
+    'tech-terms-js': techTermsJsData,
+    'tech-terms-general': techTermsGeneralData,
+    'shortcuts-windows': shortcutsWindowsData,
+    'shortcuts-vscode': shortcutsVscodeData,
+    'shortcuts-chrome': shortcutsChromeData,
+    'shortcuts-photoshop': shortcutsPhotoshopData,
+    'file-formats': fileFormatsData,
+    'image-formats': imageFormatsData,
+    'video-formats': videoFormatsData,
+    'apps-screen-recording': appsScreenRecordingData,
+    'apps-video-editing': appsVideoEditingData,
+    'apps-download-managers': appsDownloadManagersData,
+    'apps-developer-tools': appsDeveloperToolsData,
+    'apps-runtimes-libraries': appsRuntimesLibrariesData,
+    'apps-security-privacy': appsSecurityPrivacyData,
+    'apps-remote-desktop': appsRemoteDesktopData,
+    'apps-database-guis': appsDatabaseGuisData,
 };

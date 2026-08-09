@@ -116,14 +116,15 @@
   text-align: center;
 }
 
-/* استهداف عناوين كروت مسار أدوات ومواقع للمطورين تحديداً */
-.premium-card[data-tech="dev-tools"] .card-title-en {
+/* استهداف عناوين كروت الأقسام العربية والمسارات المخصصة لترتيب الاتجاه من اليمين لليسار */
+.premium-card[data-tech="dev-tools"] .card-title-en,
+.premium-card[data-tech="tech-reference"] .card-title-en,
+.premium-card[data-tech="tech-reference-sub"] .card-title-en,
+.premium-card[data-tech="apps"] .card-title-en,
+.premium-card[data-tech="our-creations"] .card-title-en {
   font-family: 'Cairo', sans-serif;
-  /* اسم الخط العربي المطلوب */
   direction: rtl;
-  /* الاتجاه من اليمين إلى اليسار */
   text-align: center;
-  /* محاذاة النص بالمنتصف */
 }
 
 .card-title-ar {

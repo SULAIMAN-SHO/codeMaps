@@ -406,6 +406,173 @@ export const categories = [
         arabicName: 'مكتبات الصور والأيقونات',
         desc: 'مكتبات تحميل الصور عالية الدقة والأيقونات والشعارات المتجاوبة مجاناً لاستخدامها بالواجهات.',
         tech: 'dev-tools'
+    },
+    // ==========================================
+    // مسار المشاريع والتطبيقات (Our Creations Track)
+    // ==========================================
+    {
+        id: 'our-creations',
+        name: 'Our Creations',
+        arabicName: 'من تطويرنا',
+        desc: 'مجموعة متميزة من التطبيقات والمواقع والأدوات المبتكرة التي تم تطويرها بأيدينا وبجهود أصدقائنا المبدعين.',
+        tech: 'our-creations'
+    },
+    // ==========================================
+    // مسار الأدوات والتطبيقات البرمجية (Apps & Desktop Tools Track)
+    // ==========================================
+    {
+        id: 'apps-screen-recording',
+        name: 'تطبيقات تصوير وتسجيل الشاشة',
+        arabicName: 'تطبيقات تصوير وتسجيل الشاشة',
+        icon: 'https://www.google.com/s2/favicons?domain=obsproject.com&sz=128',
+        desc: 'برامج وأدوات التقاط وتسجيل الشاشة وإنشاء الشروحات التوضيحية والبث المباشر.',
+        tech: 'apps'
+    },
+    {
+        id: 'apps-video-editing',
+        name: 'تطبيقات ومحررات الفيديو',
+        arabicName: 'تطبيقات ومحررات الفيديو',
+        icon: 'https://www.google.com/s2/favicons?domain=capcut.com&sz=128',
+        desc: 'برامج المونتاج وتحرير وتصدير المقاطع التوضيحية والمؤثرات البصرية على الحاسوب.',
+        tech: 'apps'
+    },
+    {
+        id: 'apps-download-managers',
+        name: 'تطبيقات التحميل وإدارة الملفات',
+        arabicName: 'تطبيقات التحميل وإدارة الملفات',
+        icon: 'https://www.google.com/s2/favicons?domain=freedownloadmanager.org&sz=128',
+        desc: 'أدوات وبرامج جلب وتحميل الملفات والفيديوهات وتفريغ الحزم أونلاين بسرعات فائقة.',
+        tech: 'apps'
+    },
+    {
+        id: 'apps-developer-tools',
+        name: 'برامج وأدوات المطورين الأساسية',
+        arabicName: 'برامج وأدوات المطورين الأساسية',
+        icon: 'https://www.google.com/s2/favicons?domain=code.visualstudio.com&sz=128',
+        desc: 'المحررات والبيئات المكتبيّة المركزية للمطورين مثل VS Code و Docker و Git و Postman.',
+        tech: 'apps'
+    },
+    {
+        id: 'apps-runtimes-libraries',
+        name: 'البيئات والمنصات التنفيذية والمكتبات',
+        arabicName: 'البيئات والمنصات التنفيذية والمكتبات',
+        icon: 'https://www.google.com/s2/favicons?domain=nodejs.org&sz=128',
+        desc: 'البيئات التنفيذية وأدوات إدارة الحزم والمحركات البرمجية مثل Node.js و Bun و FFmpeg.',
+        tech: 'apps'
+    },
+    {
+        id: 'apps-remote-desktop',
+        name: 'برامج التحكم والوصول عن بُعد',
+        arabicName: 'برامج التحكم والوصول عن بُعد',
+        icon: 'https://www.google.com/s2/favicons?domain=anydesk.com&sz=128',
+        desc: 'تطبيقات التحكم بسطح المكتب ومشاركة الشاشة ومساعدة فريق العمل والعملاء عن بُعد.',
+        tech: 'apps'
+    },
+    // ==========================================
+    // مسار المصطلحات والمعلومات التقنية - الكروت الرئيسية الـ 5 فقط
+    // ==========================================
+    {
+        id: 'tech-terms-main',
+        name: 'المصطلحات التقنية',
+        arabicName: 'المصطلحات التقنية',
+        desc: 'دليل شامل ومبسط لأهم المفاهيم والمصطلحات البرمجية المقسمة بداخل الصفحة حسب اللغات والتخصص.',
+        tech: 'tech-reference'
+    },
+    {
+        id: 'shortcuts-main',
+        name: 'اختصارات تطبيقات',
+        arabicName: 'اختصارات تطبيقات',
+        desc: 'دليل اختصارات لوحة المفاتيح السريعة لنظام التشغيل والمحررات والمتصفحات وبرامج التصميم.',
+        tech: 'tech-reference'
+    },
+    {
+        id: 'file-formats',
+        name: 'صيغ الملفات البرمجية',
+        arabicName: 'صيغ الملفات البرمجية',
+        desc: 'شرح معايير واستخدامات صيغ الملفات البرمجية الأساسية مثل HTML و CSS و JS و JSON.',
+        tech: 'tech-reference'
+    },
+    {
+        id: 'image-formats',
+        name: 'صيغ الصور الرقمية',
+        arabicName: 'صيغ الصور الرقمية',
+        desc: 'دليل الفروقات والاستخدامات بين صيغ الصور المختلفة مثل PNG و WebP و AVIF و SVG.',
+        tech: 'tech-reference'
+    },
+    {
+        id: 'video-formats',
+        name: 'صيغ الفيديوهات والوسائط',
+        arabicName: 'صيغ الفيديوهات والوسائط',
+        desc: 'مقارنات واستخدامات صيغ الفيديوهات والترميز السحابي للويب مثل MP4 و WebM و MOV.',
+        tech: 'tech-reference'
+    },
+
+    // ==========================================
+    // الفئات الفرعية الداخلية (Sub-Categories) المجهزة بالأيقونات المباشرة
+    // ==========================================
+    {
+        id: 'tech-terms-html',
+        name: 'مصطلحات - HTML',
+        arabicName: 'مصطلحات - HTML',
+        model3d: 'assets/3D/HTML.glb', // مسار ملف مجسم الـ 3D
+        desc: 'دليل وشرح مفاهيم ومصطلحات بنية الويب وهيكلة المستندات بـ HTML5.',
+        tech: 'tech-reference-sub'
+    },
+    {
+        id: 'tech-terms-css',
+        name: 'مصطلحات - CSS',
+        arabicName: 'مصطلحات - CSS',
+        model3d: 'assets/3D/CSS.glb',
+        desc: 'دليل مصطلحات ومفاهيم التنسيق والواجهات وشلال التتابع بـ CSS3.',
+        tech: 'tech-reference-sub'
+    },
+    {
+        id: 'tech-terms-js',
+        name: 'مصطلحات - JavaScript',
+        arabicName: 'مصطلحات - JavaScript',
+        model3d: 'assets/3D/JS.glb',
+        desc: 'شرح معاني ومفاهيم البرمجة المتقدمة والجافاسكريبت مثل Closure و Hoisting و Scope.',
+        tech: 'tech-reference-sub'
+    },
+    {
+        id: 'tech-terms-general',
+        name: 'مصطلحات تقنية عامة',
+        arabicName: 'مصطلحات تقنية عامة',
+        icon: 'https://www.google.com/s2/favicons?domain=cloudflare.com&sz=128',
+        desc: 'المفاهيم البرمجية والشبكية الأساسية الشاملة مثل API و DOM و CDN و DNS.',
+        tech: 'tech-reference-sub'
+    },
+    {
+        id: 'shortcuts-windows',
+        name: 'اختصارات - Windows',
+        arabicName: 'اختصارات - Windows',
+        icon: 'https://www.google.com/s2/favicons?domain=microsoft.com&sz=128',
+        desc: 'أهم اختصارات لوحة المفاتيح السريعة لنظام التشغيل ويندوز لزيادة إنتاجية العمل.',
+        tech: 'tech-reference-sub'
+    },
+    {
+        id: 'shortcuts-vscode',
+        name: 'اختصارات - VS Code',
+        arabicName: 'اختصارات - VS Code',
+        icon: 'https://www.google.com/s2/favicons?domain=code.visualstudio.com&sz=128',
+        desc: 'دليل اختصارات محرر الأكواد VS Code للتنقل والتعديل البرمجي الخاطف.',
+        tech: 'tech-reference-sub'
+    },
+    {
+        id: 'shortcuts-chrome',
+        name: 'اختصارات - Chrome',
+        arabicName: 'اختصارات - Chrome',
+        icon: 'https://www.google.com/s2/favicons?domain=developer.chrome.com&sz=128',
+        desc: 'اختصارات متصفح قوقل كروم وأدوات المطورين (DevTools) للتصحيح والمعاينة.',
+        tech: 'tech-reference-sub'
+    },
+    {
+        id: 'shortcuts-photoshop',
+        name: 'اختصارات - Photoshop',
+        arabicName: 'اختصارات - Photoshop',
+        icon: 'https://www.google.com/s2/favicons?domain=adobe.com&sz=128',
+        desc: 'أدوات واختصارات لوحة المفاتيح لتطبيق أدوبي فوتوشوب لتصميم الواجهات والرسومات.',
+        tech: 'tech-reference-sub'
     }
 
 ];

@@ -48,6 +48,26 @@ export function renderCategory(container, categoryId) {
   } else if (category.tech === 'dev-tools') {
     backLabel = 'العودة لمسار أدوات ومواقع للمطورين';
     backHash = '#/track/dev-tools';
+  } else if (category.tech === 'apps') {
+    backLabel = 'العودة لمسار أدوات وتطبيقات';
+    backHash = '#/track/apps';
+  } else if (category.tech === 'our-creations') {
+    backLabel = 'العودة لمسار من تطويرنا';
+    backHash = '#/track/our-creations';
+  } else if (category.tech === 'tech-reference-sub') {
+    if (category.id.startsWith('tech-terms')) {
+      backLabel = 'العودة لقسم المصطلحات التقنية';
+      backHash = '#/category/tech-terms-main';
+    } else if (category.id.startsWith('shortcuts')) {
+      backLabel = 'العودة لقسم اختصارات تطبيقات';
+      backHash = '#/category/shortcuts-main';
+    } else {
+      backLabel = 'العودة لمسار مصطلحات ومعلومات تقنية';
+      backHash = '#/track/tech-reference';
+    }
+  } else if (category.tech === 'tech-reference') {
+    backLabel = 'العودة لمسار مصطلحات ومعلومات تقنية';
+    backHash = '#/track/tech-reference';
   }
 
   // بناء ترويسة التصنيف المحددة مع زر العودة التكيفي
@@ -73,28 +93,75 @@ export function renderCategory(container, categoryId) {
   const contentArea = document.getElementById('category-content');
   const methods = registry[categoryId];
 
-  // معالجة الأقسام غير المكتملة بصرياً (Placeholder Empty States)
+  // معالجة الأقسام غير المكتملة بصرياً لحماية التشغيل ومنع الأخطاء البرمجية
   if (!methods || methods.length === 0) {
     contentArea.innerHTML = `
       <div class="empty-state">
         <div class="empty-state-icon">⚙️</div>
         <h2 class="empty-state-title">هذا القسم قيد التطوير الهندسي</h2>
-        <p>نعمل حالياً على صياغة طبقات المعرفة السبعة الخاصة بدوال هذا القسم لضمان تقديم تجربة متميزة تواكب تطلعات المطور المحترف.</p>
+        <p>نعمل حالياً على صياغة وتنسيق محتوى هذا القسم لضمان تقديم تجربة متميزة.</p>
       </div>
     `;
     return;
   }
 
-  // جلب وحقن الدوال ديناميكياً بناءً على مصفوفة القسم النشط
-  const grid = document.createElement('div');
-  grid.className = 'card-grid';
+  // فحص ما إذا كانت العناصر عبارة عن فئات فرعية (Sub-Categories) لعرضها كبطاقات فئات والتنقل لداخلها كمجلد
+  const isSubCategoryList = Array.isArray(methods) && methods[0] && (methods[0].tech === 'tech-reference-sub' || (methods[0].arabicName && methods[0].desc && !methods[0].shortDescription));
 
-  methods.forEach(method => {
-    const methodCard = CardComponent.createMethodCard(method, (selectedMethod) => {
-      ModalComponent.open(selectedMethod);
+  if (isSubCategoryList) {
+    const grid = document.createElement('div');
+    grid.className = 'card-grid';
+
+    methods.forEach(subCategory => {
+      const categoryCard = CardComponent.createCategoryCard(subCategory);
+      grid.appendChild(categoryCard);
     });
-    grid.appendChild(methodCard);
-  });
 
-  contentArea.appendChild(grid);
+    contentArea.appendChild(grid);
+  } else {
+    // تجميع وإبراز العناصر حسب المجموعات الفرعية (group) إن وجدت للتقسيم الداخلي المريح
+    const hasGroups = methods.some(m => m.group);
+
+    if (hasGroups) {
+      const groups = {};
+      methods.forEach(method => {
+        const gName = method.group || 'عام';
+        if (!groups[gName]) groups[gName] = [];
+        groups[gName].push(method);
+      });
+
+      Object.keys(groups).forEach(groupTitle => {
+        const sectionTitle = document.createElement('h2');
+        sectionTitle.className = 'section-title';
+        sectionTitle.style.cssText = 'font-size: 1.3rem; margin: 1.5rem 0 1rem; color: var(--accent-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;';
+        sectionTitle.textContent = groupTitle;
+        contentArea.appendChild(sectionTitle);
+
+        const grid = document.createElement('div');
+        grid.className = 'card-grid';
+
+        groups[groupTitle].forEach(method => {
+          const methodCard = CardComponent.createMethodCard(method, (selectedMethod) => {
+            ModalComponent.open(selectedMethod);
+          });
+          grid.appendChild(methodCard);
+        });
+
+        contentArea.appendChild(grid);
+      });
+    } else {
+      // جلب وحقن العناصر ديناميكياً بأسلوب الشبكة القياسي
+      const grid = document.createElement('div');
+      grid.className = 'card-grid';
+
+      methods.forEach(method => {
+        const methodCard = CardComponent.createMethodCard(method, (selectedMethod) => {
+          ModalComponent.open(selectedMethod);
+        });
+        grid.appendChild(methodCard);
+      });
+
+      contentArea.appendChild(grid);
+    }
+  }
 }
