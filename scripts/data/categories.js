@@ -432,7 +432,7 @@ export const categories = [
         id: 'apps-video-editing',
         name: 'تطبيقات ومحررات الفيديو',
         arabicName: 'تطبيقات ومحررات الفيديو',
-        icon: 'https://www.google.com/s2/favicons?domain=capcut.com&sz=128',
+        icon: 'assets/icons/Video applications and editors.webp',
         desc: 'برامج المونتاج وتحرير وتصدير المقاطع التوضيحية والمؤثرات البصرية على الحاسوب.',
         tech: 'apps'
     },
@@ -440,7 +440,7 @@ export const categories = [
         id: 'apps-download-managers',
         name: 'تطبيقات التحميل وإدارة الملفات',
         arabicName: 'تطبيقات التحميل وإدارة الملفات',
-        icon: 'https://www.google.com/s2/favicons?domain=freedownloadmanager.org&sz=128',
+        icon: 'assets/icons/download_file_manager.webp',
         desc: 'أدوات وبرامج جلب وتحميل الملفات والفيديوهات وتفريغ الحزم أونلاين بسرعات فائقة.',
         tech: 'apps'
     },
@@ -466,6 +466,30 @@ export const categories = [
         arabicName: 'برامج التحكم والوصول عن بُعد',
         icon: 'https://www.google.com/s2/favicons?domain=anydesk.com&sz=128',
         desc: 'تطبيقات التحكم بسطح المكتب ومشاركة الشاشة ومساعدة فريق العمل والعملاء عن بُعد.',
+        tech: 'apps'
+    },
+    {
+        id: 'apps-system-diagnostics',
+        name: 'برامج فحص ومعلومات النظام والعتاد',
+        arabicName: 'برامج فحص ومعلومات النظام والعتاد',
+        icon: 'assets/icons/System.webp',
+        desc: 'برامج فحص العتاد، ومراقبة حرارة المكونات واستهلاك الطاقة، واختبار صحة وعمر الهارد ديسك.',
+        tech: 'apps'
+    },
+    {
+        id: 'apps-video-players',
+        name: 'برامج تشغيل الفيديو والوسائط',
+        arabicName: 'برامج تشغيل الفيديو والوسائط',
+        icon: 'assets/icons/Play video.webp',
+        desc: 'أفضل البرامج والتطبيقات المكتبيّة لتشغيل مقاطع الفيديو والوسائط بكافة الصيغ والترميزات.',
+        tech: 'apps'
+    },
+    {
+        id: 'apps-3d-viewers',
+        name: 'برامج تشغيل وتصفح تصاميم 3D',
+        arabicName: 'برامج تشغيل وتصفح تصاميم 3D',
+        icon: 'assets/icons/3D.webp',
+        desc: 'برامج وأدوات معاينة وتشغيل مجسمات وتصاميم الـ 3D بصيغ GLB و GLTF و OBJ.',
         tech: 'apps'
     },
     // ==========================================

@@ -65,6 +65,7 @@ import { vscodeExtensionsData } from "./tools/vscode-extensions.js";
 import { aiToolsData } from "./tools/ai-tools.js";
 import { ourCreationsData } from './tools/our-creations.js';
 
+
 import {
     appsScreenRecordingData,
     appsVideoEditingData,
@@ -73,7 +74,10 @@ import {
     appsRuntimesLibrariesData,
     appsSecurityPrivacyData,
     appsRemoteDesktopData,
-    appsDatabaseGuisData
+    appsDatabaseGuisData,
+    appsSystemDiagnosticsData,
+    appsVideoPlayersData,
+    apps3DViewersData
 } from './tools/desktop-apps.js';
 
 
@@ -198,4 +202,7 @@ export const registry = {
     'apps-security-privacy': appsSecurityPrivacyData,
     'apps-remote-desktop': appsRemoteDesktopData,
     'apps-database-guis': appsDatabaseGuisData,
+    'apps-system-diagnostics': appsSystemDiagnosticsData,
+    'apps-video-players': appsVideoPlayersData,
+    'apps-3d-viewers': apps3DViewersData,
 };
