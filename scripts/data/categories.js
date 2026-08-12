@@ -407,6 +407,35 @@ export const categories = [
         desc: 'مكتبات تحميل الصور عالية الدقة والأيقونات والشعارات المتجاوبة مجاناً لاستخدامها بالواجهات.',
         tech: 'dev-tools'
     },
+    {
+        id: 'frameworks-libraries',
+        name: 'أطر العمل والمكتبات البرمجية',
+        arabicName: 'أطر العمل والمكتبات البرمجية',
+        desc: 'التوثيق المرجعي والمنصات الرسمية لأبرز أطر العمل والمكتبات الشائعة مثل React و Tailwind CSS و Bootstrap.',
+        tech: 'dev-tools'
+    },
+    {
+        id: 'mock-apis-data',
+        name: 'مولدات البيانات الوهمية و Mock APIs',
+        arabicName: 'مولدات البيانات الوهمية و Mock APIs',
+        desc: 'واجهات برمجة تطبيقات (APIs) وبيانات وهمية مجانية لاختبار وبناء الواجهات بدون حاجة لباك إند.',
+        tech: 'dev-tools'
+    },
+    {
+        id: '3d-web-design',
+        name: 'أدوات وتصميمات الـ 3D التفاعلية',
+        arabicName: 'أدوات وتصميمات الـ 3D التفاعلية',
+        desc: 'منصات ومجتمعات تصميم المجسمات والتأثيرات ثلاثية الأبعاد المجهزة للعرض والتحكم التفاعلي بالويب.',
+        tech: 'dev-tools'
+    },
+    {
+        id: 'cloud-hosting-deployment',
+        name: 'منصات الاستضافة والتطوير السحابي',
+        arabicName: 'منصات الاستضافة والتطوير السحابي',
+        desc: 'منصات استضافة وتدشين تطبيقات الويب وقواعد البيانات السحابية بضغطة زر مثل Vercel و Supabase.',
+        tech: 'dev-tools'
+    }
+    ,
     // ==========================================
     // مسار المشاريع والتطبيقات (Our Creations Track)
     // ==========================================
@@ -424,7 +453,7 @@ export const categories = [
         id: 'apps-screen-recording',
         name: 'تطبيقات تصوير وتسجيل الشاشة',
         arabicName: 'تطبيقات تصوير وتسجيل الشاشة',
-        icon: 'https://www.google.com/s2/favicons?domain=obsproject.com&sz=128',
+        icon: 'assets/icons/REC.webp',
         desc: 'برامج وأدوات التقاط وتسجيل الشاشة وإنشاء الشروحات التوضيحية والبث المباشر.',
         tech: 'apps'
     },
@@ -448,7 +477,7 @@ export const categories = [
         id: 'apps-developer-tools',
         name: 'برامج وأدوات المطورين الأساسية',
         arabicName: 'برامج وأدوات المطورين الأساسية',
-        icon: 'https://www.google.com/s2/favicons?domain=code.visualstudio.com&sz=128',
+        icon: 'assets/icons/Tools.webp',
         desc: 'المحررات والبيئات المكتبيّة المركزية للمطورين مثل VS Code و Docker و Git و Postman.',
         tech: 'apps'
     },
@@ -456,7 +485,7 @@ export const categories = [
         id: 'apps-runtimes-libraries',
         name: 'البيئات والمنصات التنفيذية والمكتبات',
         arabicName: 'البيئات والمنصات التنفيذية والمكتبات',
-        icon: 'https://www.google.com/s2/favicons?domain=nodejs.org&sz=128',
+        icon: 'assets/icons/node-net.webp',
         desc: 'البيئات التنفيذية وأدوات إدارة الحزم والمحركات البرمجية مثل Node.js و Bun و FFmpeg.',
         tech: 'apps'
     },
@@ -464,7 +493,7 @@ export const categories = [
         id: 'apps-remote-desktop',
         name: 'برامج التحكم والوصول عن بُعد',
         arabicName: 'برامج التحكم والوصول عن بُعد',
-        icon: 'https://www.google.com/s2/favicons?domain=anydesk.com&sz=128',
+        icon: 'assets/icons/Control programs.webp',
         desc: 'تطبيقات التحكم بسطح المكتب ومشاركة الشاشة ومساعدة فريق العمل والعملاء عن بُعد.',
         tech: 'apps'
     },

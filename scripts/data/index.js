@@ -107,6 +107,10 @@ import {
     animationLibrariesData,
     devUtilitiesData,
     stockImagesIconsData,
+    frameworksLibrariesData,
+    mockApisData,
+    threeDWebDesignData,
+    cloudHostingDeploymentData
 } from "./tools/dev-tools.js";
 
 // بناء كائن التسجيل المركزي وتصديره لربط الأقسام بمعرفاتها (categoryId)
@@ -205,4 +209,8 @@ export const registry = {
     'apps-system-diagnostics': appsSystemDiagnosticsData,
     'apps-video-players': appsVideoPlayersData,
     'apps-3d-viewers': apps3DViewersData,
+    "frameworks-libraries": frameworksLibrariesData,
+    'mock-apis-data': mockApisData,
+    '3d-web-design': threeDWebDesignData,
+    'cloud-hosting-deployment': cloudHostingDeploymentData,
 };

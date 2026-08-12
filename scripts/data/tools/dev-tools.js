@@ -53,17 +53,56 @@ export const visualInspirationData = [
         keywords: ['unsplash', 'stock photos', 'images', 'design']
     },
     {
-        id: 'site-freepik',
+        id: 'site-refero-design',
         type: 'website',
-        name: 'Freepik',
-        icon: 'https://www.google.com/s2/favicons?domain=www.freepik.com&sz=128',
+        name: 'Refero Design Styles',
+        icon: 'https://www.google.com/s2/favicons?domain=styles.refero.design&sz=128',
         categoryId: 'visual-inspiration',
-        shortDescription: 'مكتبة أصول التصميم المتكاملة لتحميل ملفات الفيكتور و PSD والتصاميم الجاهزة.',
-        url: 'https://www.freepik.com',
-        pricing: 'مجاني / Premium',
-        purpose: 'كيف تستفيد منه: جلب رسومات الفيكتور وملفات PSD لتزيين واجهات التطبيقات والمواقع.',
-        features: ['ملايين ملفات الفيكتور والـ PSD', 'رسوم توضيحية احترافية', 'تحديثات يومية'],
-        keywords: ['freepik', 'vectors', 'psd', 'design assets']
+        shortDescription: 'مكتبة استلهام أنماط وتفاعلات ودراسات حالة الواجهات الحقيقية لأكبر تطبيقات الويب.',
+        url: 'https://styles.refero.design/',
+        pricing: 'مجاني للتصفح والاستلهام',
+        purpose: 'كيف تستفيد منه: استكشاف أساليب وتصاميم ومكونات الواجهات المستخدمة في كبار المنتجات العالمية.',
+        features: ['أنماط وتصاميم واجهات حقيقية', 'تصفح حسب نوع المكون والشاشة', 'استلهام الأفكار المعاصرة'],
+        keywords: ['refero design', 'ui patterns', 'inspiration', 'design styles']
+    },
+    {
+        id: 'site-finsweet',
+        type: 'website',
+        name: 'Finsweet',
+        icon: 'https://www.google.com/s2/favicons?domain=finsweet.com&sz=128',
+        categoryId: 'visual-inspiration',
+        shortDescription: 'الشركة والمجتمع الرائد في تطوير أدوات ومكتبات الويب والمعايير البرمجية للواجهات.',
+        url: 'https://finsweet.com/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: جلب أدوات وتسهيلات تطوير الواجهات وربط السِمات التفاعلية بمشروعك.',
+        features: ['أدوات ومكتبات تطوير ويب', 'معايير برمجية معتمدة', 'تفاعلات واجهات معاصرة'],
+        keywords: ['finsweet', 'webflow', 'developer tools', 'attributes']
+    },
+    {
+        id: 'site-formia',
+        type: 'website',
+        name: 'Formia 3D & Forms',
+        icon: 'https://www.google.com/s2/favicons?domain=formia.so&sz=128',
+        categoryId: 'visual-inspiration',
+        shortDescription: 'أداة تصميم الأصول التفاعلية ثلاثية الأبعاد وواجهات النماذج بالذكاء الاصطناعي.',
+        url: 'https://formia.so/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: بناء وتصميم عناصر 3D تفاعلية ونماذج إدخال جذابة للموقع.',
+        features: ['تصميم أصول 3D تفاعلية', 'بناء نماذج إدخال جذابة', 'تكامل سهل مع الويب'],
+        keywords: ['formia', '3d assets', 'forms', 'ui design']
+    },
+    {
+        id: 'site-kigen-design',
+        type: 'website',
+        name: 'Kigen Design',
+        icon: 'https://www.google.com/s2/favicons?domain=kigen.design&sz=128',
+        categoryId: 'visual-inspiration',
+        shortDescription: 'أصول ومجموعات UI KITS ورسوم 3D عالية الدقة المخصصة للواجهات والتطبيقات.',
+        url: 'https://kigen.design/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: جلب حزم أصول رسومية ثلاثية الأبعاد وقوالب تصاميم جاهزة للمشاريع.',
+        features: ['حزم أصول 3D جاهزة', 'تصاميم UI Kits متكاملة', 'دعم Figma والويب'],
+        keywords: ['kigen design', '3d assets', 'ui kit', 'design resources']
     }
 ];
 
@@ -172,6 +211,45 @@ export const imageEditingData = [
         purpose: 'كيف تستفيد منه: إنشاء أيقونة المفضلة (Favicon) بجميع المقاسات القياسية لموقعك.',
         features: ['توليد صيغ ICO القياسية', 'دعم أبعاد متعددة (16px - 64px)', 'تحويل بنقرة زر'],
         keywords: ['ico', 'favicon', 'converter', 'icon']
+    },
+    {
+        id: 'site-svg-backgrounds',
+        type: 'website',
+        name: 'SVG Backgrounds',
+        icon: 'https://www.google.com/s2/favicons?domain=www.svgbackgrounds.com&sz=128',
+        categoryId: 'image-editing',
+        shortDescription: 'أداة سريعة لتصميم وتنسيق أنماط وتدرجات خلفيات الـ SVG التفاعلية للموقع.',
+        url: 'https://www.svgbackgrounds.com',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: تصميم خلفيات وبنرات عصرية وتصدير كود الـ SVG بوزن متناهي الخفة.',
+        features: ['أنماط خلفيات SVG عصرية', 'تخصيص الألوان والتدرجات', 'تصدير كود CSS و SVG ناصع'],
+        keywords: ['svg backgrounds', 'svg', 'patterns', 'backgrounds']
+    },
+    {
+        id: 'site-upscale-media',
+        type: 'website',
+        name: 'Upscale.media',
+        icon: 'https://www.google.com/s2/favicons?domain=www.upscale.media&sz=128',
+        categoryId: 'image-editing',
+        shortDescription: 'أداة ذكاء اصطناعي مجانية لرفع دقة وتوضيح تفاصيل الصور وتكبيرها دون فقدان الجودة.',
+        url: 'https://www.upscale.media/',
+        pricing: 'مجاني بالكامل',
+        purpose: 'كيف تستفيد منه: تحسين وتكبير دقة صور الواجهات والشعارات المنخفضة بدقة خيالية.',
+        features: ['رفع دقة الصور بالذكاء الاصطناعي', 'معالجة التشويش والتغبيش', 'تصدير صور HD عالية الدقة'],
+        keywords: ['upscale.media', 'ai upscale', 'image enhancer', 'hd image']
+    },
+    {
+        id: 'site-magic-studio',
+        type: 'website',
+        name: 'Magic Studio',
+        icon: 'https://www.google.com/s2/favicons?domain=magicstudio.com&sz=128',
+        categoryId: 'image-editing',
+        shortDescription: 'أداة تعديل الصور بالذكاء الاصطناعي لإزالة العناصر غير المرغوبة واستبدال الخلفيات.',
+        url: 'https://magicstudio.com/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: حذف العناصر والأشخاص واستبدال الخلفيات من صور المنتجات والواجهات.',
+        features: ['حذف الأجسام من الصور بالذكاء الاصطناعي', 'تفريغ واستبدال الخلفيات', 'سهولة وسرعة التعديل'],
+        keywords: ['magic studio', 'ai object remover', 'image editor', 'background']
     }
 ];
 
@@ -427,6 +505,188 @@ export const uiComponentsIconsData = [
         purpose: 'كيف تستفيد منه: تحويل جداول HTML العادية إلى جداول بيانات تفاعلية مجهزة بالفرز والفلترة.',
         features: ['فرز وبحث تلقائي في الجداول', 'تقسيم الصفحات (Pagination)', 'تصدير البيانات لـ Excel'],
         keywords: ['datatables', 'tables', 'javascript', 'data']
+    },
+    {
+        id: 'site-fancyapps',
+        type: 'website',
+        name: 'Fancyapps',
+        icon: 'https://www.google.com/s2/favicons?domain=fancyapps.com&sz=128',
+        categoryId: 'ui-components',
+        shortDescription: 'مجموعة مكتبات JavaScript وواجهة مستخدم توفر مكونات تفاعلية جاهزة مثل Lightbox وCarousel وPanzoom وFullscreen للويب.',
+        url: 'https://fancyapps.com/',
+        pricing: 'مجاني للاستخدام الشخصي ومفتوح المصدر، مع ترخيص تجاري للاستخدام التجاري',
+        purpose: 'كيف تستفيد منه: إضافة معارض صور وفيديوهات ونوافذ Lightbox وأشرطة تمرير ومكونات تفاعلية متقدمة إلى مواقع الويب دون تطويرها من الصفر.',
+        features: ['Fancybox لعرض الصور والفيديو والمحتوى في Lightbox', 'Carousel لإنشاء أشرطة تمرير تفاعلية', 'Panzoom للتكبير والتحريك', 'دعم اللمس والسحب', 'دعم الصور والفيديو وملفات PDF وHTML', 'تصميم متجاوب وقابل للتخصيص'],
+        keywords: ['fancyapps', 'fancybox', 'lightbox', 'carousel', 'panzoom', 'javascript', 'ui components', 'gallery']
+    },
+    {
+        id: 'site-shadcn-presets',
+        type: 'website',
+        name: 'shadcn/ui Presets & Themes',
+        icon: 'https://www.google.com/s2/favicons?domain=ui.shadcn.com&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'أداة تفاعلية مباشرة لتوليد وتعيين الثيمات ولوحات الألوان لمكونات shadcn/ui.',
+        url: 'https://ui.shadcn.com/create?preset=b27GcrRo',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: اختيار ومعاينة وتخصيص ألوان وتصاميم مكونات shadcn/ui وتصدير كود CSS.',
+        features: ['تخصيص ثيمات shadcn حياً', 'معاينة الألوان التفاعلية', 'تصدير متغيرات CSS مباشرة'],
+        keywords: ['shadcn', 'presets', 'themes', 'tailwind']
+    },
+    {
+        id: 'site-react-bits',
+        type: 'website',
+        name: 'React Bits',
+        icon: 'https://www.google.com/s2/favicons?domain=reactbits.dev&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'مجموعة مكونات تفاعلية حركية خفيفة وقابلة للتخصيص المباشر لتطبيقات React.',
+        url: 'https://reactbits.dev/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: إضفاء حركات وتأثيرات بصرية مبتكرة على كروت وعناوين واجهات React.',
+        features: ['أكثر من 60 مكون حركي', 'سهولة الدمج مع React', 'تأثيرات بصرية خفيفة'],
+        keywords: ['react bits', 'react', 'animated components', 'ui']
+    },
+    {
+        id: 'site-select2',
+        type: 'website',
+        name: 'Select2',
+        icon: 'https://www.google.com/s2/favicons?domain=select2.org&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'المكتبة القياسية الشائعة لبناء القوائم المنسدلة التفاعلية المجهزة بمحرك بحث مدمج.',
+        url: 'https://select2.org/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: تحويل قوائم الـ `<select>` العادية إلى عناصر تفاعلية تدعم البحث والوسوم (Tags).',
+        features: ['محرك بحث مدمج داخل القائمة', 'دعم التحديد المتعدد والوسوم', 'ربط بالبيانات السحابية Ajax'],
+        keywords: ['select2', 'dropdown', 'select', 'javascript']
+    },
+    {
+        id: 'site-svgs-app',
+        type: 'website',
+        name: 'SVGs.app',
+        icon: 'https://www.google.com/s2/favicons?domain=svgs.app&sz=128',
+        categoryId: 'svg-tools',
+        shortDescription: 'منصة مدعومة بالذكاء الاصطناعي لإنشاء رسومات وتوضيحات SVG قابلة للتعديل، مع مكتبة من الرسومات الجاهزة ومجتمع لمشاركة الأعمال.',
+        url: 'https://svgs.app/dashboard',
+        pricing: 'مجاني مع رصيد محدود، وخطط مدفوعة',
+        purpose: 'كيف تستفيد منه: إنشاء رسومات وتوضيحات متجهة مخصصة من خلال وصفها للذكاء الاصطناعي، ثم استخدامها في المواقع والتطبيقات والتصاميم مع إمكانية تنزيلها بصيغة SVG أو PNG.',
+        features: ['توليد رسومات SVG بالذكاء الاصطناعي', 'إنشاء رسومات متناسقة ضمن أسلوب بصري موحد', 'تخصيص الألوان والأنماط', 'تنزيل الرسومات بصيغة SVG وPNG', 'مكتبة مجتمعية للرسومات الجاهزة', 'إمكانية تضمين الرسومات في المواقع', 'رسومات متجهة قابلة للتوسع دون فقدان الجودة'],
+        keywords: ['svgs.app', 'svg', 'ai svg generator', 'svg generator', 'vector illustrations', 'ai illustrations', 'vector graphics', 'svg design']
+    },
+    {
+        id: 'site-radix-ui',
+        type: 'website',
+        name: 'Radix UI',
+        icon: 'https://www.google.com/s2/favicons?domain=www.radix-ui.com&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'مكتبة المكونات التفاعلية الخاوية من التنسيق مع دعم كامل لإمكانية الوصول (Accessibility).',
+        url: 'https://www.radix-ui.com/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: لبنة البناء الأولى لمكونات shadcn/ui لبناء قوائم ونوافذ منبثقة تفاعلية بسهولة.',
+        features: ['دعم كامل لـ WAI-ARIA Accessibility', 'مكونات Unstyled قابلة للتنسيق', 'دعم كامل لـ React'],
+        keywords: ['radix ui', 'accessibility', 'react', 'unstyled components']
+    },
+    {
+        id: 'site-gravity-ui',
+        type: 'website',
+        name: 'Gravity UI',
+        icon: 'https://www.google.com/s2/favicons?domain=gravity-ui.com&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'نظام التصميم ومكتبة المكونات التفاعلية المفتوحة المصدر المعتمدة من شركة Yandex لـ React.',
+        url: 'https://gravity-ui.com/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: بناء واجهات مستخدم معقدة ولوحات تحكم بتصاميم حديثة مجهزة مسبقاً.',
+        features: ['نظام تصميم متكامل', 'مكونات لوحات تحكم جاهزة', 'دعم كامل لـ React و TypeScript'],
+        keywords: ['gravity ui', 'design system', 'react', 'components']
+    },
+    {
+        id: 'site-lordicon',
+        type: 'website',
+        name: 'Lordicon',
+        icon: 'https://www.google.com/s2/favicons?domain=lordicon.com&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'أضخم مكتبة أيقونات تفاعلية متحركة بصيغ Lottie و SVG المجهزة للواجهات والويب.',
+        url: 'https://lordicon.com/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: إضافة حركة وتفاعل مميز لأيقونات الأزرار والتنبيهات عند التمرير والتحويم.',
+        features: ['أكثر من 8,900 أيقونة متحركة', 'تصدير بصيغ Lottie و SVG و GIF', 'تخصيص الألوان والأحجام حياً'],
+        keywords: ['lordicon', 'animated icons', 'lottie', 'svg icons']
+    },
+    {
+        id: 'site-iconsax',
+        type: 'website',
+        name: 'Iconsax',
+        icon: 'https://www.google.com/s2/favicons?domain=iconsax.io&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'أكثر من 6000 أيقونة فيكتور متناسقة متوفرة بـ 6 أنماط تصميمية مختلفة للواجهات.',
+        url: 'https://app.iconsax.io/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: استدعاء واستخدام أيقونات متناسقة الأنماط (Linear, Bold, Bulk, Two-tone).',
+        features: ['أكثر من 6000 أيقونة فيكتور', '6 أنماط بصرية متناسقة', 'تصدير SVG و Flutter و React'],
+        keywords: ['iconsax', 'vector icons', 'svg', 'ui icons']
+    },
+    {
+        id: 'site-hugeicons',
+        type: 'website',
+        name: 'Hugeicons',
+        icon: 'https://www.google.com/s2/favicons?domain=hugeicons.com&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'أكثر من 27,000 أيقونة فيكتور حديثة مقسمة على 57 تصنيفاً لـ React و Vue و Figma.',
+        url: 'https://hugeicons.com/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: جلب أيقونات احترافية متجاوبة عالية الدقة لكافة تخصصات التطبيقات.',
+        features: ['أكثر من 27,000 أيقونة', 'دعم React, Vue, Flutter, Figma', 'حزمة أيقونات موحدة'],
+        keywords: ['hugeicons', 'icons', 'react icons', 'figma icons']
+    },
+    {
+        id: 'site-solar-icons',
+        type: 'website',
+        name: 'Solar Icons',
+        icon: 'https://www.google.com/s2/favicons?domain=solar-icons.vercel.app&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'أكثر من 7000 أيقونة فيكتور حديثة ومجانية ومصممة بأعلى معايير الحداثة لـ Figma و React.',
+        url: 'https://solar-icons.vercel.app/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: البحث السريع ونسخ كود SVG للأيقونات العصرية المزدوجة التدرج.',
+        features: ['أكثر من 7000 أيقونة حرة', 'أنماط Bold, Linear, Duotone', 'نسخ كود React و SVG ناصع'],
+        keywords: ['solar icons', 'icons', 'duotone', 'svg']
+    },
+    {
+        id: 'site-boxicons',
+        type: 'website',
+        name: 'Boxicons',
+        icon: 'https://www.google.com/s2/favicons?domain=boxicons.com&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'مكتبة أيقونات الويب البسيطة والمفتوحة المصدر الشهيرة للمطورين والمصممين.',
+        url: 'https://boxicons.com/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: استدعاء الأيقونات عبر كلاسات بسيطة أو رموز SVG مباشرة بالمشروع.',
+        features: ['أيقونات ويب خفيفة', 'دعم الاستدعاء بـ Font / Web Component', 'أيقونات شعارات التقنيات'],
+        keywords: ['boxicons', 'web icons', 'svg', 'icon font']
+    },
+    {
+        id: 'site-iconly',
+        type: 'website',
+        name: 'Iconly 3D & 2D',
+        icon: 'https://www.google.com/s2/favicons?domain=web.iconly.pro&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'مجموعات أيقونات ثلاثية الأبعاد (3D) و 2D فائقة الأناقة لمصممي ومطوري الواجهات.',
+        url: 'https://web.iconly.pro/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: إضافة أبعاد بصرية ثلاثية الأبعاد (3D Icons) ناعمة تجذب انتباه الزوار.',
+        features: ['أيقونات 3D و 2D عالية الجودة', 'تصدير صور وعناصر متجهة', 'تصاميم حديثة للواجهات'],
+        keywords: ['iconly', '3d icons', 'ui icons', 'design']
+    },
+    {
+        id: 'site-iconic',
+        type: 'website',
+        name: 'Iconic',
+        icon: 'https://www.google.com/s2/favicons?domain=iconic.app&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'أيقونات SVG ناصعة ومحاذية للبيكسل مخصصة لتصميم وبناء الواجهات الحديثة.',
+        url: 'https://iconic.app/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: البحث السريع وتنزيل رموز SVG بكسلية ناصعة عالية الدقة.',
+        features: ['تصاميم بكسلية دقيقة Pixel-perfect', 'تحميل مجاني لملفات SVG', 'تحديثات حية للرموز'],
+        keywords: ['iconic', 'svg icons', 'pixel perfect', 'ui']
     }
 ];
 
@@ -483,6 +743,45 @@ export const colorPalettesData = [
         purpose: 'كيف تستفيد منه: تصميم خلفيات الأزرار والـ Hero Sections وتصدير كود `background: linear-gradient`.',
         features: ['معاينة حية للتدرجات', 'توليد كود CSS ناصع', 'أفكار خلفيات جاهزة'],
         keywords: ['css gradient', 'gradients', 'background', 'colors']
+    },
+    {
+        id: 'site-color-hunt',
+        type: 'website',
+        name: 'Color Hunt',
+        icon: 'https://www.google.com/s2/favicons?domain=colorhunt.co&sz=128',
+        categoryId: 'color-palettes',
+        shortDescription: 'منصة مفتوحة يومية تستعرض آلاف لوحات الألوان الحديثة المتناسقة للمصممين والمطورين.',
+        url: 'https://colorhunt.co/',
+        pricing: 'مجاني بالكامل',
+        purpose: 'كيف تستفيد منه: استكشاف واختيار أزواج ولوحات الألوان المتميزة الجاهزة لموقعك.',
+        features: ['لوحات ألوان محدثة يومياً', 'نسخ الأكواد الست عشرية (HEX)', 'تصنيف حسب الأكثر شعبية'],
+        keywords: ['color hunt', 'color palette', 'hex colors', 'design']
+    },
+    {
+        id: 'site-usbrandcolors',
+        type: 'website',
+        name: 'US Brand Colors',
+        icon: 'https://www.google.com/s2/favicons?domain=usbrandcolors.com&sz=128',
+        categoryId: 'color-palettes',
+        shortDescription: 'دليل شامل ومستودع لأكواد درجات ألوان العلامات التجارية والشركات العالمية المعتمدة.',
+        url: 'https://usbrandcolors.com/',
+        pricing: 'مجاني بالكامل',
+        purpose: 'كيف تستفيد منه: نسخ الأكواد الست عشرية (HEX) لألوان الشركات والمنصات العالمية المعتمدة.',
+        features: ['دليل ألوان الشركات العالمية', 'نسخ أكواد HEX بضغطة زر', 'محدث وشامل لمئات العلامات التجارية'],
+        keywords: ['usbrandcolors', 'brand colors', 'hex colors', 'palettes']
+    },
+    {
+        id: 'site-brandcolors',
+        type: 'website',
+        name: 'BrandColors',
+        icon: 'https://www.google.com/s2/favicons?domain=brandcolors.net&sz=128',
+        categoryId: 'color-tools',
+        shortDescription: 'مكتبة تجمع أكواد الألوان الرسمية للعلامات التجارية الشهيرة، وتوفر مرجعاً سريعاً للوصول إلى ألوان الهوية البصرية بصيغة HEX.',
+        url: 'https://brandcolors.net/',
+        pricing: 'مجاني',
+        purpose: 'كيف تستفيد منه: البحث عن ألوان العلامات التجارية ومعرفة أكواد HEX المستخدمة في هوياتها البصرية لاستخدامها كمرجع في التصميم وتطوير واجهات المواقع.',
+        features: ['مكتبة كبيرة من ألوان العلامات التجارية', 'عرض أكواد HEX للألوان', 'البحث عن العلامات التجارية', 'نسخ أكواد الألوان بسهولة', 'مفيد للمصممين والمطورين'],
+        keywords: ['brand colors', 'brandcolors', 'hex colors', 'brand palette', 'color codes', 'branding', 'design']
     }
 ];
 
@@ -608,6 +907,71 @@ export const animationLibrariesData = [
         purpose: 'كيف تستفيد منه: إضافة تأثيرات خلفيات ثلاثية الأبعاد حركية (3D Waves & Clouds) بـ Three.js.',
         features: ['خلفيات 3D حية تفاعلية', 'تكامل مباشر مع Three.js', 'تخصيص الألوان والسرعة'],
         keywords: ['vantajs', '3d background', 'canvas', 'three.js']
+    },
+    {
+        id: 'site-scrollreveal',
+        type: 'website',
+        name: 'ScrollReveal.js',
+        icon: 'https://www.google.com/s2/favicons?domain=scrollrevealjs.org&sz=128',
+        categoryId: 'animation-libraries',
+        shortDescription: 'مكتبة جافاسكريبت خفيفة وسريعة لإضفاء تحريكات وتأثيرات ظهور عصرية للعناصر عند التمرير.',
+        url: 'https://scrollrevealjs.org/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: تحريك كروت وعناصر الموقع بسلاسة أثناء تمرير الشاشة بدون الحاجة لمكتبات ثقيلة.',
+        features: ['تحريكات ظهور انسيابية', 'خفيف جداً بدون الاعتماد على الجيكويري', 'قابل للتخصيص الكامل'],
+        keywords: ['scrollreveal', 'scroll animation', 'javascript', 'effects']
+    },
+    {
+        id: 'site-loading-io',
+        type: 'website',
+        name: 'Loading.io',
+        icon: 'https://www.google.com/s2/favicons?domain=loading.io&sz=128',
+        categoryId: 'loading-animation-tools',
+        shortDescription: 'منصة متخصصة في إنشاء وتحميل تأثيرات التحميل والرسوم المتحركة للويب والتطبيقات بصيغ متعددة مثل SVG وGIF وCSS وLottie.',
+        url: 'https://loading.io/',
+        pricing: 'مجاني مع ميزات ومحتوى مدفوع',
+        purpose: 'كيف تستفيد منه: إنشاء مؤشرات تحميل ورسوم متحركة وأيقونات وخلفيات وأنماط متحركة جاهزة للاستخدام في مواقع الويب والتطبيقات دون الحاجة لبناء الحركة من الصفر.',
+        features: ['إنشاء مؤشرات تحميل متحركة', 'تصدير بصيغ SVG وGIF وAPNG وCSS وLottie', 'مكتبة أيقونات قابلة للتخصيص والتحريك', 'تحريك الصور والنصوص المخصصة', 'إنشاء خلفيات وأنماط متحركة', 'مولدات CSS وأدوات مساعدة للمطورين'],
+        keywords: ['loading.io', 'loading animation', 'loader', 'spinner', 'svg animation', 'gif', 'css animation', 'lottie', 'animated icons']
+    },
+    {
+        id: 'site-animate-css',
+        type: 'website',
+        name: 'Animate.css',
+        icon: 'https://www.google.com/s2/favicons?domain=animate.style&sz=128',
+        categoryId: 'animation-libraries',
+        shortDescription: 'مكتبة CSS جاهزة توفر مجموعة واسعة من التحريكات والتأثيرات البصرية لإضافة الحركة إلى عناصر صفحات الويب بسهولة.',
+        url: 'https://animate.style/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: إضافة تحريكات جاهزة مثل الظهور والاختفاء والاهتزاز والارتداد للعناصر بمجرد إضافة أصناف CSS دون كتابة التحريكات من الصفر.',
+        features: ['مجموعة كبيرة من تحريكات CSS الجاهزة', 'استخدام بسيط عبر أصناف CSS', 'متوافق مع مختلف المتصفحات', 'إمكانية تخصيص مدة وتأخير وتكرار التحريك', 'دعم prefers-reduced-motion لإتاحة الوصول'],
+        keywords: ['animate.css', 'css animation', 'css animations', 'animation library', 'web animation', 'effects', 'frontend']
+    },
+    {
+        id: 'site-jitter',
+        type: 'website',
+        name: 'Jitter',
+        icon: 'https://www.google.com/s2/favicons?domain=jitter.video&sz=128',
+        categoryId: 'animation-tools',
+        shortDescription: 'أداة تصميم وحركة تعمل عبر الويب لإنشاء الرسوم المتحركة والتصاميم المتحركة بسرعة، مع دعم الذكاء الاصطناعي وFigma وLottie والفيديو.',
+        url: 'https://jitter.video/',
+        pricing: 'مجاني مع خطط مدفوعة',
+        purpose: 'كيف تستفيد منه: تحويل التصاميم الثابتة إلى رسوم متحركة احترافية، وإنشاء حركات لواجهات المستخدم والشعارات والمحتوى التسويقي والفيديوهات دون الحاجة إلى برامج معقدة.',
+        features: ['تحريك التصاميم باستخدام Timeline بسيط', 'تأثيرات وتحريكات جاهزة وقابلة للتخصيص', 'إنشاء تحريكات مخصصة وEasing خاص', 'تكامل مباشر مع Figma', 'تحويل الصور إلى فيديو بالذكاء الاصطناعي', 'تصدير MP4 وMOV وWebM وGIF وLottie', 'دعم SVG والفيديو والصوت', 'تعاون فوري بين أعضاء الفريق', 'تصدير بدقة تصل إلى 4K و120fps', 'قوالب Motion Design جاهزة'],
+        keywords: ['jitter', 'motion design', 'animation', 'figma animation', 'lottie', 'motion graphics', 'ai animation', 'ui animation', 'video animation']
+    },
+    {
+        id: 'site-svgator',
+        type: 'website',
+        name: 'SVGator',
+        icon: 'https://www.google.com/s2/favicons?domain=www.svgator.com&sz=128',
+        categoryId: 'animation-libraries',
+        shortDescription: 'المولد الأول عالمياً لتحريك وإنشاء أنيميشن ملفات الـ SVG التفاعلية بدون كود.',
+        url: 'https://www.svgator.com/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: تحريك عناصر الشعار والأيقونات بصيغة SVG وتصديرها ككود تفاعلي للموقع.',
+        features: ['تحريك رسومات SVG بدون كود', 'تحديث وتصدير أنيميشن ناصع', 'دعم التفاعل مع الماوس'],
+        keywords: ['svgator', 'svg animation', 'interactive svg', 'motion']
     }
 ];
 
@@ -807,6 +1171,136 @@ export const devUtilitiesData = [
         purpose: 'كيف تستفيد منه: تنفيذ عمليات المعالجة السريعة للملفات والصور دون الحاجة لتثبيت برامج.',
         features: ['عشرات الأدوات المجانية', 'معالجة ملفات PDF والصور', 'سريع وبدون إعلانات'],
         keywords: ['tinywow', 'tools', 'pdf', 'image tools']
+    },
+    {
+        id: 'site-free-for-dev',
+        type: 'website',
+        name: 'Free for Developers',
+        icon: 'https://www.google.com/s2/favicons?domain=free-for.dev&sz=128',
+        categoryId: 'dev-utilities',
+        shortDescription: 'أضخم مرجع وحصر عالمي شامل للخدمات السحابية والـ PaaS والـ SaaS المجانية للمطورين.',
+        url: 'https://free-for.dev/#/',
+        pricing: 'دليل مجاني حُر',
+        purpose: 'كيف تستفيد منه: استكشاف الاستضافات المجانية والدومينات الخادمة والخوادم لاستضافة مشاريعك.',
+        features: ['حصر لمئات الخدمات المجانية', 'تصنيف دقيق للـ SaaS و PaaS', 'محدث باستمرار من المطورين'],
+        keywords: ['free for dev', 'free hosting', 'paas', 'saas', 'free tier']
+    },
+    {
+        id: 'site-jsonplaceholder',
+        type: 'website',
+        name: 'JSONPlaceholder',
+        icon: 'https://www.google.com/s2/favicons?domain=jsonplaceholder.typicode.com&sz=128',
+        categoryId: 'mock-apis-data',
+        shortDescription: 'الخدمة المجانية الأولى عالمياً لاختبار جلب واستدراج بيانات الـ REST API الوهمية.',
+        url: 'https://jsonplaceholder.typicode.com/',
+        pricing: 'مجاني بالكامل',
+        purpose: 'كيف تستفيد منه: جلب وتجربة منشورات، تعليقات، صور، ومستخدمين وهميين لـ Fetch و Axios.',
+        features: ['استجابة سريعة لوهمي البيانات', 'دعم استعلامات CRUD كاملة', 'مجاني وبدون تسجيل'],
+        keywords: ['jsonplaceholder', 'fake api', 'rest api', 'testing']
+    },
+    {
+        id: 'site-tw-elements',
+        type: 'website',
+        name: 'TW Elements',
+        icon: 'https://www.google.com/s2/favicons?domain=tw-elements.com&sz=128',
+        categoryId: 'ui-components-icons',
+        shortDescription: 'مكتبة مكونات تفاعلية حرة ومبنية بنظام Tailwind CSS تحاكي قوة Bootstrap.',
+        url: 'https://tw-elements.com/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: جلب مكونات وأزرار ونوافذ منبثقة تفاعلية جاهزة بـ Tailwind.',
+        features: ['أكثر من 500 مكون تفاعلي', 'دعم Tailwind CSS كامل', 'كود نظيف جاهز للنسخ'],
+        keywords: ['tw elements', 'tailwind', 'ui', 'components']
+    },
+    {
+        id: 'site-drawio',
+        type: 'website',
+        name: 'Draw.io (Diagrams.net)',
+        icon: 'https://www.google.com/s2/favicons?domain=app.diagrams.net&sz=128',
+        categoryId: 'dev-utilities',
+        shortDescription: 'الأداة المجانية ومفتوحة المصدر الأولى عالمياً لرسم مخططات معمارية النظام والشبكات.',
+        url: 'https://app.diagrams.net/',
+        pricing: 'مجاني بالكامل ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: رسم مخططات الـ Flowcharts، معمارية السيرفرات، وهياكل قواعد البيانات.',
+        features: ['رسم مخططات معمارية احترافية', 'تصدير بصيغ PNG, SVG, PDF', 'تكامل مع Google Drive و GitHub'],
+        keywords: ['drawio', 'diagrams', 'flowchart', 'architecture']
+    },
+    {
+        id: 'site-readme-so',
+        type: 'website',
+        name: 'Readme.so',
+        icon: 'https://www.google.com/s2/favicons?domain=readme.so&sz=128',
+        categoryId: 'dev-utilities',
+        shortDescription: 'أسرع وأسهل أداة تفاعلية لبناء وتنسيق ملفات الـ README.md للمشاريع على GitHub.',
+        url: 'https://readme.so/',
+        pricing: 'مجاني بالكامل',
+        purpose: 'كيف تستفيد منه: تصميم وثيقة شرح وتوجيه ممتازة لمشروعك البرمجي على GitHub بسهولة.',
+        features: ['محرر تفاعلي بالسحب والإفلات', 'قوالب أقسام جاهزة', 'تصدير ملف Markdown ناصع'],
+        keywords: ['readme', 'markdown', 'github', 'documentation']
+    },
+    {
+        id: 'site-codesandbox',
+        type: 'website',
+        name: 'CodeSandbox',
+        icon: 'https://www.google.com/s2/favicons?domain=codesandbox.io&sz=128',
+        categoryId: 'dev-utilities',
+        shortDescription: 'بيئة تطوير وتجميع سحابية كاملة لتشغيل وتجربة مشاريع React و Node.js أونلاين.',
+        url: 'https://codesandbox.io/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: بناء ومعاينة ومشاركة مشاريع الويب والتطبيقات الحية مباشرة عبر المتصفح.',
+        features: ['بيئة تشغيل سحابية كاملة', 'دعم React, Vue, Node.js', 'مشاركة المشاريع الحية برابط'],
+        keywords: ['codesandbox', 'cloud ide', 'react', 'playground']
+    },
+    {
+        id: 'site-temp-mail',
+        type: 'website',
+        name: 'Temp Mail',
+        icon: 'https://www.google.com/s2/favicons?domain=temp-mail.org&sz=128',
+        categoryId: 'dev-utilities',
+        shortDescription: 'أداة البريد المؤقت السريعة لاختبار تسجيل حسابات ورسائل التطبيقات دون سبام.',
+        url: 'https://temp-mail.org/en/',
+        pricing: 'مجاني بالكامل',
+        purpose: 'كيف تستفيد منه: اختبار إرسال واستقبال رسائل التفعيل والـ Auth بالتطبيقات أثناء البرمجة.',
+        features: ['إنشاء بريد مؤقت محمي فوراً', 'استقبال الرسائل حياً', 'حماية بريدك الشخصي'],
+        keywords: ['temp mail', 'disposable email', 'testing', 'auth']
+    },
+    {
+        id: 'site-database-build',
+        type: 'website',
+        name: 'Database Build',
+        icon: 'https://www.google.com/s2/favicons?domain=database.build&sz=128',
+        categoryId: 'dev-utilities',
+        shortDescription: 'أداة تصميم وتوليد جداول وهياكل قواعد البيانات (SQL Schemas) بالذكاء الاصطناعي.',
+        url: 'https://database.build/',
+        pricing: 'مجاني تجريبي / Pro',
+        purpose: 'كيف تستفيد منه: رسم وتوليد العلاقات والجداول بين قواعد البيانات وتصدير كود SQL جاهز.',
+        features: ['توليد جداول SQL بالذكاء الاصطناعي', 'رسم علاقات الجداول', 'تصدير كود SQL ناصع'],
+        keywords: ['database build', 'sql', 'schema', 'ai database']
+    },
+    {
+        id: 'site-swagger',
+        type: 'website',
+        name: 'Swagger (OpenAPI)',
+        icon: 'https://www.google.com/s2/favicons?domain=swagger.io&sz=128',
+        categoryId: 'dev-utilities',
+        shortDescription: 'الأدوات القياسية الأولى عالمياً لتوثيق وتجربة واجهات الـ REST APIs المعيارية.',
+        url: 'https://swagger.io/product/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: إنشاء وثائق تفاعلية (Interactive Docs) تجعل تجربة الـ APIs سهلة للفرونت إند.',
+        features: ['توثيق تفاعلي للـ APIs', 'تجربة الطلبات أونلاين', 'دعم معايير OpenAPI'],
+        keywords: ['swagger', 'openapi', 'api docs', 'testing']
+    },
+    {
+        id: 'site-pipedream',
+        type: 'website',
+        name: 'Pipedream',
+        icon: 'https://www.google.com/s2/favicons?domain=pipedream.com&sz=128',
+        categoryId: 'dev-utilities',
+        shortDescription: 'منصة ربط الـ APIs والـ Webhooks وأكواد الجافاسكريبت وتدفق البيانات للمطورين.',
+        url: 'https://pipedream.com/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: أتمتة وربط الخدمات والـ APIs واستقبال الـ Webhooks بسهولة وبكود خفيف.',
+        features: ['ربط الـ APIs والـ Webhooks', 'تشغيل كود Node.js سحابياً', 'أتمتة العمليات'],
+        keywords: ['pipedream', 'webhooks', 'api integration', 'automation']
     }
 ];
 
@@ -863,6 +1357,19 @@ export const stockImagesIconsData = [
         purpose: 'كيف تستفيد منه: تحميل الصور والـ Stock Videos لاستخدامها في الخلفيات والواجهات مجاناً.',
         features: ['صور ومقاطع فيديو HD', 'ترخيص مفتوح للاستخدام التجاري', 'تنوع عالي الجودة'],
         keywords: ['pexels', 'stock photos', 'stock videos', 'free images']
+    },
+    {
+        id: 'site-wikimedia-commons',
+        type: 'website',
+        name: 'Wikimedia Commons',
+        icon: 'https://www.google.com/s2/favicons?domain=commons.wikimedia.org&sz=128',
+        categoryId: 'stock-images-icons',
+        shortDescription: 'أضخم مستودع عالمي حُر للصور والرسوم والميديا المتاحة تحت المشاع الإبداعي.',
+        url: 'https://commons.wikimedia.org/wiki/Main_Page',
+        pricing: 'مجاني بالكامل (CC)',
+        purpose: 'كيف تستفيد منه: جلب صور توثيقية ورسوم حرة وخالية من حقوق الملكية الفكرية للمشاريع.',
+        features: ['ملايين الملفات الحرة', 'ترخيص مفتوح للاستخدام العام', 'استكشاف وتوثيق شامل'],
+        keywords: ['wikimedia', 'commons', 'free images', 'public domain', 'stock photos']
     },
     {
         id: 'site-pixabay',
@@ -1032,5 +1539,281 @@ export const stockImagesIconsData = [
         purpose: 'كيف تستفيد منه: جلب خلفيات وبنرات HD/4K فائقة الجودة لواجهات المواقع الحديثة.',
         features: ['خلفيات بدقة 4K و HD', 'تصاميم صور حديثة', 'تحميل مجاني المباشر'],
         keywords: ['wsupercars', 'wallpapers', '4k images', 'hd photos']
+    },
+    {
+        id: 'site-4k-wallpapers',
+        type: 'website',
+        name: '4K Wallpapers',
+        icon: 'https://www.google.com/s2/favicons?domain=4kwallpapers.com&sz=128',
+        categoryId: 'wallpaper-resources',
+        shortDescription: 'مكتبة متخصصة في خلفيات عالية الدقة للكمبيوتر والهواتف، تضم آلاف الخلفيات بدقة 4K و5K ومجموعة واسعة من التصنيفات والأنماط.',
+        url: 'https://4kwallpapers.com/',
+        pricing: 'مجاني',
+        purpose: 'كيف تستفيد منه: العثور على خلفيات عالية الجودة لسطح المكتب والهاتف والشاشات فائقة الدقة، مع إمكانية البحث حسب الموضوع أو الأسلوب أو نوع الجهاز.',
+        features: ['خلفيات بدقة 4K و5K', 'تصنيفات متنوعة للصور', 'خلفيات للكمبيوتر والهواتف', 'خلفيات UltraWide للشاشات العريضة', 'بحث وتصنيف حسب الموضوع', 'خلفيات داكنة وMinimal وAbstract وغيرها'],
+        keywords: ['4k wallpapers', 'wallpapers', 'desktop wallpapers', 'mobile wallpapers', '4k backgrounds', '5k wallpapers', 'ultrawide', 'hd wallpapers']
+    },
+    {
+        id: 'site-pngplay',
+        type: 'website',
+        name: 'PNGPlay',
+        icon: 'https://www.google.com/s2/favicons?domain=www.pngplay.com&sz=128',
+        categoryId: 'stock-images-icons',
+        shortDescription: 'أرشيف مجاني ضخم لتحميل مئات الآلاف من صور الـ PNG الشفافة المفرغة بدون خلفية.',
+        url: 'https://www.pngplay.com/',
+        pricing: 'مجاني بالكامل',
+        purpose: 'كيف تستفيد منه: جلب صور وعناصر تفاعلية مفرغة بخلفيات شفافة جاهزة للتصاميم.',
+        features: ['صور PNG مفرغة بدون خلفية', 'جودة تحميل عالية', 'تصنيفات شاملة للعناصر'],
+        keywords: ['pngplay', 'transparent png', 'cutout', 'images']
+    }
+];
+
+// 10. أطر العمل والمكتبات البرمجية
+export const frameworksLibrariesData = [
+    {
+        id: 'site-react',
+        type: 'website',
+        name: 'React',
+        icon: 'https://www.google.com/s2/favicons?domain=react.dev&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'المكتبة البرمجية الأولى عالمياً لبناء واجهات المستخدم التفاعلية من شركة Meta.',
+        url: 'https://react.dev',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: بناء واجهات مستخدم معقدة وسريعة باستخدام المكونات القابلة لإعادة الاستخدام (Components).',
+        features: ['بناء واجهات بنظام المكونات Components', 'سعة وسرعة تحديث الـ Virtual DOM', 'منظومة مكتبات وأدوات ضخمة'],
+        keywords: ['react', 'javascript', 'ui library', 'frontend']
+    },
+    {
+        id: 'site-tailwindcss',
+        type: 'website',
+        name: 'Tailwind CSS',
+        icon: 'https://www.google.com/s2/favicons?domain=tailwindcss.com&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'إطار عمل CSS القياسي المعاصر القائم على كلاسات التنسيق المباشرة (Utility-First).',
+        url: 'https://tailwindcss.com',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: كتابة تنسيقات وتصاميم متجاوبة وسريعة جداً مباشرة داخل ملفات HTML/JSX.',
+        features: ['تنسيق خاطف بكلاسات Utility-First', 'تصميم متجاوب تماماً للشاشات', 'أدوات تنظيف التنسيقات الزائدة'],
+        keywords: ['tailwind', 'css', 'utility-first', 'framework']
+    },
+    {
+        id: 'site-bootstrap',
+        type: 'website',
+        name: 'Bootstrap',
+        icon: 'https://www.google.com/s2/favicons?domain=getbootstrap.com&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'إطار عمل الويب الشهير لبناء واجهات ومكونات مواقع متجاوبة مجهزة مسبقاً.',
+        url: 'https://getbootstrap.com',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: إنشاء شبكات (Grid Systems) وأزرار ونوافذ منبثقة وقوائم جاهزة بسرعة فائقة.',
+        features: ['نظام شبكي متجاوب Flexbox Grid', 'مكونات جاهزة للتطبيق مباشرة', 'سهولة الاستخدام والتكامل'],
+        keywords: ['bootstrap', 'css', 'grid', 'components']
+    },
+    {
+        id: 'site-nextjs',
+        type: 'website',
+        name: 'Next.js',
+        icon: 'https://www.google.com/s2/favicons?domain=nextjs.org&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'إطار عمل React الشامل لبناء تطبيقات الويب الفائقة السرعة بدعم العرض من الخادم (SSR).',
+        url: 'https://nextjs.org',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: بناء مواقع وتطبيقات React فائقة السرعة ومتوافقة كلياً مع محركات البحث (SEO).',
+        features: ['توليد الصفحات سحابياً SSR & SSG', 'توجيه تلقائي عبر المجلدات App Router', 'تحسين تلقائي للصور والخطوط'],
+        keywords: ['nextjs', 'react', 'ssr', 'fullstack']
+    },
+    {
+        id: 'site-vuejs',
+        type: 'website',
+        name: 'Vue.js',
+        icon: 'https://www.google.com/s2/favicons?domain=vuejs.org&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'إطار عمل الجافاسكريبت التقدمي الخفيف والسهل لبناء واجهات الويب التفاعلية.',
+        url: 'https://vuejs.org',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: تطوير تطبيقات الصفحة الواحدة (SPA) بسهولة تعلم فائقة وترابط بيانات سلس.',
+        features: ['سلس جداً في التعلم والاستخدام', 'ربط بيانات ثنائي الاتجاه Two-way Data Binding', 'أداء خفيف وسريع'],
+        keywords: ['vue', 'javascript', 'spa', 'frontend']
+    },
+    {
+        id: 'site-svelte',
+        type: 'website',
+        name: 'Svelte',
+        icon: 'https://www.google.com/s2/favicons?domain=svelte.dev&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'إطار العمل الثوري الذي يجمع الأكواد أثناء البناء (Compile-Time) بدون Virtual DOM.',
+        url: 'https://svelte.dev',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: تحويل كودك إلى جافاسكريبت ناصع عالي السرعة يستهلك أقل مساحة ذاكرة ممكنة.',
+        features: ['بدون Virtual DOM ثقيل', 'حجم ملفات متناهي الخفة', 'كتابة كود أقل وأبسط'],
+        keywords: ['svelte', 'compiler', 'javascript', 'fast']
+    },
+    {
+        id: 'site-vite',
+        type: 'website',
+        name: 'Vite',
+        icon: 'https://www.google.com/s2/favicons?domain=vite.dev&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'أداة بناء وتجميع أطر عمل الفرونت إند الفائقة السرعة المعززة بـ ES Modules.',
+        url: 'https://vite.dev',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: تشغيل خادم التطوير المحلي والمعاينة الحية فوراً بدون الانتظار البطيء.',
+        features: ['تشغيل وتحديث لحظي خاطف (HMR)', 'دعم React, Vue, Svelte', 'تجميع وإنتاج سريع للغاية'],
+        keywords: ['vite', 'bundler', 'build tool', 'hmr']
+    },
+    {
+        id: 'site-axios',
+        type: 'website',
+        name: 'Axios',
+        icon: 'https://www.google.com/s2/favicons?domain=axios-http.com&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'المكتبة القياسية الشهيرة لإرسال وإدارة طلبات الـ HTTP والـ APIs القائمة على الـ Promises.',
+        url: 'https://axios-http.com/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: جلب وإرسال البيانات للـ APIs بسلاسة، وإدارة المعالجة التلقائية وتحويل الـ JSON.',
+        features: ['دعم الـ Promises و Async/Await', 'تحويل البيانات التلقائي لـ JSON', 'حماية واصطياد أخطاء الطلبات'],
+        keywords: ['axios', 'http', 'api', 'javascript', 'fetch']
+    },
+    {
+        id: 'site-mui',
+        type: 'website',
+        name: 'Material UI (MUI)',
+        icon: 'https://www.google.com/s2/favicons?domain=mui.com&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'مكتبة مكونات الواجهات القياسية الشهيرة المعتمدة على نظام Material Design لـ React.',
+        url: 'https://mui.com/material-ui/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: تسريع بناء واجهات التطبيقات بمكونات مصممة ومجهزة ومطابقة لمعايير قوقل.',
+        features: ['مكونات مجهزة بـ Material Design', 'دعم كامل لتطبيقات React', 'سهولة التخصيص والثيمات'],
+        keywords: ['mui', 'material ui', 'react', 'components']
+    },
+    {
+        id: 'site-mdbootstrap',
+        type: 'website',
+        name: 'MDBootstrap (MDB)',
+        icon: 'https://www.google.com/s2/favicons?domain=mdbootstrap.com&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'إطار عمل واجهات يدمج بين قوة وقدرات Bootstrap وتنسيقات Material Design.',
+        url: 'https://mdbootstrap.com/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: دمج مكونات وتصميمات Material Design في مشاريع Bootstrap لـ React و Vue.',
+        features: ['دمج Bootstrap مع Material Design', 'دعم React, Vue, Angular', 'عشرات المكونات الجاهزة'],
+        keywords: ['mdbootstrap', 'bootstrap', 'material design', 'ui']
+    },
+    {
+        id: 'site-axios',
+        type: 'website',
+        name: 'Axios',
+        icon: 'https://www.google.com/s2/favicons?domain=axios-http.com&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'المكتبة القياسية الشهيرة لإرسال وإدارة طلبات الـ HTTP والـ APIs القائمة على الـ Promises.',
+        url: 'https://axios-http.com/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: جلب وإرسال البيانات للـ APIs بسلاسة، وإدارة المعالجة التلقائية وتحويل الـ JSON.',
+        features: ['دعم الـ Promises و Async/Await', 'تحويل البيانات التلقائي لـ JSON', 'حماية واصطياد أخطاء الطلبات'],
+        keywords: ['axios', 'http', 'api', 'javascript', 'fetch']
+    },
+    {
+        id: 'site-npm',
+        type: 'website',
+        name: 'npm (Node Package Manager)',
+        icon: 'https://www.google.com/s2/favicons?domain=www.npmjs.com&sz=128',
+        categoryId: 'dev-utilities',
+        shortDescription: 'المستودع الرسمي الأضخم عالمياً للبحث واستكشاف حزم ومكتبات الجافاسكريبت.',
+        url: 'https://www.npmjs.com/',
+        pricing: 'مجاني بالكامل',
+        purpose: 'كيف تستفيد منه: البحث عن الحزم والمكتبات المفتوحة وقراءة التوثيق وطريقة التثبيت.',
+        features: ['أكبر مستودع حزم برمجي', 'البحث في جميع حزم الويب', 'توثيق وتتبع الحزم'],
+        keywords: ['npm', 'packages', 'javascript', 'node']
+    }
+];
+
+// 11. مولدات البيانات الوهمية و Mock APIs
+export const mockApisData = [
+    {
+        id: 'site-fakestore-api',
+        type: 'website',
+        name: 'FakeStore API',
+        icon: 'https://www.google.com/s2/favicons?domain=fakestoreapi.com&sz=128',
+        categoryId: 'mock-apis-data',
+        shortDescription: 'واجهة برمجية مجانية توفر بيانات متاجر إلكترونية وهمية لاختبار وبناء الواجهات.',
+        url: 'https://fakestoreapi.com/docs',
+        pricing: 'مجاني بالكامل',
+        purpose: 'كيف تستفيد منه: جلب منتجات وعربات تسوق ومستخدمين وهميين لبناء وتجربة واجهات المتاجر أونلاين.',
+        features: ['بيانات متاجر إلكترونية كاملة', 'دعم استعلامات GET, POST, PUT, DELETE', 'استجابة سريعة'],
+        keywords: ['fakestore', 'api', 'mock api', 'e-commerce', 'dummy data']
+    },
+    {
+        id: 'site-dummyjson',
+        type: 'website',
+        name: 'DummyJSON',
+        icon: 'https://www.google.com/s2/favicons?domain=dummyjson.com&sz=128',
+        categoryId: 'mock-apis-data',
+        shortDescription: 'واجهة REST API مجانية توفر كتل بيانات نصية وهمية متنوعة لاختبار واستكشاف الـ Fetch.',
+        url: 'https://dummyjson.com/',
+        pricing: 'مجاني بالكامل',
+        purpose: 'كيف تستفيد منه: جلب منشورات، تعليقات، مستخدمين، ووصفات وهمية لبناء واجهات التطبيقات.',
+        features: ['أكثر من 10 أنواع بيانات مختلفة', 'دعم المصادقة الوهمية (Auth)', 'سرعة استجابة واستقرار'],
+        keywords: ['dummyjson', 'rest api', 'mock data', 'json', 'testing']
+    }
+];
+
+// 12. أدوات وتصميمات الـ 3D التفاعلية
+export const threeDWebDesignData = [
+    {
+        id: 'site-spline-3d',
+        type: 'website',
+        name: 'Spline 3D Design',
+        icon: 'https://www.google.com/s2/favicons?domain=spline.design&sz=128',
+        categoryId: '3d-web-design',
+        shortDescription: 'أداة ومجتمع تصميم المجسمات والتأثيرات ثلاثية الأبعاد التفاعلية المجهزة للويب.',
+        url: 'https://spline.design/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: تصميم مجسمات 3D تفاعلية وتضمينها في موقعك مع التحكم بحركتها بالجافاسكريبت.',
+        features: ['تصميم 3D أونلاين بالمتصفح', 'تضمين مباشر بكود ويب', 'تفاعل مع حركة الماوس والتمرير'],
+        keywords: ['spline', '3d design', 'web 3d', 'interactive 3d']
+    },
+    {
+        id: 'site-model-viewer-dev',
+        type: 'website',
+        name: 'Google model-viewer',
+        icon: 'https://www.google.com/s2/favicons?domain=modelviewer.dev&sz=128',
+        categoryId: '3d-web-design',
+        shortDescription: 'المكون الرسمي من قوقل لعرض وتصفح مجسمات الـ 3D والواقع المعزز (AR) بسهولة بالويب.',
+        url: 'https://modelviewer.dev/',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: إدراج مجسمات GLB/GLTF في موقعك كعنصر HTML بسيط مع دعم التدوير والواقع المعزز.',
+        features: ['عنصر HTML مخصص بسيط', 'دعم الواقع المعزز AR', 'تحكم كامل بالظلال والإضاءة'],
+        keywords: ['model-viewer', 'google', '3d web', 'ar', 'glb']
+    }
+];
+
+// 13. منصات الاستضافة والتطوير السحابي
+export const cloudHostingDeploymentData = [
+    {
+        id: 'site-vercel',
+        type: 'website',
+        name: 'Vercel',
+        icon: 'https://www.google.com/s2/favicons?domain=vercel.com&sz=128',
+        categoryId: 'cloud-hosting-deployment',
+        shortDescription: 'المنصة العالمية الأولى لاستضافة وتدشين تطبيقات الويب الحديثة و Next.js سحابياً أونلاين.',
+        url: 'https://vercel.com/',
+        pricing: 'مجاني للمطورين / Pro',
+        purpose: 'كيف تستفيد منه: رفع وتدشين مشاريعك وتطبيقاتك الحية مباشرة من مستودع GitHub بضغطة زر.',
+        features: ['تدشين واستضافة فورية من GitHub', 'دعم كامل لـ Next.js و React', 'شبكة Edge CDN سريعة جداً'],
+        keywords: ['vercel', 'hosting', 'deployment', 'nextjs', 'cloud']
+    },
+    {
+        id: 'site-supabase',
+        type: 'website',
+        name: 'Supabase',
+        icon: 'https://www.google.com/s2/favicons?domain=supabase.com&sz=128',
+        categoryId: 'cloud-hosting-deployment',
+        shortDescription: 'البديل المفتوح المصدر الأقوى لـ Firebase يوفر قواعد بيانات PostgreSQL سحابية ومصادقة.',
+        url: 'https://supabase.com/',
+        pricing: 'مجاني / Pro',
+        purpose: 'كيف تستفيد منه: إنشاء قواعد بيانات سحابية حية، وإدارة حسابات المستخدمين (Auth)، وتخزين الملفات.',
+        features: ['قواعد بيانات PostgreSQL سحابية', 'نظام إدارة المصادقة (Auth)', 'استجابة لحظية Realtime DB'],
+        keywords: ['supabase', 'firebase alternative', 'database', 'postgresql', 'auth']
     }
 ];

@@ -433,6 +433,46 @@ export const aiToolsData = [
         features: ['ربط لحظي بالبيانات الحية', 'نموذج تفكير قوي', 'إجابات مباشرة وقوية'],
         keywords: ['grok', 'xai', 'ai']
     },
+    {
+        id: 'ai-aiml-api',
+        type: 'ai-tool',
+        name: 'AIML API',
+        icon: 'https://www.google.com/s2/favicons?domain=aimlapi.com&sz=128',
+        group: 'مفاتيح API مجانية وخوادم الذكاء الاصطناعي',
+        shortDescription: 'منصة تتيح الوصول لأكثر من 200 نموذج ذكاء اصطناعي عبر مفتاح API واحد موحد.',
+        url: 'https://aimlapi.com/',
+        pricing: 'رصيد تجريبي مجاني / Pro',
+        bestFor: 'أفضل حالات الاستخدام: دمج واستدعاء نماذج الذكاء الاصطناعي المتنوعة بمفتاح API سريع.',
+        features: ['أكثر من 200 نموذج ذكي', 'مفتاح API واحد موحد', 'دعم النماذج النصية والبصرية'],
+        keywords: ['aiml api', 'api key', 'models', 'ai api']
+    },
+    {
+        id: 'ai-emergent',
+        type: 'ai-tool',
+        name: 'Emergent AI',
+        icon: 'https://www.google.com/s2/favicons?domain=app.emergent.sh&sz=128',
+        group: 'بناء التطبيقات والواجهات الكاملة',
+        shortDescription: 'أداة سحابية لتوليد وبناء تطبيقات الويب الكاملة والمنتجات الذكية بسرعة.',
+        url: 'https://app.emergent.sh/landing/',
+        pricing: 'مجاني تجريبي / مدفوع',
+        bestFor: 'أفضل حالات الاستخدام: تحويل أفكار التطبيقات إلى برمجيات حقيقية بالذكاء الاصطناعي.',
+        features: ['توليد تطبيقات متكاملة', 'واجهات تفاعلية معاصرة', 'تصدير الكود المباشر'],
+        keywords: ['emergent', 'ai app builder', 'fullstack', 'ai']
+    },
+    {
+        id: 'ai-magnific',
+        type: 'ai-tool',
+        name: 'Magnific AI',
+        icon: 'https://www.google.com/s2/favicons?domain=magnific.ai&sz=128',
+        group: 'الأبحاث وتحليل التصاميم والوسائط',
+        shortDescription: 'أداة الذكاء الاصطناعي الفائقة لتوضيح وتكبير دقة الصور ورسوم الواجهات وإبراز التفاصيل الخيالية.',
+        url: 'https://magnific.ai/',
+        pricing: 'اشتراك / Pro',
+        bestFor: 'أفضل حالات الاستخدام: تحسين وتوضيح تفاصيل صور التصاميم ورسوم الواجهات بدقة فائقة جداً (Upscaling).',
+        features: ['تكبير وتوضيح تفاصيل الصور بدقة الخارقة', 'التحكم بنسبة التفاصيل والـ Hallucination', 'توليد أصول بصرية خالية من التغبيش'],
+        keywords: ['magnific', 'ai upscaler', 'image enhancer', 'design']
+    }
+    ,
     // ==========================================
     // توليد الصور والـ SVG أونلاين (Cloud UI & Design)
     // ==========================================

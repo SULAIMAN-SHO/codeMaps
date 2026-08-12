@@ -1847,6 +1847,115 @@ export class Illustrations {
           <text x="162" y="68" fill="#00f2fe" font-family="var(--font-mono)" font-size="10" font-weight="800" text-anchor="middle">P</text>
           <text x="120" y="122" fill="#f3f4f6" font-family="var(--font-mono)" font-size="8" font-weight="700" text-anchor="middle">App Shortcuts</text>
         </svg>
+      `,
+      'frameworks-libraries': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="fwGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="50%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#8b5cf6" />
+            </linearGradient>
+            <filter id="fwBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="fwGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <path d="M 65,75 L 125,40 L 185,75 L 125,110 Z" stroke="url(#fwGlow)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4" />
+          <g filter="url(#fwBlur)">
+            <rect x="40" y="50" width="50" height="50" rx="8" fill="url(#fwGlass)" stroke="url(#fwGlow)" stroke-width="1.5" />
+            <rect x="100" y="15" width="50" height="50" rx="8" fill="url(#fwGlass)" stroke="url(#fwGlow)" stroke-width="1.5" />
+            <rect x="160" y="50" width="50" height="50" rx="8" fill="url(#fwGlass)" stroke="url(#fwGlow)" stroke-width="1.5" />
+            <rect x="100" y="85" width="50" height="50" rx="8" fill="url(#fwGlass)" stroke="url(#fwGlow)" stroke-width="1.5" />
+          </g>
+          <text x="65" y="78" fill="#38bdf8" font-family="var(--font-mono)" font-size="10" font-weight="800" text-anchor="middle">React</text>
+          <text x="125" y="43" fill="#f3f4f6" font-family="var(--font-mono)" font-size="10" font-weight="800" text-anchor="middle">Vue</text>
+          <text x="185" y="78" fill="#8b5cf6" font-family="var(--font-mono)" font-size="9" font-weight="800" text-anchor="middle">Tailwind</text>
+          <text x="125" y="113" fill="#f3f4f6" font-family="var(--font-mono)" font-size="9" font-weight="800" text-anchor="middle">Svelte</text>
+        </svg>
+      `,
+      'mock-apis-data': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="mockGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#10b981" />
+              <stop offset="50%" stop-color="#06b6d4" />
+              <stop offset="100%" stop-color="#8b5cf6" />
+            </linearGradient>
+            <filter id="mockBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="mockGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <g filter="url(#mockBlur)">
+            <rect x="45" y="30" width="150" height="80" rx="10" fill="url(#mockGlass)" stroke="url(#mockGlow)" stroke-width="1.5" />
+            <circle cx="85" cy="55" r="14" fill="rgba(16, 185, 129, 0.2)" stroke="url(#mockGlow)" stroke-width="1.5" />
+            <circle cx="155" cy="55" r="14" fill="rgba(139, 92, 246, 0.2)" stroke="url(#mockGlow)" stroke-width="1.5" />
+          </g>
+          <text x="85" y="59" fill="#10b981" font-family="var(--font-mono)" font-size="10" font-weight="800" text-anchor="middle">JSON</text>
+          <text x="155" y="59" fill="#38bdf8" font-family="var(--font-mono)" font-size="10" font-weight="800" text-anchor="middle">API</text>
+          <text x="120" y="95" fill="#f3f4f6" font-family="var(--font-mono)" font-size="9" font-weight="700" text-anchor="middle">Mock Data</text>
+        </svg>
+      `,
+
+      '3d-web-design': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="tdGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ec4899" />
+              <stop offset="50%" stop-color="#00f2fe" />
+              <stop offset="100%" stop-color="#9333ea" />
+            </linearGradient>
+            <filter id="tdBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="tdGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="120" cy="70" rx="65" ry="25" stroke="url(#tdGlow)" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5" transform="rotate(-15 120 70)" />
+          <g filter="url(#tdBlur)">
+            <polygon points="120,30 160,50 120,70 80,50" fill="url(#tdGlass)" stroke="url(#tdGlow)" stroke-width="1.5" />
+            <polygon points="80,50 120,70 120,105 80,85" fill="rgba(236, 72, 153, 0.2)" stroke="url(#tdGlow)" stroke-width="1.5" />
+            <polygon points="120,70 160,50 160,85 120,105" fill="rgba(0, 242, 254, 0.2)" stroke="url(#tdGlow)" stroke-width="1.5" />
+          </g>
+          <text x="120" y="122" fill="#f3f4f6" font-family="var(--font-mono)" font-size="8" font-weight="700" text-anchor="middle">3D Web Assets</text>
+        </svg>
+      `,
+      'cloud-hosting-deployment': `
+        <svg viewBox="0 0 240 140" width="100%" height="120px" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <defs>
+            <linearGradient id="cloudGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="50%" stop-color="#10b981" />
+              <stop offset="100%" stop-color="#6366f1" />
+            </linearGradient>
+            <filter id="cloudBlur" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="cloudGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255, 255, 255, 0.15)" />
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+            </linearGradient>
+          </defs>
+          <path d="M 60,85 L 120,40 L 180,85 M 120,40 L 120,105" stroke="url(#cloudGlow)" stroke-width="2" stroke-dasharray="4 3" opacity="0.4" />
+          <g filter="url(#cloudBlur)">
+            <path d="M 80,65 C 80,55 95,45 110,48 C 118,40 135,42 145,50 C 158,50 168,60 165,72 C 172,80 165,92 152,92 L 85,92 C 72,92 65,82 72,72 C 68,65 72,55 80,65 Z" fill="url(#cloudGlass)" stroke="url(#cloudGlow)" stroke-width="1.5" />
+            <polygon points="120,55 132,70 123,70 123,82 117,82 117,70 108,70" fill="url(#cloudGlow)" />
+          </g>
+          <text x="120" y="122" fill="#f3f4f6" font-family="var(--font-mono)" font-size="8" font-weight="700" text-anchor="middle">Cloud &amp; Deployment</text>
+        </svg>
       `
     };
 
