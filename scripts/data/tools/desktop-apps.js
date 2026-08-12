@@ -757,3 +757,74 @@ export const apps3DViewersData = [
         keywords: ['meshlab', '3d mesh', 'gltf', 'obj', 'stl']
     }
 ];
+
+export const appsSystemUtilitiesData = [
+    {
+        id: 'langover',
+        name: 'LangOver',
+        type: 'app',
+        icon: 'https://www.google.com/s2/favicons?domain=langover.com&sz=128',
+        url: 'https://langover.com/Download.aspx',
+        pricing: 'مجاني بالكامل',
+        shortDescription: 'أداة مجانية وسريعة لتحويل لغة النصوص المكتوبة بالخطأ فوراً بين العربية والإنجليزية دون الحاجة لإعادة الكتابة.',
+        whyUseIt: 'تصحيح النصوص المكتوبة بلغة خاطئة بسبب نسيان تبديل اللغة (Alt+Shift)، وتصحيح حالة الأحرف وعكس اتجاه الكلمات بنقرة زر أو اختصار F10.',
+        features: [
+            'تحويل فوري للغة النص المظلل باختصار F10',
+            'دعم التحويل بين العربية والإنجليزية وكافة اللغات',
+            'تعديل حالة الأحرف الكبيرة والصغيرة وسلسلة النصوص',
+            'أداة خفيفة جداً تعمل في خلفية النظام بدون استهلاك للموارد'
+        ],
+        keywords: ['LangOver', 'تحويل اللغة', 'الكتابة الخاطئة', 'تعديل النصوص', 'Keyboard Layout']
+    },
+    {
+        id: 'windhawk',
+        name: 'Windhawk',
+        type: 'app',
+        icon: 'https://www.google.com/s2/favicons?domain=windhawk.net&sz=128',
+        url: 'https://windhawk.net/',
+        pricing: 'مجاني ومفتوح المصدر',
+        shortDescription: 'منصة متقدمة لتخصيص وتعديل نظام التشغيل ويندوز والتطبيقات عبر المودات والسكربتات البرمجية.',
+        whyUseIt: 'إضافة ميزات وتعديلات بصرية ووظيفية متقدمة لقائمة ابدأ وشريط المهام والواجهات دون التعديل المباشر على ملفات النظام.',
+        features: [
+            'متجر مدمج لمودات وتعديلات ويندوز المفتوحة المصدر',
+            'تخصيص شريط المهام وقائمة ابدأ والنوافذ بدقة عالية',
+            'إمكانية كتابة موديولات وتعديلات مخصصة بـ C++',
+            'بيئة آمنة وخفيفة يمكن تفعيل وإلغاء المودات فيها بضغطة زر'
+        ],
+        keywords: ['Windhawk', 'تخصيص ويندوز', 'Windows Mods', 'Taskbar Tweak', 'Windows 11 Customization']
+    },
+    {
+        id: 'localsend',
+        name: 'LocalSend',
+        type: 'app',
+        icon: 'https://www.google.com/s2/favicons?domain=localsend.org&sz=128',
+        url: 'https://localsend.org',
+        pricing: 'مجاني ومفتوح المصدر',
+        shortDescription: 'تطبيق آمن ومفتوح المصدر لنقل الملفات والمجلدات بين الأجهزة محلياً عبر شبكة الـ Wi-Fi بدون إنترنت.',
+        whyUseIt: 'مشاركة الملفات بسرعة فائقة وأمان بين الهواتف والأجهزة بنظام ويندوز وماك ولينكس وأندرويد و iOS كبديل محلي آمن لـ AirDrop.',
+        features: [
+            'عمليات نقل مشفرة بالكامل بنظام E2E محلياً',
+            'عدم الحاجة لاتصال بالإنترنت أو خوادم سحابية خارجية',
+            'دعم كامل لجميع أنظمة التشغيل (Cross-Platform)',
+            'واجهة بسيطة وسريعة بدون إعلانات أو قيود على حجم الملفات'
+        ],
+        keywords: ['LocalSend', 'نقل الملفات', 'AirDrop البديل', 'مشاركة محلي', 'Local Transfer', 'Wi-Fi File Share']
+    },
+    {
+        id: 'hibit-uninstaller',
+        name: 'HiBit Uninstaller',
+        type: 'app',
+        icon: 'https://www.google.com/s2/favicons?domain=hibitsoft.ir&sz=128',
+        url: 'https://www.hibitsoft.ir/Uninstaller.html',
+        pricing: 'مجاني بالكامل',
+        shortDescription: 'أداة احترافية لإزالة البرامج والتطبيقات من جذورها وتنظيف مخلفات النظام والسجل (Registry).',
+        whyUseIt: 'إزالة البرامج المستعصية، ملحقات المتصفحات، وتطبيقات ويندوز الأصلية مع مسح جميع الملفات المتبقية والسجلات المتروكة.',
+        features: [
+            'حذف البرامج المستعصية بالحذف القسري (Forced Uninstall)',
+            'تنظيف الـ Registry والملفات المؤقتة والمجلدات الفارغة',
+            'إدارة برامج بدء التشغيل (Startup Manager) واستعادة النظام',
+            'يتوفر منه نسخة محمولة (Portable) لا تحتاج لتثبيت'
+        ],
+        keywords: ['HiBit Uninstaller', 'إزالة البرامج', 'تنظيف النظام', 'Forced Uninstall', 'Registry Cleaner']
+    }
+];

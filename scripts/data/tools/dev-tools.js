@@ -1571,17 +1571,17 @@ export const stockImagesIconsData = [
 // 10. أطر العمل والمكتبات البرمجية
 export const frameworksLibrariesData = [
     {
-        id: 'site-react',
+        id: 'site-bootstrap',
         type: 'website',
-        name: 'React',
-        icon: 'https://www.google.com/s2/favicons?domain=react.dev&sz=128',
+        name: 'Bootstrap',
+        icon: 'https://www.google.com/s2/favicons?domain=getbootstrap.com&sz=128',
         categoryId: 'frameworks-libraries',
-        shortDescription: 'المكتبة البرمجية الأولى عالمياً لبناء واجهات المستخدم التفاعلية من شركة Meta.',
-        url: 'https://react.dev',
+        shortDescription: 'إطار عمل الويب الشهير لبناء واجهات ومكونات مواقع متجاوبة مجهزة مسبقاً.',
+        url: 'https://getbootstrap.com',
         pricing: 'مجاني ومفتوح المصدر',
-        purpose: 'كيف تستفيد منه: بناء واجهات مستخدم معقدة وسريعة باستخدام المكونات القابلة لإعادة الاستخدام (Components).',
-        features: ['بناء واجهات بنظام المكونات Components', 'سعة وسرعة تحديث الـ Virtual DOM', 'منظومة مكتبات وأدوات ضخمة'],
-        keywords: ['react', 'javascript', 'ui library', 'frontend']
+        purpose: 'كيف تستفيد منه: إنشاء شبكات (Grid Systems) وأزرار ونوافذ منبثقة وقوائم جاهزة بسرعة فائقة.',
+        features: ['نظام شبكي متجاوب Flexbox Grid', 'مكونات جاهزة للتطبيق مباشرة', 'سهولة الاستخدام والتكامل'],
+        keywords: ['bootstrap', 'css', 'grid', 'components']
     },
     {
         id: 'site-tailwindcss',
@@ -1597,17 +1597,30 @@ export const frameworksLibrariesData = [
         keywords: ['tailwind', 'css', 'utility-first', 'framework']
     },
     {
-        id: 'site-bootstrap',
+        id: 'site-sass',
         type: 'website',
-        name: 'Bootstrap',
-        icon: 'https://www.google.com/s2/favicons?domain=getbootstrap.com&sz=128',
-        categoryId: 'frameworks-libraries',
-        shortDescription: 'إطار عمل الويب الشهير لبناء واجهات ومكونات مواقع متجاوبة مجهزة مسبقاً.',
-        url: 'https://getbootstrap.com',
+        name: 'Sass',
+        icon: 'https://www.google.com/s2/favicons?domain=sass-lang.com&sz=128',
+        categoryId: 'css-preprocessors',
+        shortDescription: 'لغة توسعة لـ CSS تضيف ميزات متقدمة مثل المتغيرات والتداخل وMixins والوحدات لتسهيل كتابة CSS منظم وقابل لإعادة الاستخدام والصيانة.',
+        url: 'https://sass-lang.com/',
         pricing: 'مجاني ومفتوح المصدر',
-        purpose: 'كيف تستفيد منه: إنشاء شبكات (Grid Systems) وأزرار ونوافذ منبثقة وقوائم جاهزة بسرعة فائقة.',
-        features: ['نظام شبكي متجاوب Flexbox Grid', 'مكونات جاهزة للتطبيق مباشرة', 'سهولة الاستخدام والتكامل'],
-        keywords: ['bootstrap', 'css', 'grid', 'components']
+        purpose: 'كيف تستفيد منه: كتابة ملفات SCSS أو Sass بطريقة أكثر تنظيماً ومرونة، ثم تحويلها إلى CSS عادي يمكن للمتصفح قراءته مباشرة.',
+        features: ['المتغيرات وإعادة استخدام القيم', 'التداخل Nesting لتنظيم المحددات', 'Mixins لإعادة استخدام مجموعات CSS', 'الدوال والعمليات الحسابية', 'تقسيم المشروع إلى Modules وPartials', 'Inheritance و@extend', 'تحويل SCSS وSass إلى CSS', 'دعم JavaScript API وNode.js'],
+        keywords: ['sass', 'scss', 'css preprocessor', 'css', 'frontend', 'web development', 'mixins', 'variables', 'nesting']
+    },
+    {
+        id: 'site-react',
+        type: 'website',
+        name: 'React',
+        icon: 'https://www.google.com/s2/favicons?domain=react.dev&sz=128',
+        categoryId: 'frameworks-libraries',
+        shortDescription: 'المكتبة البرمجية الأولى عالمياً لبناء واجهات المستخدم التفاعلية من شركة Meta.',
+        url: 'https://react.dev',
+        pricing: 'مجاني ومفتوح المصدر',
+        purpose: 'كيف تستفيد منه: بناء واجهات مستخدم معقدة وسريعة باستخدام المكونات القابلة لإعادة الاستخدام (Components).',
+        features: ['بناء واجهات بنظام المكونات Components', 'سعة وسرعة تحديث الـ Virtual DOM', 'منظومة مكتبات وأدوات ضخمة'],
+        keywords: ['react', 'javascript', 'ui library', 'frontend']
     },
     {
         id: 'site-nextjs',

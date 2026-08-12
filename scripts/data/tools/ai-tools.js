@@ -80,7 +80,19 @@ export const aiToolsData = [
         features: ['نماذج Mistral Large وسريعة', 'مجاني بالكامل', 'أداء عالي في تحليل البرمجيات'],
         keywords: ['mistral', 'le chat', 'france', 'free ai']
     },
-
+    {
+        id: 'ai-google-labs',
+        type: 'ai-tool',
+        name: 'Google Labs',
+        icon: 'https://www.google.com/s2/favicons?domain=labs.google.com&sz=128',
+        group: 'منصات تجربة النماذج المجمعة مجاناً',
+        shortDescription: 'الدليل والمختبر الرسمي الموحد المعتمد من قوقل لتجربة واستكشاف أحدث التجارب النماذجية بالذكاء الاصطناعي.',
+        url: 'https://labs.google.com',
+        pricing: 'مجاني بالكامل للمطورين',
+        bestFor: 'أفضل حالات الاستخدام: تجربة النماذج الأولية المبتكرة من قوقل مثل NotebookLM و Mixboard و MusicFX واكتشاف أدوات الذكاء الاصطناعي القادمة.',
+        features: ['تجميع أحدث تجارب قوقل بالذكاء الاصطناعي', 'وصول مجاني مبكر للنماذج الأولية', 'بيئة تجارب حرة وشاملة'],
+        keywords: ['google labs', 'experiments', 'ai tools', 'notebooklm', 'google ai']
+    },
     // ==========================================
     // 2. مفاتيح API مجانية وخوادم الذكاء الاصطناعي (Free AI API Keys)
     // ==========================================
@@ -96,6 +108,19 @@ export const aiToolsData = [
         bestFor: 'أفضل حالات الاستخدام: استخراج مفتاح API مجاني وسريع جداً لتطبيقاتك بنماذج Llama و DeepSeek.',
         features: ['سرعة استجابة فائقة (LPU)', 'مفاتيح API مجانية سخية', 'دعم نماذج مفتوحة متقدمة'],
         keywords: ['groq', 'api key', 'free api', 'lpu', 'fast']
+    },
+    {
+        id: 'ai-openai-platform',
+        type: 'ai-tool',
+        name: 'OpenAI Developer Platform',
+        icon: 'https://www.google.com/s2/favicons?domain=platform.openai.com&sz=128',
+        group: 'مفاتيح API مجانية وخوادم الذكاء الاصطناعي',
+        shortDescription: 'البوابة الرسمية الأساسية للمطورين للوصول واستخراج مفاتيح API وتجربة نماذج GPT-4o.',
+        url: 'https://platform.openai.com/',
+        pricing: 'رصيد تجريبي / حسب الاستهلاك',
+        bestFor: 'أفضل حالات الاستخدام: بناء وتطوير التطبيقات وإجراء اختبارات النماذج التفاعلية في الـ Playground واستخراج مفاتيح الـ API.',
+        features: ['إدارة مفاتيح الـ API وتحديد الصلاحيات', 'بيئة تجربة تفاعلية Playground', 'دعم نماذج GPT-4o و Whisper و DALL-E'],
+        keywords: ['openai', 'platform', 'api keys', 'gpt-4o', 'playground']
     },
     {
         id: 'ai-google-studio',
@@ -230,7 +255,19 @@ export const aiToolsData = [
         features: ['إنشاء مكونات واجهات بـ React', 'تصدير التصاميم والكود', 'استلهام الأفكار السريعة'],
         keywords: ['magicpatterns', 'ui', 'prototyping', 'react']
     },
-
+    {
+        id: 'ai-google-stitch',
+        type: 'ai-tool',
+        name: 'Stitch by Google',
+        icon: 'https://www.google.com/s2/favicons?domain=stitch.withgoogle.com&sz=128',
+        group: 'بناء التطبيقات والواجهات الكاملة',
+        shortDescription: 'منصة قوقل الذكية لتصميم واجهات التطبيقات بالذكاء الاصطناعي وتوليد كود Gemini.',
+        url: 'https://stitch.withgoogle.com/',
+        pricing: 'مجاني بالكامل',
+        bestFor: 'أفضل حالات الاستخدام: تحويل أفكار وتصاميم واجهات التطبيقات إلى أكواد تفاعلية قابلة للتصدير لـ Google AI Studio.',
+        features: ['توليد واجهات تطبيقات تفاعلية', 'تكامل مباشر مع Google AI Studio', 'تصدير كود نظيف ومتجاوب'],
+        keywords: ['stitch', 'google', 'ui design', 'gemini', 'code generation']
+    },
     // ==========================================
     // 4. محررات الأكواد ووكلاء التطوير (AI Code Editors & Agents)
     // ==========================================
@@ -356,6 +393,19 @@ export const aiToolsData = [
         keywords: ['perplexity', 'search', 'ai', 'research']
     },
     {
+        id: 'ai-genspark',
+        type: 'ai-tool',
+        name: 'Genspark AI Search',
+        icon: 'https://www.google.com/s2/favicons?domain=www.genspark.ai&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'محرك البحث الذكي المتقدم القائم على الوكلاء لتوليد صفحات وبحوث ملخصة وموثقة.',
+        url: 'https://www.genspark.ai/',
+        pricing: 'مجاني بالكامل',
+        bestFor: 'أفضل حالات الاستخدام: البحث عن الأفكار والحلول التقنية المعقدة وإنشاء صفحات ملخصة (Sparkpages) بأسلوب قائم على الوكلاء.',
+        features: ['بحث ذكي متعدد الوكلاء (Agentic Search)', 'توليد صفحات بحوث تفاعلية Sparkpages', 'إجابات موثقة وخالية من التحيز'],
+        keywords: ['genspark', 'ai search', 'perplexity alternative', 'agents', 'sparkpages']
+    },
+    {
         id: 'ai-notebooklm',
         type: 'ai-tool',
         name: 'NotebookLM',
@@ -367,6 +417,19 @@ export const aiToolsData = [
         bestFor: 'أفضل حالات الاستخدام: رفع الكتب والمستندات التقنية وتلخيصها وإنشاء بودكاست صوتي عنها.',
         features: ['تحليل المستندات و PDF', 'إنشاء بودكاست صلب وملخصات', 'روابط استشهاد دقيقة'],
         keywords: ['notebooklm', 'google', 'research', 'pdf']
+    },
+    {
+        id: 'ai-humata',
+        type: 'ai-tool',
+        name: 'Humata AI',
+        icon: 'https://www.google.com/s2/favicons?domain=app.humata.ai&sz=128',
+        group: 'المساعدات النماذجية المباشرة',
+        shortDescription: 'مساعد ذكي متطور لقراءة وتحليل واستخراج الإجابات الموثقة من مستندات الـ PDF الضخمة.',
+        url: 'https://app.humata.ai/',
+        pricing: 'مجاني جزئياً / Pro',
+        bestFor: 'أفضل حالات الاستخدام: التفاعل والمحادثة المباشرة مع الكتب والتوثيقات التقنية بصيغة PDF واستخراج المفاهيم بسرعة.',
+        features: ['تحليل وسؤال وجواب لمستندات PDF', 'جلب الاستشهادات والصفحات الدقيقة', 'تلخيص الأبحاث المتقدمة'],
+        keywords: ['humata', 'pdf ai', 'document analysis', 'chat with pdf', 'research']
     },
     {
         id: 'ai-gemini',
@@ -515,7 +578,19 @@ export const aiToolsData = [
         features: ['توليد نصوص واضحة داخل الصور', 'تصميم الشعارات والأيقونات', 'مجاني أونلاين'],
         keywords: ['ideogram', 'typography', 'logo', 'design']
     },
-
+    {
+        id: 'ai-google-mixboard',
+        type: 'ai-tool',
+        name: 'Google Mixboard',
+        icon: 'https://www.google.com/s2/favicons?domain=mixboard.google.com&sz=128',
+        group: 'توليد أصول التصميم والـ SVG السحابي',
+        shortDescription: 'مساحة قوقل التفاعلية القائمة على الذكاء الاصطناعي لدمج واستلهام وبناء اللوحات البصرية (Moodboards).',
+        url: 'https://mixboard.google.com',
+        pricing: 'مجاني بالكامل من Google Labs',
+        bestFor: 'أفضل حالات الاستخدام: دمج الصور والمفاهيم البصرية وتوليد أفكار التصاميم والهويات التجارية التفاعلية.',
+        features: ['مزج وتوليد المفاهيم البصرية الذكية', 'إنشاء لوحات الاستلهام Moodboards', 'دعم الذكاء الاصطناعي لتوليد الصور والتجريب'],
+        keywords: ['mixboard', 'google labs', 'moodboard', 'visual concept', 'design']
+    },
     // ==========================================
     // الوسائط والصوتيات السحابية (Cloud Media & Audio)
     // ==========================================
@@ -612,6 +687,19 @@ export const aiToolsData = [
         bestFor: 'أفضل حالات الاستخدام: إنشاء فيديوهات توضيحية ومقاطع تحريك سينمائية تفاعلية.',
         features: ['دعم مقاطع فيديو أطول', 'دقة ألوان وحركة ممتازة', 'استخدام سحابي مباشر'],
         keywords: ['kling', 'klingai', 'video ai']
+    },
+    {
+        id: 'ai-vidu',
+        type: 'ai-tool',
+        name: 'Vidu AI',
+        icon: 'https://www.google.com/s2/favicons?domain=www.vidu.com&sz=128',
+        group: 'توليد الصوتيات والوسائط السحابية',
+        shortDescription: 'منصة سحابية متقدمة لتوليد مقاطع الفيديو فائقة الواقعية والمؤثرات البصرية بطلب نصي أو من صورة.',
+        url: 'https://www.vidu.com/',
+        pricing: 'رصيد مجاني يتجدد يومياً',
+        bestFor: 'أفضل حالات الاستخدام: تحويل الصور والأفكار إلى فيديوهات حركية ديناميكية عالية الدقة للمشاريع والتطبيقات.',
+        features: ['توليد فيديو عالي الدقة من نص أو صورة', 'حركة أجساد وشخصيات واقعية', 'سرعة توليد عالية مع رصيد يومي'],
+        keywords: ['vidu', 'vidu ai', 'video generation', 'ai video', 'media']
     },
     {
         id: 'ai-sambanova',

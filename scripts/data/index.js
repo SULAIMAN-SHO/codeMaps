@@ -77,7 +77,8 @@ import {
     appsDatabaseGuisData,
     appsSystemDiagnosticsData,
     appsVideoPlayersData,
-    apps3DViewersData
+    apps3DViewersData,
+    appsSystemUtilitiesData
 } from './tools/desktop-apps.js';
 
 
@@ -213,4 +214,5 @@ export const registry = {
     'mock-apis-data': mockApisData,
     '3d-web-design': threeDWebDesignData,
     'cloud-hosting-deployment': cloudHostingDeploymentData,
+    'apps-system-utilities': appsSystemUtilitiesData,
 };
